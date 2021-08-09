@@ -5,7 +5,7 @@ import random
 from sympy import sympify
 import sympy as sp
 
-def Evaluating_Variable_Expressions_1(option_difficulty, option_random):
+def Distributive_Property_1(option_difficulty, option_random):
     problemsets = []
     answerset = []
     temp = 0
@@ -184,15 +184,15 @@ def Evaluating_Variable_Expressions_1(option_difficulty, option_random):
 
 print("EASY!!!\n\n")
 for i in range(20):
-    a, b = Evaluating_Variable_Expressions_1("easy", False)
+    a, b = Distributive_Property_1("easy", False)
     print(a, b)
 
 print("MEDIUM!!!\n\n")
 for i in range(20):
-    a, b = Evaluating_Variable_Expressions_1("medium", False)
+    a, b = Distributive_Property_1("medium", False)
     print(a, b)
 
 print("HARD!!!\n\n")
 for i in range(20):
-    a, b = Evaluating_Variable_Expressions_1("hard", False)
+    a, b = Distributive_Property_1("hard", False)
     print(a, b)
