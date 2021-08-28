@@ -1,0 +1,120 @@
+<!--
+  This load page should have only PUT methods since it call the data from the server.
+  It should not have any POST because it can cause of making duplicate wkst data. 
+-->
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+<body>
+  <form novalidate style="height: 0px" method = "POST">
+
+  <!--MASTER LOCATION TO SAVE DATA-->
+  <div style="display: none;">
+    <p id="dtitle">{{ darr[0] }}</p>
+    <p id="sname">{{ darr[1] }}</p>
+    <p id="dseed">{{ darr[3] }}</p>
+  </div>
+
+  <div class="side-bar shadow" style="float: left">
+    <div class="menu_intro" style="padding: 24px">
+      <h3 class="w3-bar-item">Loading Worksheet</h3>
+      <div class="dropdown">
+        <button type="button" onclick="btnop1()" class="dropbtn">Teacher</button>
+        <div id="myDropdown" class="dropdown-content" style="margin-top: 0px">
+
+          <div class="opts">
+            <div class="num_problem">
+              <label for="numprob" class="num-problem-font">Teacher UUID*</label>
+              <input type="text" id="Enumprob" name="numprob" required/>
+            </div>
+
+        </div>
+      </div> <!--Main close of the first drop down-->
+      <div class="dropdown">
+        <button type="button" onclick="btnopt2()" class="dropbtn sec-opt" id="second-opt">Student</button>
+          <div id="myDropdown2" class="dropdown-content" style="margin-top: 50px">
+
+            <div class="opts">
+              <div class="num_problem">
+                <label for="numprob" class="num-problem-font">Student UUID*</label>
+                <input type="text" id="Enumprob" name="numprob" required/>
+              </div>
+
+          </div>
+      </div>
+
+    </div>
+  <!--Generate button box-->
+      <div class="btn_generate shadow">
+        <button type="button" class="btn-create shadow" id="cmd">LOAD WORKSHEET</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+  <div class="wks-gen" style="width: 75%; float: right" id="wkst">
+    <div class = "col-worksheet">
+
+      <div class="wks-info">
+        <div> <p class= "wks-name">Name: <span id="txt-studnetName"></span></p> </div>
+        <div> <p class= "wks-date">Due Date: <span id="txt-dueDate"></span></p> </div>
+      </div>
+
+      <latex-js baseURL="https://cdn.jsdelivr.net/npm/latex.js/dist/">
+      <div class="wks-info2">
+        <div id="content">
+          When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+        </div>
+        <div> <p class= "wks-title"><span id="txt-title"></span></p> </div>
+        <div> <p class= "wks-desc"><span id="txt-desc"></span></p> </div>
+      </div>
+    </latex-js>
+
+      <div id="wks-problems">
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropbtn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+<script> /*For option 1*/
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("easyopt");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+</body>
+{% endblock %}

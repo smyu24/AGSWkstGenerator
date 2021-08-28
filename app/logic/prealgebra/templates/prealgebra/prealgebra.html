@@ -1,0 +1,136 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+  <style>
+    div.h {margin: .5em 0;max-width: 70em;}
+    pre {padding: .5em;}
+  </style>
+
+  {% for message in get_flashed_messages() %}
+  <span class="alert-pop alert-pop--warning" onclick="removeAlert()">
+    {{message}}
+  </span>
+{% endfor %}
+
+<div style="display: none;">
+  <input type="text" id="seed" value="{{ seed }}">
+</div>
+
+  <!--MASTER LOCATION TO SAVE DATA-->
+  <div class="side-bar shadow" style="float: left">
+    <div class="menu_intro" style="padding: 24px">
+      <h3 class="w3-bar-item">Worksheet Options</h3>
+      <h6 style="color: rgb(94, 94, 94)">Prealgebra worksheet generater</h6>
+
+      <div id="readroot" style="display: none">
+        <input type="button" value="-"
+               onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+
+               <label class="num-problem-font2">Section Field*</label>
+
+        <select name="level" required>
+            <option value="">Difficulty</option>
+            <option value="1">Easy</option>
+            <option value="2">Medium</option>
+            <option value="3">hard</option>
+        </select>
+
+
+        <label class="num-problem-font">Number of Problem*</label>
+        <input type="number" id="numporb" name="numporb" min="1" max="{{max}}" value="5" required/>
+      
+        <label for="autogen" class="num-problem-font ">Auto Generate</label>
+        <input for="autogen" name="auto" type="checkbox" id="auto" value="0" onclick="validate(id)">
+      
+        <label class="num-problem-font" id="mint">Minimum Number*</label>
+        <input type="number" id="min" name="min" min="{{min}}" max={{max}} value="10" required/>
+
+        <label class="num-problem-font" id="maxt">Maximum Number*</label>
+        <input type="number" id="max" name="max" min="{{min}}" max={{max}} value="20" required/>
+    </div>
+
+    <form method="POST">
+      <span id="writeroot"></span>
+      <input type="button" onclick="moreFields()" value="+" />
+
+  <!--Generate button box-->
+  <!-- <button type="submit" formmethod="post" class="upload"> <i class="fa fa-upload fa-2x"></i></button> -->
+  <div class="btn_generate shadow">
+    <button type="submit" class="btn-create shadow">GENERATE WORKSHEET</button>
+  <!-- <button type="button" class="btn-create shadow" onclick="updatedpdf()">GENERATE WORKSHEET</button> -->
+  </div>
+</form>
+</div>
+</div>
+
+<div class="h">
+  <pre id="pretag" style="display: none;">
+  </pre>
+</div>
+
+<script type="text/javascript">
+  var counter = 0;
+  function moreFields() {
+      counter++;
+      var newFields = document.getElementById("readroot").cloneNode(true);
+      newFields.id = 'setofForm'+counter;
+      newFields.style.display = 'block';
+      var newField = newFields.childNodes;
+
+      for (var i=0;i<newField.length;i++) {
+          var theName = newField[i].name;
+          if (theName)
+              newField[i].name = theName + counter;
+
+          var theid = newField[i].id;
+          if (theid)
+              newField[i].id = theid + counter;
+      }
+      var insertHere = document.getElementById("writeroot");
+      insertHere.parentNode.insertBefore(newFields,insertHere);
+  }
+</script>
+
+<script>  
+  exampleupdate();
+    window.onload = function() {
+      moreFields();
+      var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
+      var f2 = document.createElement("span");
+          f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
+        "\" name=\"form2-pre" + 0 +
+        "\" enctype=\"multipart/form-data\" action=\"" +
+        runlatexLatexcgiURI +
+        "\" method=\"post\" target=\"pre" + 0 +
+        "ifr\"></form>";
+      latexcgi('pre0');
+    }
+</script>
+
+<script type="text/javascript"> //for the auto gen.
+  function validate(id) {
+    var nid = id.charAt(id.length-1)
+
+    if(document.getElementById('min' + nid).style.display != 'none') {
+      document.getElementById('min' + nid).style.display = 'none';
+      document.getElementById('max' + nid).style.display = 'none';
+      document.getElementById('mint' + nid).style.display = 'none';
+      document.getElementById('maxt' + nid).style.display = 'none';
+    } else {
+      document.getElementById('min' + nid).style.display = 'block';
+      document.getElementById('max' + nid).style.display = 'block';
+      document.getElementById('mint' + nid).style.display = 'block';
+      document.getElementById('maxt' + nid).style.display = 'block';
+    }
+  }
+  </script>
+
+</body>
+{% endblock %}

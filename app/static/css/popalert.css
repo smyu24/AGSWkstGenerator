@@ -1,0 +1,77 @@
+/* POP */
+
+/*
+ANIMATIONS
+*/
+.alert-pop {
+    display: block;
+    background-color: #fff;
+    padding: 1.8rem 3rem 1.8rem 2rem;
+    border-radius: 4px;
+    position: absolute;
+    font-size: .92rem;
+    line-height: .92rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    top: 3rem;
+    right: 1rem;
+    
+    pointer-events: none;
+    animation: alertPopup .8s ease-in-out;
+  }
+  
+  
+  .alert-pop--warning  {
+      background-color: rgb(189, 55, 55);
+      color: #fff;
+  }
+  
+  .alert-pop--warning:after  {
+      background-color: orangered;
+      color: #fff;
+  }
+  
+  .alert-pop--danger:after {
+      background-color: red;
+  }
+  .alert-pop--danger {
+    background-color: tomato;
+    color: #fff;
+  }
+  
+  .alert-pop--remove {
+    animation: fadeOut 1s;
+  }
+
+  
+@keyframes fadeOut {
+    0% {
+    opacity: 1;
+      visibility: visible;
+
+  }
+  
+  80% {
+/*      transform: translateX(-3rem); */
+  }
+  
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes alertPopup {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  
+  80% {
+/*      transform: translateX(-3rem); */
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

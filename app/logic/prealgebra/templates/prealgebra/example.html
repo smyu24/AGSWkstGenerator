@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+<body>
+  <style type="text/css" media="screen">
+    .ace_editor {
+  border: 1px solid lightgray;
+  margin-bottom: 1px !important;
+  width: 100%;
+    }
+    div.spacer {
+  margin-top:16px;
+    }
+  </style>
+
+  <style>
+    body {margin:auto; max-width: 70em;}
+    div.h {background-color: #F5F5FF;margin: .5em 0;}
+    pre {background-color: #EEE;margin:0;padding: .5em;}
+  </style>
+
+
+  <div class="h">
+    <pre style="display: none;">
+      {{default}}
+    </pre>
+  </div>
+
+  <script>
+    window.onload = function() {
+    var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
+    var f2 = document.createElement("span");
+		    f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
+			"\" name=\"form2-pre" + 0 +
+			"\" enctype=\"multipart/form-data\" action=\"" +
+      runlatexLatexcgiURI +
+			"\" method=\"post\" target=\"pre" + 0 +
+			"ifr\"></form>";
+    latexcgi('pre0');
+    }
+  </script>
+</body>
+
+{% endblock %}

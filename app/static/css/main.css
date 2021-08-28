@@ -1,0 +1,242 @@
+body, html {
+    font-family: system-ui;
+    margin: 0px;
+    background-color: rgb(96, 97, 156);
+    height: 100%;
+}
+
+/*Horizontal menu bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #ffffff;
+    color: black;
+}
+
+.profile {
+    background-color: #333;
+    color: white;
+}
+
+.nav-cont {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/*Right side menu*/
+
+.side-bar {
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+    width: 300px;
+    height: calc(100% - 84px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+h6 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+/*Drop down menu*/
+.dropbtn {
+    background-color: #ffffff;
+    color: black;
+    border:1px solid rgb(158, 158, 158);
+    border-right: none;
+    border-left: none;
+
+    padding: 16px 8px 6px 16px;
+    font-size: 16px;
+    margin-left: -23px;
+    width: 300px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #dbdbdb;
+}
+
+#second-opt {
+    position: absolute;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/*For section*/
+.dropdown-content {
+    display: none;
+    width: 230;
+    left: 30px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {display: block;}
+
+
+/*Generate button*/
+.btn_generate {
+    background-color: #fff;
+    height: 80px;
+    width: 300px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+.btn-create {
+    background-color: #7635aa;
+    color: white;
+    border: none;
+    padding: 10px 55px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    /*T R B L*/
+    margin: 23px 0px 0px 20px;
+}
+
+.btn-create:hover, .btn-create:focus {
+    background-color: #4a1872;
+  }
+
+/*Global setting*/
+.shadow {
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%), 0 1px 14px 0 rgb(0 0 0 / 12%);
+}
+
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 50px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*Input label*/
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin-left: 10px;
+    width: 200px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.num-problem-font {
+    margin-top: 20px;
+    margin-left: 10px;
+    color: rgb(185, 185, 185);
+    font-size: 12px;
+}
+
+.num-problem-font2 {
+    margin-top: 20px;
+    margin-left: 10px;
+    color: rgb(71, 71, 71);
+    font-size: 15px;
+}
+
+.txt-randnum {
+    height: 50px;
+}
+
+.upload {
+    display: none;
+    position: fixed;
+    background-color: yellow;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    top: 89%;
+    left: 93%; 
+    cursor: pointer;
+}
+
+.ansbtn {
+    position: fixed;
+    background-color: rgb(60, 60, 95);
+    border: 1px solid rgb(34, 34, 53);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90px;
+    top: 89%;
+    left: 93%; 
+    cursor: pointer;
+}
+
+.ansbtn2 {
+    position: fixed;
+    background-color: rgb(60, 60, 95);
+    color: white;
+    padding: 20px;
+    border: 1px solid rgb(34, 34, 53);
+    border-radius: 10px;
+    width: 90px;
+    top: 80%;
+    left: 93%; 
+    cursor: pointer;
+}
+/*Refresh btn*/
+
+textarea {
+    resize: vertical;
+}
