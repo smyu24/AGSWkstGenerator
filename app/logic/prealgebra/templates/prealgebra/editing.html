@@ -13,52 +13,67 @@
   </style>
 
   <!--MASTER LOCATION TO SAVE DATA-->
-  <div style="display: none;">
-    <input type="text" id="seed" value="{{ probs }}">
-    <input type="text" id="answ" value="{{ answ }}">
-    <input type="text" id="Nansw" value="{{ Nansw }}">
-  </div>
-
   <div class="side-bar shadow" style="float: left">
     <div class="menu_intro" style="padding: 24px">
-      <h3 class="w3-bar-item">Worksheet Options</h3>
+      <h3 class="w3-bar-item">Worksheet Display Options</h3>
       <h6 style="color: rgb(94, 94, 94)">Prealgebra worksheet generater</h6>
-      <form novalidate style="height: 0px" method = "PUT"></form>
-      <div class="dropdown">
-        <button type="button" onclick="btnopt2()" class="dropbtn sec-opt" id="second-opt">Display Options</button>
-          <div id="myDropdown2" class="dropdown-content" style="margin-top: 50px">
+      
+      <div id="readroot" style="display: none">
 
-            <div class="txt-page">
-              <label for="pdfdesc" class="num-problem-font">Number of column* </label>
-              <input type="number" id="numcol" name="numprob" min="2" max="5" value="2" required/>
-            </div>
+        <div id="select"class="ltclass"></div>
 
-            <div class="txt-name">
-              <label for="studnetName" class="num-problem-font">Row space* </label>
-              <input type="number" id="numrow" name="numrow" min="2" max="99" value="2" required/>
-            </div>
+        <div id="level"></div>
 
-            <div class="txt-date">
-              <label for="dueDate" class="num-problem-font">Due Date* </label>
-              <input type="date" id="dueDate" name="dueDate">
-            </div>
+        <label class="num-problem-font-main">Problem Design-</label>
 
-            <div class="txt-title">
-              <label for="pdftitle" class="num-problem-font">Enter the title* </label>
-              <input type="text" id="pdftitle" name="pdftitle" value="Worksheet Title">
-            </div>
+        <label for="autogen" class="num-problem-font ">Display*</label>
+        <input for="autogen" name="auto" type="checkbox" id="auto" value="checked">
 
-            <div class="txt-desc">
-              <label for="pdfdesc" class="num-problem-font">Instructions* </label>
-              <textarea type="text" id="pdfdesc" name="pdfdesc" rows="10" cols="30">Here are the instructions</textarea>
-            </div>
+        <label for="autogen" class="num-problem-font ">Numbering*</label>
+        <input for="autogen" name="auto" type="checkbox" id="auto" value="checked">
 
+        <label for="autogen" class="num-problem-font ">Point*</label>
+        <input type="number" id="min" name="min" min="0" max="100" value="0" required/>
+
+        <label for="pdfdesc" class="num-problem-font">Instructions* </label>
+        <textarea type="text" id="pdfdesc" name="pdfdesc" rows="3" cols="30">Here are the instructions</textarea>
+    </div>
+      
+      <form method="POST">
+        <div>
+          <div class="txt-page">
+            <label for="pdfdesc" class="num-problem-font">Number of column* </label>
+            <input type="number" id="numcol" name="numprob" min="2" max="5" value="2" required/>
           </div>
-      </div>
+
+          <div class="txt-name">
+            <label for="studnetName" class="num-problem-font">Row spsace* </label>
+            <input type="number" id="numrow" name="numrow" min="2" max="99" value="2" required/>
+          </div>
+
+          <div class="txt-date">
+            <label for="dueDate" class="num-problem-font">Due Date* </label>
+            <input type="date" id="dueDate" name="dueDate">
+          </div>
+
+          <div class="txt-title">
+            <label for="pdftitle" class="num-problem-font">Enter the title* </label>
+            <input type="text" id="pdftitle" name="pdftitle" value="Worksheet Title">
+          </div>
+
+          <div class="txt-desc">
+            <label for="pdfdesc" class="num-problem-font">Main Instructions* </label>
+            <textarea type="text" id="pdfdesc" name="pdfdesc" rows="8" cols="30">Here are the instructions</textarea>
+          </div>
+        </div>
+
+        <button type="button" onclick="btnopt2()" class="dropbtn sec-opt" id="second-opt">More Details...</button>
+        <div class = "detail option" style="display: none;">
+          <span id="writeroot"></span>
+        </div>
 
     </div>
   <!--Generate button box-->
-  <button type="submit" formmethod="post" class="upload"> <i class="fa fa-upload fa-2x"></i></button>
   <div class="btn_generate shadow">
     <button type="button" class="btn-create shadow" onclick="changecol()">Update the worksheet</button>
     <button type="button" class="ansbtn" onclick="showanswer()">answer</button>
@@ -73,9 +88,44 @@
   </pre>
 </div>
 
+<div style="display: none;">
+  <input type="text" id="seed" value="{{ probs }}">
+  <input type="text" id="answ" value="{{ answ }}">
+  <input type="text" id="Nansw" value="{{ Nansw }}">
+</div>
+
+<script type="text/javascript">
+  var counter = 0;
+  function moreFields() {
+    counter++;
+    var newFields = document.getElementById("readroot").cloneNode(true);
+    newFields.id = 'setofForm'+counter;
+    newFields.style.display = 'block';
+    var newField = newFields.childNodes;
+  
+    for (var i=0;i<newField.length;i++) {
+      var theName = newField[i].name;
+      if (theName) {newField[i].name = theName + counter;}
+      
+      var theid = newField[i].id;
+      if (theid) {newField[i].id = theid + counter;}
+    }  
+    var insertHere = document.getElementById("writeroot");
+    insertHere.parentNode.insertBefore(newFields,insertHere);
+  }
+</script>
+
   <script>
+    var arr = {{arr| tojson}};
+    var total = {{total| tojson}};
     updatedpdf();
+    
     window.onload = function() {
+
+    for(let i = 0; i < total; i++) {
+    moreFields();
+    }
+
     var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
     var f2 = document.createElement("span");
 		    f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
@@ -88,23 +138,22 @@
     }
   </script>
 
-<script>
-  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-  var dropdown = document.getElementsByClassName("dropbtn");
-  var i;
-
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-    dropdownContent.style.display = "none";
-    } else {
-    dropdownContent.style.display = "block";
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropbtn");
+    var i;
+  
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
     }
-    });
-  }
-  </script>
-
+    </script>
 </body>
 {% endblock %}

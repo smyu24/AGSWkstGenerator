@@ -57,7 +57,7 @@ const mainTex = `%!TeX pdf\n\\documentclass[11pt,letterpaper]{article}
 
 \\begin{document}
 \\head{MMTprep Worksheet}{Due Date: MM/DD/YYYY}
-\\textbf{Instructions:} \\par \\noindent Here are the instructions \\pspace
+\\textbf{Instructions:} Here are the instructions \\pspace
 
 \\pointproblem{5} This is the example document. \\vspace{1.5cm}
 
@@ -101,16 +101,21 @@ const fronttex = `%!TeX pdf\n\\documentclass[11pt,letterpaper]{article}
 
 \\newcommand{\\ans}{\\noindent\\textbf{Answer. }}
 
-\\newcommand{\\prob}{\\noindent\\textbf{Section. }}
+\\newcommand{\\prob}{\\noindent\\textbf{Problem. }}
 \\newcounter{problem}
 \\newcommand{\\problem}{
 	\\stepcounter{problem}%
 	\\noindent \\textbf{Problem \\theproblem. }%
 }
-
 \\newcommand{\\pointproblem}[1]{
 	\\stepcounter{problem}%
 	\\noindent \\textbf{Problem \\theproblem.} (#1 points)\\,%
+}
+\\newcommand{\\pointprob}[1]
+    {\\noindent\\textbf{Problem. }(#1 points)\\,%
+}
+\\newcommand{\\point}[1]
+    {\\noindent\\textbf{(#1 points)}\\,%
 }
 
 \\newcommand{\\pspace}{\\par\\vspace{\\baselineskip}}
@@ -135,9 +140,8 @@ const fronttex = `%!TeX pdf\n\\documentclass[11pt,letterpaper]{article}
 
 \\begin{document}
 \\head{MMTprep Worksheet}{Due Date: MM/DD/YYYY}
-\\textbf{Instructions:} \\par \\noindent Here are the instructions \\pspace
-
-\\pointproblem{5} This is the example sentence. \\vspace{0.5cm}`;
+\\textbf{Instructions:} Here are the instructions \\pspace
+\\point{5} This is the example sentence. \\vspace{0.5cm} \\par`;
 
 const backtex = `{\\raggedleft\\vfill\\itshape\\Longstack[l]{%
 	\\quad

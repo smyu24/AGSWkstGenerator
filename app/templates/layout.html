@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/logincss.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mega dropdown.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/popalert.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/userinfocard.css') }}">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -22,6 +23,7 @@
     <script src="{{ url_for('static', filename='js/runlatex.js') }}"></script>
     <script src="{{ url_for('static', filename='js/aceeditor.js') }}"></script>
     <script src="{{ url_for('static', filename='js/example4pre1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dynamic.js') }}"></script>
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -33,22 +35,22 @@
       <li><a id="navhome" href="/">Home</a></li>
 
       <div class="pre-dropdown">
-        <li><a id="navprealg" href="/prealgebra">Prealgebra</a></li>
+        <li><a id="navprealg" href="/prealgebra/{{'1-1-1'}}">Prealgebra</a></li>
         <div class="pre-content">
           <div class="row">
             <div class="column">
               <h3>Reading Numbers</h3>
-              <a href="/prealgebra/1-1-1">Naming Decimal Places</a>
-              <a href="/prealgebra/1-1-2">Writing whole numbers</a>
-              <a href="/prealgebra/1-1-3">Reading whole numbers</a>
-              <a href="/prealgebra/1-1-4">Rounding numbers</a>
+              <a href="/prealgebra/{{'1-1-1'}}">Naming Decimal Places</a>
+              <a href="/prealgebra/{{'1-1-2'}}">Writing & Reading numbers</a>
+              <a href="/prealgebra/{{'1-1-3'}}">Rounding numbers</a>
             </div>
             <div class="column">
               <h3>Number Theory</h3>
-              <a href="/prealgebra/1-2-1">Divisibility</a>
-              <a href="/prealgebra/1-2-2">Factoring</a>
-              <a href="/prealgebra/1-2-3">Factors and Factorization</a>
-              <a href="/prealgebra/1-2-4">Factoring Monomials</a>
+              <a href="/prealgebra/1-2-1">Divisibility and Factors</a>
+              <a href="/prealgebra/1-2-2">Factoring numbers</a>
+              <a href="/prealgebra/1-2-3">Listing monomials</a>
+              <a href="/prealgebra/1-2-4">Greatest common factors</a>
+              <a href="/prealgebra/1-2-5">Least Common Multiple</a>
             </div>
             <div class="column">
               <h3>Category 3</h3>

@@ -1,4 +1,18 @@
-def seedgem(reqeust):
+def reseed(seed, code):
+    twoDarr = []
+    oneDarr = []
+    j=0
+    for i in range(len(seed)):
+        oneDarr.append(seed[i])
+        if(len(oneDarr) == 5):
+            twoDarr.append(oneDarr)
+            twoDarr[j][0] = str(code) + "-" + str(twoDarr[j][0])
+            j += 1
+            oneDarr = []
+    
+    return twoDarr
+
+def seedgem(reqeust, code):
     farr = []
     i = 0
     x = 0
@@ -15,10 +29,11 @@ def seedgem(reqeust):
             for value in reqeust.getlist(key):
                 if(key[:5] == "level"):
                     numsec += 1
+
                 farr.append(int(value))
                 i += 1
                 x += 1
-                if(x == 4):
+                if(x == 5):
                     if(farr[i-2] >= farr[i-1]):
                         return False
                     x = 0
@@ -26,8 +41,8 @@ def seedgem(reqeust):
             auto -= 1
             x = 0
             continue
-    farr.insert(0, numsec)
     if(go == False):
         return False
     else:
-        return farr
+        return numsec, reseed(farr, code)
+        

@@ -19,10 +19,6 @@
   </span>
 {% endfor %}
 
-<div style="display: none;">
-  <input type="text" id="seed" value="{{ seed }}">
-</div>
-
   <!--MASTER LOCATION TO SAVE DATA-->
   <div class="side-bar shadow" style="float: left">
     <div class="menu_intro" style="padding: 24px">
@@ -31,29 +27,23 @@
 
       <div id="readroot" style="display: none">
         <input type="button" value="-"
-               onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+               onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br />
 
-               <label class="num-problem-font2">Section Field*</label>
+        <div id="select"class="ltclass"></div>
 
-        <select name="level" required>
-            <option value="">Difficulty</option>
-            <option value="1">Easy</option>
-            <option value="2">Medium</option>
-            <option value="3">hard</option>
-        </select>
-
+        <div id="level"></div>
 
         <label class="num-problem-font">Number of Problem*</label>
         <input type="number" id="numporb" name="numporb" min="1" max="{{max}}" value="5" required/>
       
         <label for="autogen" class="num-problem-font ">Auto Generate</label>
-        <input for="autogen" name="auto" type="checkbox" id="auto" value="0" onclick="validate(id)">
+        <input for="autogen" name="auto" type="checkbox" id="auto" value="checked" onclick="validate(id, {{option}})">
       
         <label class="num-problem-font" id="mint">Minimum Number*</label>
-        <input type="number" id="min" name="min" min="{{min}}" max={{max}} value="10" required/>
+        <input type="number" id="min" name="min" min={{min}} max={{max}} value={{min}} required/>
 
         <label class="num-problem-font" id="maxt">Maximum Number*</label>
-        <input type="number" id="max" name="max" min="{{min}}" max={{max}} value="20" required/>
+        <input type="number" id="max" name="max" min={{min}} max={{max}} value={{max}} required/>
     </div>
 
     <form method="POST">
@@ -85,23 +75,41 @@
       var newField = newFields.childNodes;
 
       for (var i=0;i<newField.length;i++) {
-          var theName = newField[i].name;
-          if (theName)
-              newField[i].name = theName + counter;
+        var theName = newField[i].name;
+        if (theName) {newField[i].name = theName + counter;}
 
-          var theid = newField[i].id;
-          if (theid)
-              newField[i].id = theid + counter;
+        var theid = newField[i].id;
+        if (theid) {newField[i].id = theid + counter;}
       }
+
+      var name = 'Ltarget' + (counter+1);
+      document.getElementById("Ltarget").name = name;
+      document.getElementsByName(name)[0].setAttribute("onchange", 'getmyid("' + document.getElementsByName(name)[0].name + '")');
+
+      var name2 = 'level' + (counter+1);
+      document.getElementById("levels").name = name2;
+
       var insertHere = document.getElementById("writeroot");
       insertHere.parentNode.insertBefore(newFields,insertHere);
   }
 </script>
 
-<script>  
-  exampleupdate();
+<script type="text/javascript"> //Jinja Option  
+  var ex = {{seed| tojson}};
+  exampleupdate(ex);
+
     window.onload = function() {
-      moreFields();
+      
+      var jinja = {{selection| tojson}}; //create select
+      dynamicSelection(jinja);
+
+      var opt = {{option| tojson}}
+      var diff = {{diffc| tojson}}; //create select
+      dynamicDifficulty(diff, opt);
+
+      moreFields(); //create table
+      document.getElementsByName("Ltarget1")[0].setAttribute("onchange", 'getmyid("' + document.getElementsByName("Ltarget1")[0].name + '")');
+
       var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
       var f2 = document.createElement("span");
           f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
@@ -114,23 +122,27 @@
     }
 </script>
 
-<script type="text/javascript"> //for the auto gen.
-  function validate(id) {
-    var nid = id.charAt(id.length-1)
+<script type="text/javascript">
+  var aa = {{num| tojson}}; //create select
+  var arrmin = [];
+  var arrmax = [];
 
-    if(document.getElementById('min' + nid).style.display != 'none') {
-      document.getElementById('min' + nid).style.display = 'none';
-      document.getElementById('max' + nid).style.display = 'none';
-      document.getElementById('mint' + nid).style.display = 'none';
-      document.getElementById('maxt' + nid).style.display = 'none';
-    } else {
-      document.getElementById('min' + nid).style.display = 'block';
-      document.getElementById('max' + nid).style.display = 'block';
-      document.getElementById('mint' + nid).style.display = 'block';
-      document.getElementById('maxt' + nid).style.display = 'block';
-    }
+  for(let i = 1; i < aa.length; i++) {
+    arrmin.push(aa[i]);
+    arrmax.push(aa[i+1]);
+    i++;
   }
-  </script>
+
+  function getmyid(id) {
+    console.log(id);
+    var val = document.getElementsByName(id)[0];
+    var digit = parseInt(id.charAt(id.length-1));
+    document.getElementById('min' + digit).min = parseInt(arrmin[parseInt(val.value)-1]);
+    document.getElementById('max' + digit).min = parseInt(arrmin[parseInt(val.value)-1]);
+    document.getElementById('min' + digit).max = parseInt(arrmax[parseInt(val.value)-1]);
+    document.getElementById('max' + digit).max = parseInt(arrmax[parseInt(val.value)-1]);
+  }
+</script>
 
 </body>
 {% endblock %}

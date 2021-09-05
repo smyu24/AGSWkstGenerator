@@ -1,11 +1,3 @@
-function btnop1() {
-
-}
-
-function btnopt2() {
-
-}
-
 function btnadd() {
 	console.log("= Open");
 
