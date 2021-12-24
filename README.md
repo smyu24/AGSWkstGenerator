@@ -1,4 +1,4 @@
-+-# AGS_Worksheet_Generator
+# AGS_Worksheet_Generator
 
 A website for generating mathematics(AGS) related worksheets
 
