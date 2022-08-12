@@ -1,12 +1,9 @@
-"""import os;from pathlib import Path
-print(os.getcwd())
-fff = os.getcwd()
-fff1 = Path(fff)
-print(fff1.parent, type(fff1))
+import sys; sys.path.insert(0, "..")
 
-import sys; sys.path.append(str(fff1.parent))
-import loader"""
-from .loader import *
+from loader import getInt, getFrac, LinFunc, QuadFunc, latexify, signify
+from sympy import *
+import random
+
 
 def Evaluate_Equation_1(difficulty=1, expr="latex"):
   problem = ""
@@ -61,20 +58,20 @@ def Evaluate_Equation_1(difficulty=1, expr="latex"):
 
 def Evaluate_Equation_2(difficulty=1, expr='latex'):
     if difficulty == 1: # easy
-        slope = randint(2,9) if randint(0,1) else Rational(1,randint(2,9))
+        slope = random.randint(2,9) if random.randint(0,1) else Rational(1,random.randint(2,9))
         func = LinFunc(slope, getInt(-9,9))
         mult = S.One
 
         problem = signify(func.getSlopeInt()) + r' \newline '
     elif difficulty == 2: # medium
-        func = LinFunc(randint(2,9), getInt(-15,15))
-        mult = sympify(randint(2,7)) if randint(0,1) else Rational(1,randint(2,7))
+        func = LinFunc(random.randint(2,9), getInt(-15,15))
+        mult = sympify(random.randint(2,7)) if random.randint(0,1) else Rational(1,random.randint(2,7))
 
         problem = fr'{func.label}({func.variable}) = {latex(mult)}\left({str(func)}\right)'
         problem = signify(problem) + r' \newline '
     elif difficulty == 3: # hard
-        func = QuadFunc(randint(1,4), randint(-5,5), randint(-9,9))
-        mult = sympify(randint(2,5)) if randint(0,1) else Rational(1,randint(2,5))
+        func = QuadFunc(random.randint(1,4), random.randint(-5,5), random.randint(-9,9))
+        mult = sympify(random.randint(2,5)) if random.randint(0,1) else Rational(1,random.randint(2,5))
 
         problem = fr'{func.label}({func.variable}) = {latex(mult)}\left({str(func)}\right)'
         problem = signify(problem) + r' \newline '
@@ -96,14 +93,14 @@ def Evaluate_Equation_2(difficulty=1, expr='latex'):
 
 def Evaluate_Equation_3(difficulty=1, expr='latex'):
     if difficulty == 1: # easy
-        func1 = LinFunc(randint(1,9), randint(1,9))
-        func2 = LinFunc(randint(1,9), randint(1,9), label='g')
+        func1 = LinFunc(random.randint(1,9), random.randint(1,9))
+        func2 = LinFunc(random.randint(1,9), random.randint(1,9), label='g')
     elif difficulty == 2: # medium
         func1 = LinFunc(getInt(-9,9), getInt(-9,9))
         func2 = LinFunc(getInt(-9,9), getInt(-9,9), label='g')
     elif difficulty == 3: # hard
-        func1 = LinFunc(Rational(getInt(-9,9),randint(2,7)), Rational(getInt(-9,9),randint(2,7)))
-        func2 = LinFunc(Rational(getInt(-9,9),randint(2,7)), Rational(getInt(-9,9),randint(2,7)), label='g')
+        func1 = LinFunc(Rational(getInt(-9,9),random.randint(2,7)), Rational(getInt(-9,9),random.randint(2,7)))
+        func2 = LinFunc(Rational(getInt(-9,9),random.randint(2,7)), Rational(getInt(-9,9),random.randint(2,7)), label='g')
 
     problem = signify(func1.getSlopeInt()) + r' \newline '
     problem += signify(func2.getSlopeInt()) + r' \newline '
@@ -118,3 +115,7 @@ def Evaluate_Equation_3(difficulty=1, expr='latex'):
         answer = outputs
 
     return problem, answer
+
+print(Evaluate_Equation_1(1))
+print(Evaluate_Equation_2(1))
+print(Evaluate_Equation_3(1))

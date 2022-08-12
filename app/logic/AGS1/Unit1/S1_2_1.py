@@ -1,4 +1,8 @@
-from .loader import *
+import sys; sys.path.insert(0, "..")
+
+from loader import ExpFunc, getInt, GeoSeq, ArithSeq, latexify, signify, tableGenerator, makeWordProb
+from sympy import *
+from random import randint
 
 # 1.2.1 Fill In The Sequence
 ### section 1:

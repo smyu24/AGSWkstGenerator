@@ -1,4 +1,9 @@
-from .loader import *
+import sys; sys.path.insert(0, "..")
+
+from loader import ExpFunc, emptyGraph, LinFunc, drawPt, startGraph, endGraph
+from sympy import *
+from random import randint,sample
+
 
 def Graph_The_Ordered_Pairs(difficulty=1):
     if difficulty == 1: # easy

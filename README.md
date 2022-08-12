@@ -87,7 +87,7 @@ CREATE TABLE learningtarget_ags1 (
 * AUTO GRADE FEATURE
 * Quizlet similar single online activities availiablity
     - lazy loading using async JS and creating
-* 
+* Local compilation of latex PDF
 * 
 * 
 * 

@@ -1,4 +1,9 @@
-from .loader import *
+import sys; sys.path.insert(0, "..")
+
+from loader import getInt, signify
+from sympy import *
+from random import randint, sample
+
 ## 1.2.2  The	meaning	of	an	exponent
 # PRECURSOR FUNCT
 def getExpandedForm(base, exp, start=1):
