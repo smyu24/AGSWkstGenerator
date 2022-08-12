@@ -29,8 +29,11 @@ def seedgem(reqeust, code):
             for value in reqeust.getlist(key):
                 if(key[:5] == "level"):
                     numsec += 1
-
-                farr.append(int(value))
+                
+                if "." in value:
+                    farr.append(float(value))
+                else:
+                    farr.append(int(value))
                 i += 1
                 x += 1
                 if(x == 5):

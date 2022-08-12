@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+
+<!--SAME NAME but having different function-->
+<div class="login">
+    <h2 class="login-header">Sign In</h2>
+
+    <form method="POST" name="signup_form" class="signup-container" action="">
+
+    <p><input type="email" placeholder="Email" name="email" required/></p>
+
+      <p><input type="password" placeholder="Password" name="password" required/></p>
+
+      <p><input type="submit" value="Sign In" class="btn"/></p>
+    </form>
+
+  </div>
+{% endblock %}

@@ -22,6 +22,8 @@ runlatex.completionsURI="";
 
 // debug by using https://httpbin.org/post
 // set to null to omit from interface
+
+//This should be replace
 runlatex.latexcgiURI="https://texlive.net/cgi-bin/latexcgi";
 
 // per page setup
@@ -59,7 +61,7 @@ var packageregex = [
 
 
 var latexcompetions="";
-    
+
 
 var customCompleter = {
     getCompletions: function(editor, session, pos, prefix, callback) {
@@ -79,8 +81,8 @@ var customCompleter = {
 	    callback(null, cmplts);
 	} else {
 	    callback(null, []);
-	    return 
-	}	    
+	    return
+	}
     }
 }
 
@@ -209,7 +211,7 @@ function openinoverleaf(nd) {
 	engv=eng[1].toLowerCase();
 	if(engv == "pdftex" || engv == "luatex" || engv == "xetex" || engv == "ptex" || engv == "uptex") {
 	    addinput(fm,"main_document","document.tex");
-	}    
+	}
     }
     addinput(fm,"encoded_snip[]","\n" + t);
     addinput(fm,"snip_name[]","document.tex");

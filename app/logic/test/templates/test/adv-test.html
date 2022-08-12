@@ -1,0 +1,107 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+  
+{% block content %}
+<body onload="separate();">
+
+  <div class="side-bar2 shadow" style="float: left; height: 100%;">
+    <div class="menu_intro" style="padding: 24px">
+      <button class="dropbtn">Prealgebra</button>
+        <ul id="childs" class="a" style="display: none;"></ul>
+        
+    </div>
+  </div>
+
+    <table id="table" class="fixed">
+      <col width="400px" />
+      <col width="300px" />
+      <col width="100px" />
+      <col width="280px" />
+
+      <tr>
+        <th><i class="fa fa-arrows-alt"></i>Title</th>
+        <th> Section</th>
+        <th>Difficulty</th>
+        <th>Number of problem</th>
+      </tr>
+      <tbody id='sortable'>
+      </tbody>
+    </table>
+  </div>
+
+  <form method="POST">
+    <input type="text" id="seed" name="seed" style="display: none;" value="" readonly>
+    <button type="submit" class="upload" onclick="relabelseed();"> <i class="fa fa-plus-circle"></i> </button> 
+  </form>
+
+
+<script>
+  var dropdown = document.getElementsByClassName("dropbtn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+</script>
+
+<script type="text/javascript"> 
+  
+  var ex = {{lst| tojson}};
+  var desc = {{dessc| tojson}};
+  var section = {{sec| tojson}};
+  var diff = {{difficulty| tojson}};
+  var psed = {{pickedseed| tojson}};
+  var psec = {{pickedsection| tojson}};
+  var noted = {{note| tojson}};
+
+  var clicked = 0;
+  var sd = 0;
+  
+  window.onload = function() {
+    list_prealgebra();
+    if(psed != psec) {
+      enterpretable();
+    }
+  }
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("#sortable").on('click','.btnDelete',function(){
+        $(this).closest('tr').remove();
+     });
+ });
+
+  $(function () {
+    $("#sortable")
+      .sortable({
+        cursor: "move",
+        placeholder: "sortable-placeholder",
+        helper: function (e, tr) {
+          var $originals = tr.children();
+          var $helper = tr.clone();
+          $helper.children().each(function (index) {
+            // Set helper cell sizes to match the original sizes
+            $(this).width($originals.eq(index).width());
+          });
+          return $helper;
+        }
+      })
+      .disableSelection();
+  });
+  
+</script>
+
+</body>
+{% endblock %}

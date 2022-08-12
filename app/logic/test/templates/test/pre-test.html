@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+  
+{% block content %}
+<body onload="testwkstopt();">
+
+<!--  <form method="POST">  </form>-->
+  <form method="POST"> 
+    <div id="rows" style="margin-left: 150px; margin-right: 100px; margin-top: 80px"></div>
+    <input type="text" id="seed" name="seed" style="display: none;" value="" readonly>
+  </form>
+  
+  <button class="upload" onclick="gotoadv();"> <i class="fa fa-ellipsis-v" aria-hidden="true" style="font-size: 55px;"></i> </button> 
+  <script type="text/javascript"> 
+    var set = {{testset| tojson}};
+  </script>
+</body>
+{% endblock %}

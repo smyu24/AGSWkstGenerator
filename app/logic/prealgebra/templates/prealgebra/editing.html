@@ -16,58 +16,55 @@
   <div class="side-bar shadow" style="float: left">
     <div class="menu_intro" style="padding: 24px">
       <h3 class="w3-bar-item">Worksheet Display Options</h3>
-      <h6 style="color: rgb(94, 94, 94)">Prealgebra worksheet generater</h6>
-      
+      <h6 style="color: rgb(94, 94, 94)">Pre-Algebra Worksheet Generator</h6>
+
       <div id="readroot" style="display: none">
 
         <div id="select"class="ltclass"></div>
 
         <div id="level"></div>
 
-        <label class="num-problem-font-main">Problem Design-</label>
+        <label class="num-problem-font-main">Problem Design:</label>
 
-        <label for="autogen" class="num-problem-font ">Display*</label>
-        <input for="autogen" name="auto" type="checkbox" id="auto" value="checked">
+        <label for="display" class="auto-num-problem-font2 ">Display*</label>
+        <input class="checkbox" name="display" type="checkbox" id="display" checked> <br>
 
-        <label for="autogen" class="num-problem-font ">Numbering*</label>
-        <input for="autogen" name="auto" type="checkbox" id="auto" value="checked">
+        <label for="numbers" class="auto-num-problem-font2 ">Numbering*</label>
+        <input  class="checkbox" name="numbers" type="checkbox" id="numbers" checked> <br>
 
-        <label for="autogen" class="num-problem-font ">Point*</label>
-        <input type="number" id="min" name="min" min="0" max="100" value="0" required/>
+        <label for="points" class="auto-num-problem-font2 ">Points*</label>
+        <input  class="checkbox" name="ckpoints" type="checkbox" id="ckpoints" checked>
+        <input class="checkbox" type="number" id="points" name="min" min="0" max="100" value="5" required/>
 
-        <label for="pdfdesc" class="num-problem-font">Instructions* </label>
-        <textarea type="text" id="pdfdesc" name="pdfdesc" rows="3" cols="30">Here are the instructions</textarea>
+        <label for="subpdfdesc" class="num-problem-font">Instructions* </label>
+        <textarea type="text" id="subpdfdesc" name="subpdfdesc" rows="3" cols="30">Here is the instruction.</textarea>
     </div>
-      
+
       <form method="POST">
         <div>
           <div class="txt-page">
-            <label for="pdfdesc" class="num-problem-font">Number of column* </label>
-            <input type="number" id="numcol" name="numprob" min="2" max="5" value="2" required/>
+            <label for="numcol" class="num-problem-font">Number of Columns* </label>
+            <input type="number" id="numcol" name="numcol" min="1" max="5" value="2" required/>
           </div>
 
           <div class="txt-name">
-            <label for="studnetName" class="num-problem-font">Row spsace* </label>
+            <label for="numrow" class="num-problem-font">Row Spaces* </label>
             <input type="number" id="numrow" name="numrow" min="2" max="99" value="2" required/>
           </div>
 
           <div class="txt-date">
-            <label for="dueDate" class="num-problem-font">Due Date* </label>
+            <label for="dueDate" class="auto-num-problem-font">Due Date* </label>
+            <input  class="checkbox" name="ckdueDate" type="checkbox" id="ckdueDate" checked>
             <input type="date" id="dueDate" name="dueDate">
           </div>
 
           <div class="txt-title">
-            <label for="pdftitle" class="num-problem-font">Enter the title* </label>
-            <input type="text" id="pdftitle" name="pdftitle" value="Worksheet Title">
-          </div>
-
-          <div class="txt-desc">
-            <label for="pdfdesc" class="num-problem-font">Main Instructions* </label>
-            <textarea type="text" id="pdfdesc" name="pdfdesc" rows="8" cols="30">Here are the instructions</textarea>
+            <label for="pdftitle" class="num-problem-font">Enter The Title* </label>
+            <input type="text" id="pdftitle" name="pdftitle" style="margin-bottom: 5px" value="Worksheet Title">
           </div>
         </div>
 
-        <button type="button" onclick="btnopt2()" class="dropbtn sec-opt" id="second-opt">More Details...</button>
+        <button type="button" class="dropbtn sec-opt" id="second-opt">More Details...</button>
         <div class = "detail option" style="display: none;">
           <span id="writeroot"></span>
         </div>
@@ -75,9 +72,9 @@
     </div>
   <!--Generate button box-->
   <div class="btn_generate shadow">
-    <button type="button" class="btn-create shadow" onclick="changecol()">Update the worksheet</button>
-    <button type="button" class="ansbtn" onclick="showanswer()">answer</button>
-    <button type="button" class="ansbtn2" onclick="showanswer2()">answer2</button>
+    <button type="button" class="btn-create shadow" onclick="changecol( wkst )">Update Worksheet</button>
+    <button type="button" class="ansbtn" onclick="showanswer()">Inline</button>
+    <button type="button" class="ansbtn2" onclick="showanswer2()">Extra</button>
   </div>
 </form>
   <!--End of the vertical option bar-->
@@ -88,12 +85,6 @@
   </pre>
 </div>
 
-<div style="display: none;">
-  <input type="text" id="seed" value="{{ probs }}">
-  <input type="text" id="answ" value="{{ answ }}">
-  <input type="text" id="Nansw" value="{{ Nansw }}">
-</div>
-
 <script type="text/javascript">
   var counter = 0;
   function moreFields() {
@@ -102,39 +93,53 @@
     newFields.id = 'setofForm'+counter;
     newFields.style.display = 'block';
     var newField = newFields.childNodes;
-  
+
     for (var i=0;i<newField.length;i++) {
       var theName = newField[i].name;
       if (theName) {newField[i].name = theName + counter;}
-      
+
       var theid = newField[i].id;
       if (theid) {newField[i].id = theid + counter;}
-    }  
+    }
     var insertHere = document.getElementById("writeroot");
     insertHere.parentNode.insertBefore(newFields,insertHere);
   }
 </script>
 
-  <script>
+  <script type="text/javascript">
     var arr = {{arr| tojson}};
     var total = {{total| tojson}};
-    updatedpdf();
-    
-    window.onload = function() {
+    var ans1 = {{answ |tojson}};
+    var ans2 = {{Nansw |tojson}};
+    var wkst = {{probs | tojson}};
+    var cr = {{latex | tojson}};
+    var des = {{desc | tojson}};
+    var today = new Date();
+    today.setDate(today.getDate() + 7);
+
+    document.getElementById("pdftitle").value = arr[0];
+    document.getElementById("numcol").value = parseInt(cr[0]);
+    document.getElementById("numrow").value = parseInt(cr[1]);
+    document.getElementById("dueDate").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
 
     for(let i = 0; i < total; i++) {
-    moreFields();
+      moreFields();
     }
+    updatedpdf(wkst);
 
-    var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
-    var f2 = document.createElement("span");
-		    f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
-			"\" name=\"form2-pre" + 0 +
-			"\" enctype=\"multipart/form-data\" action=\"" +
-      runlatexLatexcgiURI +
-			"\" method=\"post\" target=\"pre" + 0 +
-			"ifr\"></form>";
-    latexcgi('pre0');
+    window.onload = function() {
+
+      var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
+      var f2 = document.createElement("span");
+		  f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
+			  "\" name=\"form2-pre" + 0 +
+			  "\" enctype=\"multipart/form-data\" action=\"" +
+        runlatexLatexcgiURI +
+			  "\" method=\"post\" target=\"pre" + 0 +
+			  "ifr\"></form>";
+      latexcgi('pre0');
+
+      displayinst(arr, des);
     }
   </script>
 
@@ -142,7 +147,7 @@
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropbtn");
     var i;
-  
+
     for (i = 0; i < dropdown.length; i++) {
       dropdown[i].addEventListener("click", function() {
       this.classList.toggle("active");

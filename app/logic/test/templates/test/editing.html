@@ -1,0 +1,161 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+<body onload="updatedpdf()">
+
+  <style>
+    div.h {margin: .5em 0;max-width: 70em;}
+    pre {padding: .5em;}
+  </style>
+
+  <!--MASTER LOCATION TO SAVE DATA-->
+  <div class="side-bar shadow" style="float: left">
+    <div class="menu_intro" style="padding: 24px">
+      <h3 class="w3-bar-item">Exam Display Options</h3>
+      <h6 style="color: rgb(94, 94, 94)">Math Exam Worksheet Generator</h6>
+
+      <div id="readroot" style="display: none">
+
+        <div id="select"class="ltclass"></div>
+
+        <div id="level"></div>
+
+        <label class="num-problem-font-main">Problem Design-</label>
+
+        <label for="display" class="auto-num-problem-font2 ">Display*</label>
+        <input class="checkbox" name="display" type="checkbox" id="display" checked> <br>
+
+        <label for="numbers" class="auto-num-problem-font2 ">Numbering*</label>
+        <input  class="checkbox" name="numbers" type="checkbox" id="numbers" checked> <br>
+
+        <label for="points" class="auto-num-problem-font2 ">Point*</label>
+        <input  class="checkbox" name="ckpoints" type="checkbox" id="ckpoints" checked>
+        <input class="checkbox" type="number" id="points" name="min" min="0" max="100" value="5" required/>
+
+        <label for="subpdfdesc" class="num-problem-font">Instructions* </label>
+        <textarea type="text" id="subpdfdesc" name="subpdfdesc" rows="3" cols="30">Here is the instruction.</textarea>
+    </div>
+
+      <form method="POST">
+        <div>
+          <div class="txt-page">
+            <label for="numcol" class="num-problem-font">Number of Columns* </label>
+            <input type="number" id="numcol" name="numcol" min="1" max="5" value="2" required/>
+          </div>
+
+          <div class="txt-name">
+            <label for="numrow" class="num-problem-font">Row Spaces* </label>
+            <input type="number" id="numrow" name="numrow" min="2" max="99" value="2" required/>
+          </div>
+
+          <div class="txt-date">
+            <label for="dueDate" class="auto-num-problem-font">Due Date* </label>
+            <input  class="checkbox" name="ckdueDate" type="checkbox" id="ckdueDate" checked>
+            <input type="date" id="dueDate" name="dueDate">
+          </div>
+
+          <div class="txt-title">
+            <label for="pdftitle" class="num-problem-font">Enter The Title* </label>
+            <input type="text" id="pdftitle" name="pdftitle" style="margin-bottom: 5px" value="Worksheet Title">
+          </div>
+        </div>
+
+        <button type="button" class="dropbtn sec-opt" id="second-opt">More Details...</button>
+        <div class = "detail option" style="display: none;">
+          <span id="writeroot"></span>
+        </div>
+
+    </div>
+  <!--Generate button box-->
+  <div class="btn_generate shadow">
+    <button type="button" class="btn-create shadow" onclick="changecol( wkst )">Update Worksheet</button>
+    <button type="button" class="ansbtn" onclick="showanswer()">Inline</button>
+    <button type="button" class="ansbtn2" onclick="showanswer2()">Extra</button>
+  </div>
+</form>
+  <!--End of the vertical option bar-->
+</div>
+
+<div class="h">
+  <pre id="pretag" style="display: none;">
+  </pre>
+</div>
+
+<script type="text/javascript">
+  var counter = 0;
+  function moreFields() {
+    counter++;
+    var newFields = document.getElementById("readroot").cloneNode(true);
+    newFields.id = 'setofForm'+counter;
+    newFields.style.display = 'block';
+    var newField = newFields.childNodes;
+
+    for (var i=0;i<newField.length;i++) {
+      var theName = newField[i].name;
+      if (theName) {newField[i].name = theName + counter;}
+
+      var theid = newField[i].id;
+      if (theid) {newField[i].id = theid + counter;}
+    }
+    var insertHere = document.getElementById("writeroot");
+    insertHere.parentNode.insertBefore(newFields,insertHere);
+  }
+</script>
+
+  <script type="text/javascript">
+    var total = {{total| tojson}};
+    var ans2 = {{Nansw |tojson}};
+    var ans1 = {{answ |tojson}};
+    var data = {{data |tojson}};
+    var wkst = {{probs | tojson}};
+    var today = new Date();
+    today.setDate(today.getDate() + 7);
+
+    document.getElementById("pdftitle").value = "AGS MATH TEST"
+    document.getElementById("numcol").value = 2;
+    document.getElementById("numrow").value = 2;
+    document.getElementById("dueDate").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+
+    for(let i = 0; i < total; i++) {
+      moreFields();
+    }
+    updatedpdf(wkst);
+
+    window.onload = function() {
+
+      var runlatexLatexcgiURI="https://texlive.net/cgi-bin/latexcgi";
+      var f2 = document.createElement("span");
+		  f2.innerHTML="<form style=\"display:none\" id=\"form2-pre" + 0 +
+			  "\" name=\"form2-pre" + 0 +
+			  "\" enctype=\"multipart/form-data\" action=\"" +
+        runlatexLatexcgiURI +
+			  "\" method=\"post\" target=\"pre" + 0 +
+			  "ifr\"></form>";
+      latexcgi('pre0');
+
+      testdisplayinst(data)
+    }
+  </script>
+
+  <script>
+    var dropdown = document.getElementsByClassName("dropbtn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+</body>
+{% endblock %}

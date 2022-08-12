@@ -1,0 +1,70 @@
+.card-panels.hoverable {
+  transform-style: preserve-3d;
+  color: white;
+  background-color:  rgb(65, 65, 105);
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  float: left;
+  margin: 10px;
+}
+.card-panels.hoverable.small {
+  height: 300px;
+}
+
+.card-panels.hoverable .card-panels-header {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) scale(1.5);
+  transition: top 0.25s 0.1s, transform 0.25s ease 0.1s;
+}
+.card-panels.hoverable .card-panels-icon {
+  display: block;
+  text-align: center;
+}
+.card-panels.hoverable .card-panels-caption {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+}
+.card-panels.hoverable .card-panels-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.25s, opacity 0.8s;
+}
+.card-panels.hoverable:hover .card-panels-header {
+  transform: translateY(0) scale(1);
+  top: 0;
+}
+.card-panels.hoverable:hover .card-panels-content {
+  transform: translateY(0);
+  opacity: 1;
+  color: white;
+}
+
+.settitle {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: white;
+  margin-top: 147px;
+  width: 300px;
+  height: 100px;
+}
+
+
+.btntest {
+  background: none;
+  border: 0.5px solid #fff;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  width: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.btntest:hover {
+background-color: rgb(216, 216, 216);
+}
+

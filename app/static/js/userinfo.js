@@ -8,7 +8,6 @@ function separate() {
 }
 
 function display(text) {
-	console.log(text);
 }
 
 function wkstopt() {

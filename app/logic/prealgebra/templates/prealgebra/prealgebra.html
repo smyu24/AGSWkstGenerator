@@ -23,7 +23,7 @@
   <div class="side-bar shadow" style="float: left">
     <div class="menu_intro" style="padding: 24px">
       <h3 class="w3-bar-item">Worksheet Options</h3>
-      <h6 style="color: rgb(94, 94, 94)">Prealgebra worksheet generater</h6>
+      <h6 style="color: rgb(94, 94, 94)">Pre-Algebra Worksheet Generator</h6>
 
       <div id="readroot" style="display: none">
         <input type="button" value="-"
@@ -33,17 +33,24 @@
 
         <div id="level"></div>
 
-        <label class="num-problem-font">Number of Problem*</label>
-        <input type="number" id="numporb" name="numporb" min="1" max="{{max}}" value="5" required/>
-      
-        <label for="autogen" class="num-problem-font ">Auto Generate</label>
-        <input for="autogen" name="auto" type="checkbox" id="auto" value="checked" onclick="validate(id, {{option}})">
-      
-        <label class="num-problem-font" id="mint">Minimum Number*</label>
-        <input type="number" id="min" name="min" min={{min}} max={{max}} value={{min}} required/>
+        <label class="auto-num-problem-font">Number of Problems*</label>
+        <input class="resizeinput" type="number" id="numporb" name="numporb" min="1" max="2000" value="25" required/>
 
-        <label class="num-problem-font" id="maxt">Maximum Number*</label>
-        <input type="number" id="max" name="max" min={{min}} max={{max}} value={{max}} required/>
+        {% if option != "2" %}
+          <label for="autogen" class="auto-num-problem-font">Auto Generate</label>
+          <input for="autogen" class="checkbox" name="auto" type="checkbox" id="auto" value="checked" onclick="validate(id, {{option}})">
+
+
+          <label class="num-problem-font" id="mint">Minimum Number*</label>
+          <input type="number" id="min" name="min" min={{min}} max={{max}} value={{min}} required/>
+
+          <label class="num-problem-font" id="maxt">Maximum Number*</label>
+          <input type="number" id="max" name="max" min={{min}} max={{max}} value={{max}} required/>
+        {%else%}
+          <input for="autogen"id="auto"name="auto" type="checkbox" style="display: none;" checked required>
+          <input type="number"id="min"name="min"value={{min}} style="display: none;" required/>
+          <input type="number"id="max"name="max"value={{max}} style="display: none;" required/>
+        {% endif %}
     </div>
 
     <form method="POST">
@@ -94,12 +101,12 @@
   }
 </script>
 
-<script type="text/javascript"> //Jinja Option  
+<script type="text/javascript"> //Jinja Option
   var ex = {{seed| tojson}};
   exampleupdate(ex);
 
     window.onload = function() {
-      
+
       var jinja = {{selection| tojson}}; //create select
       dynamicSelection(jinja);
 
