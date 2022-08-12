@@ -4,7 +4,6 @@ from loader import getInt, signify
 from sympy import *
 from random import randint, sample
 
-## 1.2.2  The	meaning	of	an	exponent
 # PRECURSOR FUNCT
 def getExpandedForm(base, exp, start=1):
     """
@@ -49,8 +48,7 @@ def getExponentForm(base, exp, start=1):
 
     return result
 
-### Section 1:
-#### instruction: Write	each	expression	using	an	exponent.	
+
 # ConvertToExponentForm
 def The_Meaning_Of_An_Exponent_1(difficulty=1, expr="latex"):
     exp = getInt(4,9)
@@ -73,10 +71,6 @@ def The_Meaning_Of_An_Exponent_1(difficulty=1, expr="latex"):
         answer = {'base' : base, 'exp' : exp}
 
     return problem, answer
-
-### Section 2:
-#### instruction: A)	Write	each	expression	in	expanded	form. B) Then	calculate	the	value	of	the	expression
-
 
 # ConvertToExpandedForm
 def The_Meaning_Of_An_Exponent_2(difficulty=1, expr="latex"):

@@ -486,9 +486,6 @@
 \end{document}
 """
 
-### Section 1:
-#Draw Step 4 and Step 5.
-
 # parameter will be a random selection from a static array
 #of ["lin", "exp"]
 

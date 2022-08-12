@@ -4,9 +4,6 @@ from loader import ExpFunc, getInt, GeoSeq, ArithSeq, latexify, signify, tableGe
 from sympy import *
 from random import randint
 
-# 1.2.1 Fill In The Sequence
-### section 1:
-#### Use the given values in the table to determine a pattern and complete the table.
 
 def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
     header = ['Term',	'1st','2nd','3rd','4th','5th','6th','7th','8th']

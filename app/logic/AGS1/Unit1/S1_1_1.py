@@ -115,7 +115,3 @@ def Evaluate_Equation_3(difficulty=1, expr='latex'):
         answer = outputs
 
     return problem, answer
-
-print(Evaluate_Equation_1(1))
-print(Evaluate_Equation_2(1))
-print(Evaluate_Equation_3(1))
