@@ -1,6 +1,12 @@
 #1.3.2 Arithmetic Sequences
 
-import sys; sys.path.insert(0, "..")
+# absolute path of the parent directory to the sys.path
+
+import os; import sys; import inspect
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
 
 from loader import ArithSeq, signify, getInt, latexify 
 import sympy; from sympy import Rational
