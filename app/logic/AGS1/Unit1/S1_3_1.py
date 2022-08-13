@@ -12,7 +12,7 @@ from sympy import *
 import random
 
 #section 1
-def ReadTheFuncTable(difficulty=1, expr='latex'):
+def Reading_The_Table(difficulty=1, expr='latex'):
     header = [r'$n$'] + signify(list(range(1,11)))
     outputs =  [r'f(n)']
 
@@ -63,7 +63,7 @@ def ReadTheFuncTable(difficulty=1, expr='latex'):
   
 
 for i in range(4):
-    problem, answer = ReadTheFuncTable(3)
+    problem, answer = Reading_The_Table(3)
     print(problem)
     print(answer)
     print(r'ss')

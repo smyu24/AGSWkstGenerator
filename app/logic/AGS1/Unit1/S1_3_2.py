@@ -21,7 +21,7 @@ def getArith(start,diff,num):
     curr_term = curr_term + diff
   return compiledlist
 
-def Arithmatic_Sequence_Diff(difficulty=1, expr="latex"):
+def Arithmetic_Sequences_1(difficulty=1, expr="latex"):
   choicelist1=[1,2,3,4,5,6,7,8,9,10]
   choicelist2=[-10,-9,-8,-7,-6,-5,-4,-3,-2,-1]
   if difficulty == 1:
@@ -142,7 +142,7 @@ for i in range(50):
 
 
 #section 2
-def Arithmetic_Sequence_Recursive(difficulty=1, expr="latex"):
+def Arithmetic_Sequences_2(difficulty=1, expr="latex"):
   choicelist1=[1,2,3,4,5,6,7,8,9,10]
   choicelist2=[-10,-9,-8,-7,-6,-5,-4,-3,-2,-1]
   if difficulty == 1:
@@ -266,14 +266,14 @@ def Arithmetic_Sequence_Recursive(difficulty=1, expr="latex"):
       return problem,answer
 
 for i in range(5):
-  a , b = Arithmetic_Sequence_Recursive(1,"latex")
+  a , b = Arithmetic_Sequences_2(1,"latex")
   print(a," common diff: ",b)
 
 for i in range(5):
-  a , b = Arithmetic_Sequence_Recursive(2,"latex")
+  a , b = Arithmetic_Sequences_2(2,"latex")
   print(a," common diff: ",b)
 for i in range(50):
-  a , b = Arithmetic_Sequence_Recursive(3,"latex")
+  a , b = Arithmetic_Sequences_2(3,"latex")
   print(a," common diff: ",b,r"\newline")
 
 
@@ -304,7 +304,7 @@ def getSeqAnswer(seq, prob='common', blanks=False, expr="latex", numTerms=6):
 
 
 #section 3
-def Arithmetic_Sequence_Problem(difficulty=1, prob='common', blanks=False, expr="latex"):
+def Arithmetic_Sequences_3(difficulty=1, prob='common', blanks=False, expr="latex"):
     if difficulty == 1: # easy
         if randint(0,1):
             arith = ArithSeq(randint(1,10), [1,randint(1,10)])
@@ -330,6 +330,6 @@ def Arithmetic_Sequence_Problem(difficulty=1, prob='common', blanks=False, expr=
     return problem, answer
 
 for i in range(10):
-    problem, answer = Arithmetic_Sequence_Problem(3, 'explicit', blanks=True)
+    problem, answer = Arithmetic_Sequences_3(3, 'explicit', blanks=True)
     print(problem, r'\\')
     print(answer, r'\\ \\')

@@ -29,7 +29,7 @@ def getSequenceDescription(seq, given=4):
 
     return description
 
-def Recursive_vs_Explicit(difficulty=1, expr='latex'):
+def So_Should_We_Use_Recursive_Or_Explicit(difficulty=1, expr='latex'):
 
     if difficulty == 1: # easy
         common = randint(2, 5)
@@ -84,6 +84,6 @@ def Recursive_vs_Explicit(difficulty=1, expr='latex'):
     return problem, answer
 
 for jj in range(10):
-    problem, answer = Recursive_vs_Explicit(2)
+    problem, answer = So_Should_We_Use_Recursive_Or_Explicit(2)
     print(problem, r'\\')
     print(answer, r'\\ \\')
