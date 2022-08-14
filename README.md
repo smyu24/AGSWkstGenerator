@@ -27,6 +27,7 @@ pip install pandas
 pip install scipy
 pip install texttables
 pip install texttable
+pip install tabulate
 ```
 
 ## Usage
