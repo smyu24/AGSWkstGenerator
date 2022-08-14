@@ -1,8 +1,8 @@
 from Imports import *
 from Generators import tableGenerator
 from Classes import LinFunc
-from Graphing import drawScatter, getGraphBounds
-#startNumLine, endNumLine
+from Graphing import drawScatter, getGraphBounds, startNumLine, endNumLine, endGraph, startGraph
+from PrintingFunctions import brackify
 
 def genData1D(xmin=-5, xmax=5, p=0.5, size=50):
     # TODO: binom vs nbinom for longer tails
