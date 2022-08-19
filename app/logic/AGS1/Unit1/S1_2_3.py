@@ -498,7 +498,6 @@ sys.path.insert(0, parentdir)
 
 
 from loader import ArithSeq, brackify, GeoSeq
-from sympy import *
 from random import randint
 
 

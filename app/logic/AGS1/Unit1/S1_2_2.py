@@ -6,7 +6,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import getInt, signify
-from sympy import *
+from sympy import latex, Rational, simplify
 from random import randint, sample
 
 # PRECURSOR FUNCT

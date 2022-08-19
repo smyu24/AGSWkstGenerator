@@ -24,10 +24,7 @@ a,b,c,d,m,n,p,q,r,s,t,w,x,y,z = variables
 from scipy import stats
 import numpy as np
 
-
 #-----------------------------------------------------
-
-
 
 class LinFunc():
     """

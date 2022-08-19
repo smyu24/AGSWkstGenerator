@@ -7,7 +7,6 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import signify, tableGenerator
-from sympy import *
 import random
 
 #section 1

@@ -6,7 +6,6 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import ExpFunc, getInt, GeoSeq, ArithSeq, latexify, signify, tableGenerator, makeWordProb
-from sympy import *
 from random import randint
 
 

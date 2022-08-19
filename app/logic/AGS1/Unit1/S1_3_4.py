@@ -8,7 +8,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import ArithSeq, getInt, GeoSeq, latexify, signify, tableGenerator
-from sympy import *
+from sympy import Rational, latex
 from random import randint
 
 

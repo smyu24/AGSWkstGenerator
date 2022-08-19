@@ -13,8 +13,6 @@ import random
 def Evaluate_Equation_1(difficulty=1, expr="latex"):
   problem = ""
   answer = ""
-  variables = random.choice(['x', 'y', 'a', 'b', 'z', 'p', 't', 'q', 'k', 'u', 'r', 'd', 'w', 's', 'h', 'v'])
-  x = Symbol('x',real=True)
   if difficulty == 1:   # Easy
     choice = random.randint(1,2)
     intA = getInt()

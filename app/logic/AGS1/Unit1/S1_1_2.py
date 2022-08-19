@@ -6,7 +6,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import ExpFunc, emptyGraph, LinFunc, drawPt, startGraph, endGraph
-from sympy import *
+from sympy import Rational
 from random import randint,sample
 
 

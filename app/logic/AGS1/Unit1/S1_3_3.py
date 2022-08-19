@@ -7,9 +7,34 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import signify, getSeqAnswer, GeoSeq
-from sympy import *
+from loader import signify, GeoSeq, ArithSeq, latexify
+from sympy import Rational
 from random import randint
+
+def getSeqAnswer(seq, prob='common', blanks=False, expr="latex", numTerms=6):
+    if expr=="latex":
+        answer = ''
+        if prob in ['common','all'] :
+            answer += '$d = ' if type(seq)==ArithSeq else '$r = '
+            answer += latexify(seq.common, seq.precision) + '$'
+        if prob in ['explicit','all']:
+            if len(answer)>0:
+                answer += r' \newline '
+            answer += '$' + seq.getExplicit() + r' \quad\text{or}\quad ' + seq.getExplicit(0) + '$'
+        if prob in ['recursive','all']:
+            if len(answer)>0:
+                answer += r' \newline '
+            answer += '$' + seq.getRecursive() + r' \quad\text{or}\quad ' + seq.getRecursive(0) + '$'
+        
+        if blanks:
+            if len(answer)>0:
+                answer += r' \newline '
+            answer += signify(seq.getSeqStr(range(1,numTerms+1))) 
+    else:
+        seq.getTerms(numTerms)
+        answer = seq
+
+    return answer
 
 #section 1
 def Geometric_Sequence_Problem(difficulty=1, prob='common', blanks=False, expr="latex"):

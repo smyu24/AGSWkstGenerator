@@ -191,24 +191,16 @@ def M_The_Meaning_Of_An_Exp(twoDarr): #MAIN CODE -------------------------------
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-2-1-1'):
-        problem, answer = Fill_In_The_Sequence_1(twoDarr[total][1])
+      if(twoDarr[total][0] == '1-2-2-1'):
+        problem, answer = The_Meaning_Of_An_Exponent_1(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
       
-      elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-3'):
-        problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1])
+      elif(twoDarr[total][0] == '1-2-2-2'):
+        problem, answer = The_Meaning_Of_An_Exponent_2(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -241,24 +233,8 @@ def M_Finding_Patterns_In_Geo_Seq(twoDarr): #MAIN CODE -------------------------
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-2-1-1'):
-        problem, answer = Fill_In_The_Sequence_1(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-3'):
-        problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1])
+      if(twoDarr[total][0] == '1-2-3-1'):
+        problem, answer = Finding_Patterns_In_Geometric_Shapes(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -292,24 +268,8 @@ def M_Reading_The_Table(twoDarr): #MAIN CODE -----------------------------------
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-2-1-1'):
-        problem, answer = Fill_In_The_Sequence_1(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-3'):
-        problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1])
+      if(twoDarr[total][0] == '1-3-1-1'):
+        problem, answer = Reading_The_Table(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -342,24 +302,24 @@ def M_Arithmetic_Seq(twoDarr): #MAIN CODE --------------------------------------
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-2-1-1'):
-        problem, answer = Fill_In_The_Sequence_1(twoDarr[total][1])
+      if(twoDarr[total][0] == '1-3-2-1'):
+        problem, answer = Arithmetic_Sequences_1(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
       
-      elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2(twoDarr[total][1])
+      elif(twoDarr[total][0] == '1-3-2-2'):
+        problem, answer = Arithmetic_Sequences_2(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
       
-      elif(twoDarr[total][0] == '1-2-1-3'):
-        problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1])
+      elif(twoDarr[total][0] == '1-3-2-3'):
+        problem, answer = Arithmetic_Sequences_3(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -392,24 +352,8 @@ def M_Geo_Seq_Problem(twoDarr): #MAIN CODE -------------------------------------
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-2-1-1'):
-        problem, answer = Fill_In_The_Sequence_1(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-3'):
-        problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1])
+      if(twoDarr[total][0] == '1-3-3-1'):
+        problem, answer = Geometric_Sequence_Problem(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -442,24 +386,8 @@ def M_So_Should_We_Use(twoDarr): #MAIN CODE ------------------------------------
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-2-1-1'):
-        problem, answer = Fill_In_The_Sequence_1(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2(twoDarr[total][1])
-
-        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-        temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
-      elif(twoDarr[total][0] == '1-2-1-3'):
-        problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1])
+      if(twoDarr[total][0] == '1-3-4-1'):
+        problem, answer = So_Should_We_Use_Recursive_Or_Explicit(twoDarr[total][1])
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -475,6 +403,7 @@ def M_So_Should_We_Use(twoDarr): #MAIN CODE ------------------------------------
     newpageanswer.append(midnewanswer)
 
   return (masterSeed, ANSmasterSeed, newpageanswer)
+
 #--------------------
 '''
 AGS 1 Section 1-4-1
