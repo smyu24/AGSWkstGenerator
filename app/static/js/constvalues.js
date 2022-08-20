@@ -9,6 +9,8 @@ const fronttex = `%!TeX pdf\n\\documentclass[11pt,letterpaper]{article}
 
 \\usepackage[T1]{fontenc}
 \\usepackage{charter}
+\\usepackage[super]{nth}
+
 \\everymath{\\displaystyle}
 
 \\newcommand{\\class}{Section Title}

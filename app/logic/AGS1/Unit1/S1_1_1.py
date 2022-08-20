@@ -6,9 +6,8 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import getInt, getFrac, LinFunc, QuadFunc, latexify, signify
-from sympy import *
+from sympy import latex, simplify, Rational, S, sympify
 import random
-
 
 def Evaluate_Equation_1(difficulty=1, expr="latex"):
   problem = ""
@@ -24,40 +23,38 @@ def Evaluate_Equation_1(difficulty=1, expr="latex"):
       answer = latex(simplify(Rational( intC - intB ,intA)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      if abs(intA) == 1:
-          intA = str(intA)[:-1]
-      problem = f"${intA} x + {intB} = {intC} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$"
+      temp = latex(f"{intA} x + {intB} = {intC}")
+      problem = f"${temp} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$"
     elif choice == 2:
       answer = latex(simplify(Rational( intC  , intA+intB)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      if abs(intA) == 1:
-          intA = str(intA)[:-1]
-      if abs(intB) == 1:
-          intB = str(intB)[:-1]
-      problem = f'${intA} x + {intB} x = {intC} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$'
-
-  elif difficulty == 2 or difficulty == 3:   # Medium and Hard
+      temp = latex(f"{intA} x + {intB} x = {intC}")
+      problem = f'${temp} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$'
+  elif difficulty == 2 or difficulty == 3:
     choice = random.randint(1,2)
     intA = getInt()
     intB = getInt()
     intC = getInt()
     intD = getInt()
-    intE = getInt()
     fracA = getFrac()
     if choice == 1:
       answer = latex(simplify(Rational( intC - intC ,intA + intB)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      plusorminus = random.randint(1,2)
-      problem = f"${intA} x + {intB} x + {intC} = {intD}, x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$"
+      temp = latex(f"{intA} x + {intB} x + {intC} = {intD}")
+      problem = f"${temp}, x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$"
     elif choice == 2:
       answer = latex(simplify(Rational( intC  , intA+intB)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      problem = f'${intA} x + {intB} x = {intC} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$'
+      temp = latex(f"{intA} x + {intB} x = {intC}")
+      problem = f'${temp} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$'
+  answer = f"x={answer}"
   return problem , answer
 
+a,b = Evaluate_Equation_1(1)
+print(a,b)
 
 def Evaluate_Equation_2(difficulty=1, expr='latex'):
     if difficulty == 1: # easy

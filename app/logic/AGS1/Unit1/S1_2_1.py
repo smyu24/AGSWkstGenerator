@@ -58,8 +58,8 @@ def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
         answer = terms
 
     return problem, answer
-
-
+a,b = Fill_In_The_Sequence_1(2)
+print(a,b)
 
 ### section2:
 #### Use the given values in the table to determine a pattern and complete the table.

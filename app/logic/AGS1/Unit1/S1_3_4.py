@@ -47,16 +47,6 @@ def So_Should_We_Use_Recursive_Or_Explicit(difficulty=1, expr='latex'):
     
     useExplicit = randint(0,1)
 
-    problem = r'Explicit equation: $' + seq.getExplicit(0) + r'$ \newline '
-    problem += r'Recursive equation: $\text{now} = \text{previous}'
-    change = latexify(seq.common, seq.precision)
-    if type(seq) == ArithSeq:
-        problem += r' + ' if seq.common>0 else ''
-    else:
-        problem += r' \cdot '
-        change = '(' + change +')'if seq.common<0 else change
-    problem += change + r'$ \newline '
-
     if randint(0,1):
         if useExplicit:
             termNum = randint(30,80) if type(seq)==ArithSeq else randint(5,9)
@@ -66,15 +56,25 @@ def So_Should_We_Use_Recursive_Or_Explicit(difficulty=1, expr='latex'):
             termNum = 4
             header = [r'term \#', 1, 2, 3, 4]
             row = ['value', signify(latexify(seq.terms[1])), signify(latexify(seq.terms[2])), signify(latexify(seq.terms[3])), '']
-        problem += tableGenerator(header, [row])
+        problem = tableGenerator(header, [row])
     else:
         givenNum = randint(2,4)
         if useExplicit:
             termNum = randint(30,80) if type(seq)==ArithSeq else randint(6,10)
         else:
             termNum = givenNum+randint(1,2)
-        problem += getSequenceDescription(seq, given=givenNum) + r' \newline '
+        problem = getSequenceDescription(seq, given=givenNum) + r' \newline ' 
     
+    problem += r'Explicit equation: $' + seq.getExplicit(0) + r'$ \newline '
+    problem += r'Recursive equation: $\text{now} = \text{previous}'
+    change = latexify(seq.common, seq.precision)
+    if type(seq) == ArithSeq:
+        problem += r' + ' if seq.common>0 else ''
+    else:
+        problem += r' \cdot '
+        change = '(' + change +')'if seq.common<0 else change
+    problem += change + r'$ \newline '
+
     problem += r'Find the value of the \nth{' + str(termNum) + '} term.'
 
     answer = seq.findTerm(termNum)
@@ -84,5 +84,4 @@ def So_Should_We_Use_Recursive_Or_Explicit(difficulty=1, expr='latex'):
 
 for jj in range(10):
     problem, answer = So_Should_We_Use_Recursive_Or_Explicit(2)
-    print(problem, r'\\')
-    print(answer, r'\\ \\')
+    print(problem, answer)

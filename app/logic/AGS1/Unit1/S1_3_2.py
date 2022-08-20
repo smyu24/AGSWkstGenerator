@@ -35,7 +35,7 @@ def Arithmetic_Sequences_1(difficulty=1, expr="latex"):
       rand2=choice(choicelist2)
       arith=[]
       arith = getArith(rand1,rand2,5)
-    problem = r'$\text{Sequence:} '+fr'{arith[0]} , {arith[1]}, {arith[2]} , {arith[3]}, {arith[4]}$'
+    problem = r'$\text{Sequence:\hspace{1mm}} '+fr'{arith[0]} , {arith[1]}, {arith[2]} , {arith[3]}, {arith[4]}$'
     answer = '$'+str(rand2)+'$'
     return problem,answer
     
@@ -68,11 +68,11 @@ def Arithmetic_Sequences_1(difficulty=1, expr="latex"):
       latexify=[]
       for iv in range(len(arith)):
         latexify.append(sympy.latex(arith[iv]))
-      problem = r'$\text{Sequence:} '+fr'{latexify[0]} , {latexify[1]}, {latexify[2]} , {latexify[3]}, {latexify[4]}$'
+      problem = r'$\text{Sequence:\hspace{1mm}} '+fr'{latexify[0]} , {latexify[1]}, {latexify[2]} , {latexify[3]}, {latexify[4]}$'
       answer = '$'+sympy.latex(sympy.simplify(diff))+'$'
       return problem,answer
     else:
-      problem = r'\text{Sequence:} '+fr'{arith[0]} , {arith[1]}, {arith[2]} , {arith[3]}, {arith[4]}'
+      problem = r'\text{Sequence:\hspace{1mm}} '+fr'{arith[0]} , {arith[1]}, {arith[2]} , {arith[3]}, {arith[4]}'
       answer = sympy.simplify(diff)
       return problem,answer
 
@@ -117,27 +117,13 @@ def Arithmetic_Sequences_1(difficulty=1, expr="latex"):
         else:
           lat= str(front)+r'\frac{'+str(top)+'}{'+str(bot)+'}'
         latexify.append(lat)
-      problem = r'$\text{Sequence:} '+fr'{latexify[0]} , {latexify[1]}, {latexify[2]} , {latexify[3]}, {latexify[4]}$'
+      problem = r'$\text{Sequence:\hspace{1mm}} '+fr'{latexify[0]} , {latexify[1]}, {latexify[2]} , {latexify[3]}, {latexify[4]}$'
       answer = '$'+sympy.latex(sympy.simplify(diff))+'$'
       return problem,answer
     else:
-      problem = r'\text{Sequence:} '+fr'{arith[0]} , {arith[1]}, {arith[2]} , {arith[3]}, {arith[4]}'
+      problem = r'\text{Sequence:\hspace{1mm}} '+fr'{arith[0]} , {arith[1]}, {arith[2]} , {arith[3]}, {arith[4]}'
       answer = sympy.simplify(diff)
       return problem,answer
-'''
-for i in range(5):
-  a , b = Arithmatic_Sequence_Explicit(1,"latex")
-  print(a," common diff: ",b)
-for i in range(5):
-  a , b = Arithmatic_Sequence_Explicit(2,"latex")
-  print(a," common diff: ",b)
-for i in range(50):
-  a , b = Arithmatic_Sequence_Explicit(3,"latex")
-  print(a," common diff: ",b,r"\newline")
-'''
-
-
-
 
 
 #section 2
