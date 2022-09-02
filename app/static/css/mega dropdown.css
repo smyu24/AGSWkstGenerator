@@ -19,6 +19,8 @@ body {
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
+  /* overflow: auto;
+  white-space: nowrap; */
 }
 
 .navbar a {

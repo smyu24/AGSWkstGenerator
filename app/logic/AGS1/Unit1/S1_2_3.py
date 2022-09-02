@@ -1,7 +1,7 @@
 ## 1.2.3 Finding Patterns In Geometric Shapes
 
 #Growing, growing Dots
-"""
+r"""
 \documentclass{article}
 \usepackage{tikz}
 

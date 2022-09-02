@@ -23,13 +23,13 @@ def Evaluate_Equation_1(difficulty=1, expr="latex"):
       answer = latex(simplify(Rational( intC - intB ,intA)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      temp = latex(f"{intA} x + {intB} = {intC}")
+      temp = latex(f"{intA} * x + {intB} = {intC}")
       problem = f"${temp} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$"
     elif choice == 2:
       answer = latex(simplify(Rational( intC  , intA+intB)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      temp = latex(f"{intA} x + {intB} x = {intC}")
+      temp = latex(f"{intA} * x + {intB} * x = {intC}")
       problem = f'${temp} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$'
   elif difficulty == 2 or difficulty == 3:
     choice = random.randint(1,2)
@@ -42,13 +42,13 @@ def Evaluate_Equation_1(difficulty=1, expr="latex"):
       answer = latex(simplify(Rational( intC - intC ,intA + intB)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      temp = latex(f"{intA} x + {intB} x + {intC} = {intD}")
+      temp = latex(f"{intA} * x + {intB} * x + {intC} = {intD}")
       problem = f"${temp}, x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$"
     elif choice == 2:
       answer = latex(simplify(Rational( intC  , intA+intB)))
       answerpool = [intD,fracA,answer]
       random.shuffle(answerpool)
-      temp = latex(f"{intA} x + {intB} x = {intC}")
+      temp = latex(f"{intA} * x + {intB} * x = {intC}")
       problem = f'${temp} , x={answerpool[0]};x={answerpool[1]};x={answerpool[2]}$'
   answer = f"x={answer}"
   return problem , answer
