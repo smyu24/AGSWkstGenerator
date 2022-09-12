@@ -1,0 +1,373 @@
+pip install WTForms==2.3.3
+
+improve navbar, sidebar
+
+add user login, register, settings
+
+add teacher, parent, classroom database set up
+
+TOGGLE HTML VERSION FOR LIVE ANSWERING (image of exmaple + mathjax/SVG plot) https://github.com/kisonecat/tikzjax
+
+from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
+from werkzeug.security import check_password_hash, generate_password_hash
+
+FINISH PRE_ALG
+
+SET UP AGS 1
+
+get tables, graphs, graphical set up for future
+
+ADHD font availability in PDF
+
+AUTO GRADE FEATURE (ADOBE SCAN)
+
+Quizlet similar single online activities availiablity
+    lazy loading using async JS and creating
+
+mysql> SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'learningtarget';
+    SELECT DATA_TYPE  FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'learningtarget_prealg';
++---------------+----------------+----------------+-------------+------------------+----------------+-------------+-----------+--------------------------+------------------------+-------------------+----------
+-----+--------------------+--------------------+-----------------+-------------+------------+-------+---------------------------------+----------------+-----------------------+
+| TABLE_CATALOG | TABLE_SCHEMA   | TABLE_NAME     | COLUMN_NAME | ORDINAL_POSITION | COLUMN_DEFAULT | IS_NULLABLE | DATA_TYPE | CHARACTER_MAXIMUM_LENGTH | CHARACTER_OCTET_LENGTH | NUMERIC_PRECISION | NUMERIC_S
+CALE | DATETIME_PRECISION | CHARACTER_SET_NAME | COLLATION_NAME  | COLUMN_TYPE | COLUMN_KEY | EXTRA | PRIVILEGES                      | COLUMN_COMMENT | GENERATION_EXPRESSION |
++---------------+----------------+----------------+-------------+------------------+----------------+-------------+-----------+--------------------------+------------------------+-------------------+----------
+-----+--------------------+--------------------+-----------------+-------------+------------+-------+---------------------------------+----------------+-----------------------+
+| def           | smyu24$default | learningtarget | Seed        |                1 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
+| def           | smyu24$default | learningtarget | ccss        |                2 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
+| def           | smyu24$default | learningtarget | section     |                3 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
+| def           | smyu24$default | learningtarget | difficulty  |                4 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
+| def           | smyu24$default | learningtarget | options     |                5 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
+| def           | smyu24$default | learningtarget | description |                6 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
+| def           | smyu24$default | learningtarget | latex       |                7 | NULL           | NO          | text      |                    65535 |                  65535 |              NULL |
+NULL |               NULL | utf8               | utf8_general_ci | text        |            |       | select,insert,update,references |                |                       |
++---------------+----------------+----------------+-------------+------------------+----------------+-------------+-----------+--------------------------+------------------------+-------------------+----------
+-----+--------------------+--------------------+-----------------+-------------+------------+-------+---------------------------------+----------------+-----------------------+
+
+mysql> SELECT * FROM testset;
++------------+--------------------------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| section    | testname                 | ccss                                                                                                            | desc
+                                                                                                                                                                          |
++------------+--------------------------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Prealgebra | Reading Numbers          | pre.1.1.1, pre.1.1.2, pre.1.1.3                                                                                 | Learn how to read and write numbers. Discover the imp
+ortance of place values in understanding numbers, what numbers are associated with each number of digits, and how the growing number of digits involves new place values. |
+| Prealgebra | Number Theory            | pre.1.2.1,pre.1.2.2,pre.1.2.3,pre.1.2.4,pre.1.2.5                                                               | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Arithmetic               | pre.1.3.1,pre.1.3.2,pre.1.3.3,pre.1.3.4,pre.1.3.5,pre.1.3.6,pre.1.3.7,pre.1.3.8,pre.1.3.9,pre.1.3.10,pre.1.3.11 | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Algebraic Expressions    | pre.1.4.1,pre.1.4.2,pre.1.4.3                                                                                   | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Equations                | pre.1.5.1,pre.1.5.2,pre.1.5.3,pre.1.5.4,pre.1.5.5,pre.1.5.6,pre.1.5.7,pre.1.5.8                                 | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Inequalities             | pre.1.6.1,pre.1.6.2,pre.1.6.3,pre.1.6.4,pre.1.6.5                                                               | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Exponents and Radicals   | pre.1.7.1,pre.1.7.2,pre.1.7.3,pre.1.7.4                                                                         | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Proportions and Percents | pre.1.8.1,pre.1.8.2,pre.1.8.3,pre.1.8.4,pre.1.8.5,pre.1.8.6                                                     | This is the description.
+                                                                                                                                                                          |
+| Prealgebra | Linear Functions         | pre.1.9.1                                                                                                       | This is the description.
+                                                                                                                                                                          |
++------------+--------------------------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Reading Numbers','pre.1.1.1, pre.1.1.2, pre.1.1.3','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Number Theory','pre.1.2.1,pre.1.2.2,pre.1.2.3,pre.1.2.4,pre.1.2.5','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Arithmetic','pre.1.3.1,pre.1.3.2,pre.1.3.3,pre.1.3.4,pre.1.3.5,pre.1.3.6,pre.1.3.7,pre.1.3.8,pre.1.3.9,pre.1.3.10,pre.1.3.11','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Algebraic Expressions','pre.1.4.1,pre.1.4.2,pre.1.4.3','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Equations','pre.1.5.1,pre.1.5.2,pre.1.5.3,pre.1.5.4,pre.1.5.5,pre.1.5.6,pre.1.5.7,pre.1.5.8','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Inequalities','pre.1.6.1,pre.1.6.2,pre.1.6.3,pre.1.6.4,pre.1.6.5','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Exponents and Radicals','pre.1.7.1,pre.1.7.2,pre.1.7.3,pre.1.7.4','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Proportions and Percents','pre.1.8.1,pre.1.8.2,pre.1.8.3,pre.1.8.4,pre.1.8.5,pre.1.8.6','This is the description.');
+INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Linear Functions','pre.1.9.1','This is the description.');
+
+
+
+
+CREATE TABLE learningtarget_ags1 (
+    Seed text,
+    ccss text,
+    section text,
+    difficulty text,
+    options text,
+    description text,
+    latex text
+);
+
+CREATE TABLE Users (
+    uid integer AUTO_INCREMENT PRIMARY KEY,
+    username text,
+    hash text,
+    email text,
+    classrooms text,
+    parent text,
+    worksheets text,
+    ADHD BIT
+);
+
+from flask_wtf import FlaskForm
+from werkzeug.utils import secure_filename
+from werkzeug.datastructures import  FileStorage
+from wtforms import Form, BooleanField, StringField, PasswordField, validators
+
+
+VARCHAR
+Some examples of what VARCHAR is good for:
+    Usernames
+    Page titles
+    Filenames
+
+Seed, ccss, section, difficulty, options, description, latex
+
+OPTIONS 1= yes range value, 2= disable range value
+2, 1, 9
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-9-1','pre.1.9.1','Find The Slope','Easy, Hard','2, 1, 9','Find The Slope, Find the slope of each line., ', '2, 2');
+
+UPDATE learningtarget
+SET description = 'Find The Slope | Find the slope of each line. | Find the slope of the set of points. | Find the slope of each equation.'
+WHERE Seed='1-9-1';
+
+
+Find the slope of the line through each pair of points., Find the slope of each line.
+
+UPDATE learningtarget
+SET description = 'Simple and Compound Interest, Solve the following problems using the given simple interests, Solve the following problems using the given compound interests'
+WHERE Seed='1-8-6';
+
++-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
+------------------------------------------------------------+-------+
+| Seed  | ccss      | section                                                                                       | difficulty         | options | description
+                                                            | latex |
++-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
+------------------------------------------------------------+-------+
+| 1-9-1 | pre.1.9.1 | Find The Slope Using Graphs, Find The Slope Using Data Points, Find The Slope Using Equations | Easy, Medium, Hard | 2, 1, 9 | Find The Slope | Find the slope of each line. | Find the slo
+pe of the set of points. | Find the slope of each equation. | 2, 2  |
++-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
+------------------------------------------------------------+-------+
+UPDATE learningtarget SET section = 'Divide using division symbol, Divide using fraction' where Seed ='1-3-7';
+
+****IMPORTANT*****
+    problems need "$" wrapper where as answers do not !!!!!! othercase will cause erros in double casing
+
+----------------------------------------
+
+Seed, ccss, section, difficulty, options, description, latex
+
+OPTIONS 1= yes range value, 2= disable range value
+2, 1, 9
+
+ 1-9-1 | pre.1.9.1 | Find The Slope Using Graphs, Find The Slope Using Data Points, Find The Slope Using Equations | Easy, Medium, Hard | 2, 1, 9 | Find The Slope | Find the slope of each line. | Find the slo
+pe of the set of points. | Find the slope of each equation. | 2, 2  |
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-9-2','pre.1.9.2','Graphing Lines In Slope-Intercept Form','Easy, Medium, Hard','2, 1, 9','Graphing Lines In Slope-Intercept Form | Sketch the graph of each line', '2, 2');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-9-3','pre.1.9.3','Graphing Lines In Standard Form','Easy, Medium, Hard','2, 1, 9','Graphing Lines In Standard Form | Sketch the graph of each line', '2, 2');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-9-4','pre.1.9.4','Writing Linear Equations','Easy, Medium, Hard','2, 1, 9','Writing Linear Equations | Looking at the graph, write the equation that defines it', '2, 2');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-9-5','pre.1.9.5','Graphing Linear Inequalities','Easy, Medium, Hard','2, 1, 9','Graphing Linear Inequalities | Sketch the graph of each line', '2, 2');
+
+
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-1','pre.1.10.1','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-2','pre.1.10.2','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-3','pre.1.10.3','','','','', '');
+
+
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-11-1','pre.1.11.1','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-11-2','pre.1.11.2','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-11-2','pre.1.11.2','','','','', '');
+
+
+ALTER TABLE learningtarget RENAME TO learningtarget_prealg;
+
+UPDATE learningtarget_ags1 SET section = 'Should We Use Recursive Or Explicit?' where Seed ='1-3-4';
+
+UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
+UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
+
+
+
+
++-------------------------------------------------------------------------------------------------------+
+| section                                                                                               |
++-------------------------------------------------------------------------------------------------------+
+| Select the solution to the equation, Find the response value, Evaluate functions using the same value |
+| Graph The Ordered Pairs                                                                               |
+| Fill In The Sequence                                                                                  |
+| The Meaning Of An Exponent                                                                            |
+| Finding Patterns In Geometric Shapes                                                                  |
+| Reading The Table                                                                                     |
+| Arithmetic Sequences                                                                                  |
+| Geometric Sequence                                                                                    |
+| Should We Use Recursive Or Explicit?                                                                  |
++-------------------------------------------------------------------------------------------------------+
+
+1.2.1 Fill In The Sequence
+section 1:
+Use the given values in the table to determine a pattern and complete the table.
+section 2:
+Use the given values in the table to determine a pattern and complete the table.
+Section 3:
+instruction Evaluate the following equations when x = { 1, 2, 3, 4, 5 }. Organize your inputs and outputs into a table of values for each equation. Let x be the input and y
+UPDATE learningtarget_ags1 SET section = 'Complete the table using values, Complete the table using word problems, Complete the table using the function' where Seed ='1-2-1';
+UPDATE learningtarget_ags1 SET description = 'Fill In The Sequence | Use the given values in the table to determine a pattern and complete the table | Use the given values in the table to determine a pattern and complete the table | Evaluate the following equations when x = { 1, 2, 3, 4, 5 } and complete the table' where Seed ='1-2-1';
+
+1.2.2 The meaning of an exponent
+Section 1:
+instruction: Write each expression using an exponent.
+Section 2:
+instruction: A) Write each expression in expanded form. B) Then calculate the value of the expression
+
+1.3.2 Arithmetic Sequences
+Section 1
+instruction : Identify the constant difference.
+Section 2
+instruction : Identify the recursive equation.
+Section 3
+instruction : Find the next 4 terms in each sequence. Identify the explicit equation.
+
+1.3.3 Geometric Sequence
+section 1:
+Use the given function to determine a pattern and complete the table.
+Section 2
+Find the recursive equation.
+Section 3
+instruction : Find the next 4 terms in each sequence. Identify the explicit equation.
+
+| description
+                                                   |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------+
+| Evaluate Equations | Identify which of the 3 possible numbers is the solution to the equation | Determine the y-value of each ordered pair based on the given x-value | Given the following equations, evaluate
+ the following functions with the indicated values |
+| Graph The Ordered Pairs | Graph the ordered pairs from the tables on the given graphs
+                                                   |
+| Fill In The Sequence | Use the given values in the table to determine a pattern and complete the table | Use the given values in the table to determine a pattern and complete the table
+                                                   |
+| The Meaning Of An Exponent | Write each expression using an exponent | A) Write each expression in expanded form. B) Then calculate the value of the expression
+                                                   |
+| Finding Patterns In Geometric Shapes | Draw Steps 4 and 5
+                                                   |
+| Reading The Table | Use the tables to find the indicated values
+                                                   |
+| Arithmetic Sequences | Identify the constant difference | Identify the recursive equation | Find the next 4 terms in each sequence. Identify the explicit equation
+                                                   |
+| Geometric Sequence | Find the geometric equation | Find the recursive equation | Find the next 4 terms in each sequence. Identify the explicit equation
+                                                   |
+| So, Should We Use Recursive Or Explicit? | Complete the missing equation. Then decide which equation will help find the missing term most efficiently. Find the term and explain your choice
+                                                   |
+
+
+
+
+
+ 1-9-1 | pre.1.9.1 | Find The Slope Using Graphs, Find The Slope Using Data Points, Find The Slope Using Equations | Easy, Medium, Hard | 2, 1, 9 | Find The Slope | Find the slope of each line. | Find the slo
+pe of the set of points. | Find the slope of each equation. | 2, 2  |
+
+UPDATE learningtarget_ags1 SET section = 'Select the solution to the equation, Find the response value, Evaluate functions using the same value' where Seed ='1-1-1';
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-1-1','ags.1.1.1','Select the solution to the equation, Use the given x-values to find the response value, Evaluate two functions using the same x-value','Easy, Medium, Hard','2, 1, 9','Evaluate Equations | Identify which of the 3 possible numbers is the solution to the equation | Determine the y-value of each ordered pair based on the given x-value | Given the following equations, evaluate the following functions with the indicated values', '3, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-1-2','ags.1.1.2','Graph The Ordered Pairs','Easy, Medium, Hard','2, 1, 9','Graph The Ordered Pairs | Graph the ordered pairs from the tables on the given graphs', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-2-1','ags.1.2.1','Fill In The Sequence','Easy, Medium, Hard','2, 1, 9','Fill In The Sequence | Use the given values in the table to determine a pattern and complete the table | Use the given values in the table to determine a pattern and complete the table', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-2-2','ags.1.2.2','The Meaning Of An Exponent','Easy, Medium, Hard','2, 1, 9','The Meaning Of An Exponent | Write each expression using an exponent | A) Write each expression in expanded form. B) Then calculate the value of the expression', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-2-3','ags.1.2.3','Finding Patterns In Geometric Shapes','Easy, Medium, Hard','2, 1, 9','Finding Patterns In Geometric Shapes | Draw Steps 4 and 5', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-3-1','ags.1.3.1','Reading The Table','Easy, Medium, Hard','2, 1, 9','Reading The Table | Use the tables to find the indicated values', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-3-2','ags.1.3.2','Arithmetic Sequences','Easy, Medium, Hard','2, 1, 9','Arithmetic Sequences | Identify the constant difference | Identify the recursive equation | Find the next 4 terms in each sequence. Identify the explicit equation', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-3-3','ags.1.3.3','Geometric Sequence','Easy, Medium, Hard','2, 1, 9','Geometric Sequence | Find the geometric equation | Find the recursive equation | Find the next 4 terms in each sequence. Identify the explicit equation', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-3-4','ags.1.3.4','So, Should We Use Recursive Or Explicit?','Easy, Medium, Hard','2, 1, 9','So, Should We Use Recursive Or Explicit? | Complete the missing equation. Then decide which equation will help find the missing term most efficiently. Find the term and explain your choice', '2, 2');
+
+
+-----
+
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+-----
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+\\\\
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('','ags.','','Easy, Medium, Hard','2, 1, 9','Fill In The Sequence | ', '2, 2');
+
+# 1.2.1 Fill In The Sequence
+### section 1:
+#### Use the given values in the table to determine a pattern and complete the table.
+
+### section2:
+#### Use the given values in the table to determine a pattern and complete the table.
+
+#type to not have easy,medium, hard (no option for that)
+#pass down rand arraycontaining string of either ["lin", "exp", "neither"]
+
+#FillInTheTableWordProb
+
+### Section 3:
+#### instruction Evaluate	the	following	equations	when	x	=	{	1,	2,	3,	4,	5	}.		Organize	your	inputs	and	outputs	into	a	table	of	values	for	each	equation. Let	x	be	the	input	and	y	be	the	output.
+
+#FillInTheExpTable
