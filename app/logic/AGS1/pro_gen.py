@@ -11,13 +11,15 @@ from .Unit1.S1_3_4 import So_Should_We_Use_Recursive_Or_Explicit
 from .Unit1.S1_4_1 import Arithmetic_Explicit_Recursive
 from .Unit1.S1_4_2 import AGS_Find_The_Slope_Section_1, AGS_Find_The_Slope_Section_2, AGS_Find_The_Slope_Section_3, AGS_Find_The_Slope_Section_4
 from .Unit1.S1_5_1 import Information_To_Geometric_Sequence
-from .Unit1.S1_5_2 import Slope_Intercept_Form_1, Slope_Intercept_Form_2, Slope_Intercept_Form_3
+from .Unit1.S1_5_2 import Slope_Intercept_Form_1, Slope_Intercept_Form_2
 #from .Unit1.S1_5_3 import Geometric_Sequence_To_Explicit_Recursive
 #not done, but close (done somewhere else)
 from .Unit1.S1_6_1 import AGS_Percent_Change
 from .Unit1.S1_6_2 import Is_It_Arithmetic_Or_Geometric_Sequence
 from .Unit1.S1_8_1 import Fill_The_Gap
 from .Unit1.S1_9_1 import Which_Grows_Faster
+#from .Unit1.S1_10_1 import _
+# not done, will do later
 
 from .Unit2.S2_1_1 import _
 from .Unit2.S2_2_1 import MatchTheSlopes

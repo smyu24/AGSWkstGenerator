@@ -11,7 +11,7 @@ from sympy import *
 # section 1
 # instruction : In the next problems, you are given various types of information. Write the recursive and explicit functions for each geometric sequence. Finally, graph each sequence, making sure you clearly label the axes.
 
-def infoToSeq(case=1, kind='lin', expr='latex'):
+def Information_To_Geometric_Sequence(case=1, kind='lin', expr='latex'):
     if case == 1: # word problem
         problem, solns, labels = makeWordProb(kind, expr)
         problem += r' \newline '
@@ -53,7 +53,7 @@ def infoToSeq(case=1, kind='lin', expr='latex'):
 
     return problem, answer
 
-for jj in range(10):
-    problem, answer = infoToSeq(case=1,kind='exp')
-    print(problem)
-    print(answer)
+# for jj in range(10):
+#     problem, answer = Information_To_Geometric_Sequence(case=1,kind='exp')
+#     print(problem)
+#     print(answer)

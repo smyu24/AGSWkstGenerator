@@ -11,7 +11,7 @@ from random import randint
 # section 1
 # Each of the tables given represents a sequence. Find the missing terms in the sequence, show your method, and create the explicit and recursive equations.
 
-def FillInTheGap(kind='lin', expr='latex'):
+def Fill_The_Gap(kind='lin', expr='latex'):
     if kind == 'lin':
         seq = ArithSeq(getInt(-10,10), [1,getInt(-10,10)])
     else:
@@ -36,6 +36,6 @@ def FillInTheGap(kind='lin', expr='latex'):
     return problem, answer
 
 for jj in range(10):
-    problem, answer = FillInTheGap()
+    problem, answer = Fill_The_Gap()
     print(problem)
     print(answer, r'\\ \\')

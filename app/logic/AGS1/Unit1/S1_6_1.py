@@ -395,5 +395,6 @@ def Markup_Discount_and_Tax(difficulty=1, expr='latex'):
 
 def AGS_Percent_Change(difficulty = 1, expr = "latex"):
     return random.choice([Percents_Fractions_Decimal_Conversion_1(difficulty, expr), Percents_Fractions_Decimal_Conversion_2(difficulty, expr), Percents_Fractions_Decimal_Conversion_3(difficulty, expr), Percents_Fractions_Decimal_Conversion_4(difficulty, expr), Finding_Percent_Change_Section_1(difficulty, expr), Finding_Percent_Change_Section_2(difficulty, expr), Markup_Discount_and_Tax(difficulty, expr)])
+
 a,b = AGS_Percent_Change(1, "latex")
 print(a,b)

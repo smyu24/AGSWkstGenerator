@@ -9,7 +9,8 @@ sys.path.insert(0, parentdir)
 from loader import ArithSeq, getInt, GeoSeq, latexify, signify, makeWordProb
 from sympy import *
 from random import randint
-def arithOrGeo_1_6_2(case=1, expr="latex"):
+
+def Is_It_Arithmetic_Or_Geometric_Sequence(case=1, expr="latex"):
     if case == 1:           # arithmetic list
         seq = ArithSeq(getInt(-10,10), [1,getInt(-10,10)])
         problem = signify(seq.getSeqStr([1,2,3,'',5,6,'']))
@@ -34,7 +35,7 @@ def arithOrGeo_1_6_2(case=1, expr="latex"):
 
     return problem, answer
 
-for jj in range(10):
-    problem, answer = arithOrGeo_1_6_2(randint(1,4))
-    print(problem, r'\\')
-    print(answer, r'\\ \\')
+# for jj in range(10):
+#     problem, answer = Is_It_Arithmetic_Or_Geometric_Sequence(randint(1,4))
+#     print(problem, r'\\')
+#     print(answer, r'\\ \\')

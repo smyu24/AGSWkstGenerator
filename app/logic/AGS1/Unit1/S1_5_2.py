@@ -74,7 +74,7 @@ def two_point_graph(one, one_2, two, two_2, vari_1, vari_2):
     return ''.join(out)
 
 
-def Graphing_Lines_Slope_Intersect_Section_1(difficulty=1, expr="latex"):
+def Slope_Intercept_Form_1(difficulty=1, expr="latex"):
     half_1 = ""
     half_2 = ""
 
@@ -122,7 +122,7 @@ def Graphing_Lines_Slope_Intersect_Section_1(difficulty=1, expr="latex"):
 
 
 for i in range(3):
-    problem, answer = Graphing_Lines_Slope_Intersect_Section_1(1, "latex")
+    problem, answer = Slope_Intercept_Form_1(1, "latex")
     print(problem, answer)
 
 
@@ -132,7 +132,7 @@ for i in range(3):
 # Instruction : Find the slope,  m  , and the y-intercept,  b  , for each line. Then write an equation for the line.  y=mx+b
 
 
-def Graphing_Lines_Slope_Intersect_Section_2(difficulty=1, expr="latex"):
+def Slope_Intercept_Form_2(difficulty=1, expr="latex"):
     problem = ""
     answer = ""
 
@@ -251,7 +251,7 @@ def Graphing_Lines_Slope_Intersect_Section_2(difficulty=1, expr="latex"):
         elif filler == 3:
             half_1 = fr'x / {intF} {sym_1} y / {intG}'
             half_2 = fr'1'
-#intC intG
+
             y = sympy.Symbol("y")
             half_1 = sympy.sympify(half_1, evaluate = False)
             half_2 = sympy.sympify(half_2, evaluate = False)
@@ -299,14 +299,14 @@ def Graphing_Lines_Slope_Intersect_Section_2(difficulty=1, expr="latex"):
     return("$ " + str(problem) + " $", answer)
 
 
-for i in range(3):
-    problem, answer = Graphing_Lines_Slope_Intersect_Section_2(1, "latex")
-    print(problem, answer)
+# for i in range(3):
+#     problem, answer = Slope_Intercept_Form_2(1, "latex")
+#     print(problem, answer)
 
-for i in range(3):
-    problem, answer = Graphing_Lines_Slope_Intersect_Section_2(2, "latex")
-    print(problem, answer)
+# for i in range(3):
+#     problem, answer = Slope_Intercept_Form_2(2, "latex")
+#     print(problem, answer)
 
-for i in range(3):
-    problem, answer = Graphing_Lines_Slope_Intersect_Section_2(3, "latex")
-    print(problem, answer)
+# for i in range(3):
+#     problem, answer = Slope_Intercept_Form_2(3, "latex")
+#     print(problem, answer)
