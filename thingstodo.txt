@@ -17,7 +17,7 @@ SET UP AGS 1
 
 get tables, graphs, graphical set up for future
 
-ADHD font availability in PDF
+ADHD font availability in PDF -- bionic reading
 
 AUTO GRADE FEATURE (ADOBE SCAN)
 
