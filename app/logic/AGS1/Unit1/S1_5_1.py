@@ -6,8 +6,6 @@ sys.path.insert(0, parentdir)
 from loader import ArithSeq, getInt, GeoSeq, makeWordProb, signify, startGraph, endGraph, drawPt, emptyGraph
 from sympy import *
 
-# 1.5.1 Information To Geometric sequence.
-
 # section 1
 # instruction : In the next problems, you are given various types of information. Write the recursive and explicit functions for each geometric sequence. Finally, graph each sequence, making sure you clearly label the axes.
 

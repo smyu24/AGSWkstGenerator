@@ -126,8 +126,6 @@ for i in range(3):
     print(problem, answer)
 
 
-
-
 # section 2
 # Instruction : Find the slope,  m  , and the y-intercept,  b  , for each line. Then write an equation for the line.  y=mx+b
 

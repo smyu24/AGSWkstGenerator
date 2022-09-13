@@ -34,8 +34,3 @@ def Is_It_Arithmetic_Or_Geometric_Sequence(case=1, expr="latex"):
     answer += r' \newline (e) ' + signify(seq.getRecursive())
 
     return problem, answer
-
-# for jj in range(10):
-#     problem, answer = Is_It_Arithmetic_Or_Geometric_Sequence(randint(1,4))
-#     print(problem, r'\\')
-#     print(answer, r'\\ \\')

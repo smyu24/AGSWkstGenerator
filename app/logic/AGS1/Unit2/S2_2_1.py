@@ -3,12 +3,40 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import startGraph, drawLine, drawSlopeTri, drawPt, endGraph, brackify, latexify, signify, getInt, LinFunc, sample, minipagify
+from loader import brackify, latexify, signify, getInt, LinFunc, sample, minipagify
 from sympy import Rational
 from random import randint
 
 # ags.mod2.2.1 - Find The Slope In Each Representation.
 # Instruction : Find the slopes and show whether or not the slopes are the same for the pairs of representations provided.
+
+def startGraph(xmin=-1,xmax=6,ymin=-6,ymax=6):
+    xstart = 5*(xmin//5)
+    ystart = 5*(ymin//5)
+    xtick = brackify(f'{xstart},{xstart+5},...,{xmax+5}')
+    ytick = brackify(f'{ystart},{ystart+5},...,{ymax+5}')
+
+    tex = r'\begin{tikzpicture}\begin{axis}[mmt axis style,'
+    tex += fr'xmin={xmin},xmax={xmax},xtick={xtick},ymin={ymin},ymax={ymax},ytick={ytick},]'
+    return tex
+
+def endGraph():
+    return r'\end{axis}\end{tikzpicture}'
+
+def drawPt(pt):
+    return fr'\fill[black] (axis cs: {pt[0]},{pt[1]}) circle(2pt);'
+
+def drawLine(expr, xmin, xmax, color='red'):
+    return fr'\addplot[{color},domain={xmin}:{xmax}] {brackify(str(expr))};'
+
+def drawSlopeTri(pt1, pt2):
+    string = fr'\draw[dashed] (axis cs: {pt1[0]},{pt1[1]}) -- (axis cs: {pt1[0]},{pt2[1]});'
+    string += fr'\draw[dashed] (axis cs: {pt1[0]},{pt2[1]}) -- (axis cs: {pt2[0]},{pt2[1]});'
+    return string
+
+def emptyGraph(xmin=-1,xmax=10,ymin=-1,ymax=10):
+    return startGraph(xmin,xmax,ymin,ymax) + endGraph()
+
 def getSlopeTriGraph(func, pt1, pt2):
     if type(pt1)!=list:
         pt1 = [pt1] + [func.subs(pt1)]

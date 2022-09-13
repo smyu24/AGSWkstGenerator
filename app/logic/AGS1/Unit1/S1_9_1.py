@@ -62,8 +62,3 @@ def Which_Grows_Faster(case=1, expr='latex'):
     answer = r'{\bf a. }' + tableGenerator(header, rows) + answer
 
     return problem, answer
-
-# for jj in range(10):
-#     problem, answer = Which_Grows_Faster(randint(1,5))
-#     print(problem, r'\\')
-#     print(answer, r'\\')

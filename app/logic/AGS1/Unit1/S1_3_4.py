@@ -1,5 +1,3 @@
-#1.3.4 So, Should We Use Recursive Or Explicit?
-
 # absolute path of the parent directory to the sys.path
 
 import os, sys, inspect
@@ -81,7 +79,3 @@ def So_Should_We_Use_Recursive_Or_Explicit(difficulty=1, expr='latex'):
     answer = signify(latexify(answer, seq.precision)) if expr=='latex' else answer
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = So_Should_We_Use_Recursive_Or_Explicit(2)
-    print(problem, answer)

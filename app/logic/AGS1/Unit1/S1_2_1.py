@@ -8,7 +8,6 @@ sys.path.insert(0, parentdir)
 from loader import ExpFunc, getInt, GeoSeq, ArithSeq, latexify, signify, tableGenerator, makeWordProb
 from random import randint
 
-
 def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
     header = ['Term',	'1st','2nd','3rd','4th','5th','6th','7th','8th']
     values = ['Value']
@@ -58,8 +57,6 @@ def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
         answer = terms
 
     return problem, answer
-a,b = Fill_In_The_Sequence_1(2)
-print(a,b)
 
 ### section2:
 #### Use the given values in the table to determine a pattern and complete the table.
@@ -67,7 +64,6 @@ print(a,b)
 #type to not have easy,medium, hard (no option for that)
 #pass down rand arraycontaining string of either ["lin", "exp", "neither"]
 
-#FillInTheTableWordProb
 def Fill_In_The_Sequence_2(kind='lin', expr='latex'):
     problem, solns, labels = makeWordProb(kind, expr)
     
@@ -86,11 +82,9 @@ def Fill_In_The_Sequence_2(kind='lin', expr='latex'):
     return problem, answer
 
 
-
 ### Section 3:
 #### instruction Evaluate	the	following	equations	when	x	=	{	1,	2,	3,	4,	5	}.		Organize	your	inputs	and	outputs	into	a	table	of	values	for	each	equation. Let	x	be	the	input	and	y	be	the	output.
 
-#FillInTheExpTable
 def Fill_In_The_Sequence_3(difficulty=1, expr='latex'):
     labels = [r'$x$ input', r'$y$ output']
 
@@ -119,4 +113,3 @@ def Fill_In_The_Sequence_3(difficulty=1, expr='latex'):
         answer = func.subSet(range(1,6))
 
     return problem, answer
-  

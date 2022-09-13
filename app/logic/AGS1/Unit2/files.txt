@@ -1,0 +1,58 @@
+1.3.1.1 - Find The Value of  x
+instruction : For each equation find the value of  x  that makes it true.
+
+1.3.2.1 - Point Of Intersection
+instruction : Graph each set of linear equations on the same set of axes. Name the coordinates of the point where the two lines intersect.
+
+1.3.2.2 - Increasin / Decreasing / Constant / Domain & Range
+instruction : For each graph and description do the following:
+section 2 : table
+instruction : For each graph and description do the following:
+
+1.3.3.1 - Fill In The Table & State The Point Of Intersection
+instruction : Fill in the table of values for each of the linear functions. Then state the point of intersection of the two lines.
+
+1.3.3.2 - Finding Features Of Function
+instruction " For each of the following functions, find the desired features.
+section 2 : 
+instruction : For each of the following functions, find the desired features.
+
+1.3.3.3 - Finding Explicit And Recursive Equations
+instruction : Find both the explicit and recursive equations for the tables.    
+
+1.3.4.1 - Find The Indicated Values
+Instruction : Find the indicated values & Find equation or graph the explicit function
+
+1.3.4.2 - Graph The New Equation
+Instruction : Two functions are graphed. Graph a new function on the same grid by adding the two given functions.
+
+1.3.4.3- Compare Two Functions
+Instruction : Use the graph to answer the following questions.
+
+1.3.4.4 - Domain & Range / Increasing or Decreasing
+Instruction : For each graph, identify the domain, range, and whether or not the function is increasing or decreasing.
+
+1.3.5.1 - Find The Indicated Values - PT2
+Instruction : Use the graph of each function to find the indicated values.
+
+1.3.6.1 - Function Transformations (vertical)
+Instruction : Graph the equations.
+Section 2: Transfrom the graph from the given graph
+
+1.4.1.1 - Solve Each Equation And Check Steps.
+instruction : For each of the equations provided below, identify the first operation performed on the variable and also identify the last operation performed on the variable. Then, determine the first step that would take place when solving and the last step that would take place when solving. If needed, solve and check your solution.
+
+1.4.1.2 - Solve Each Equation And Check Steps.
+instruction : Graph the following equations on the coordinate grid. Determine if the given point is a solution to the equation.
+
+1.4.2.1 - Find The Domain And Range.
+instruction : Find the domain and range for each function graphed below. Use interval notation to write your answer.
+
+1.4.2.2 - Graph Inequality
+instruction : For each of the inequalities, graph the values being described on the numbers lines.
+
+1.4.2.3 - Solve For The Variable.
+instruction : Solve for the indicated variable. Show your work!
+
+
+

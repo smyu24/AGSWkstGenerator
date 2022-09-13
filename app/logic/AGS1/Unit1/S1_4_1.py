@@ -8,11 +8,8 @@ from loader import ArithSeq, latexify, signify
 
 from random import randint
 
-# 1.4.1 Arithmetic - Explicit & Recursive
 # section 1
 # instruction : Find the next three terms in each sequence. Identify the common difference. Write a recursive function and an explicit function for each sequence.
-
-## REDO THIS ONE!!!!
 
 def getSeqAnswer(seq, prob='common', blanks=False, expr="latex", numTerms=6):
     if expr=="latex":

@@ -1,5 +1,3 @@
-#1.3.2 Arithmetic Sequences
-
 # absolute path of the parent directory to the sys.path
 
 import os, sys, inspect
@@ -125,7 +123,6 @@ def Arithmetic_Sequences_1(difficulty=1, expr="latex"):
       answer = sympy.simplify(diff)
       return problem,answer
 
-
 #section 2
 def Arithmetic_Sequences_2(difficulty=1, expr="latex"):
   choicelist1=[1,2,3,4,5,6,7,8,9,10]
@@ -250,16 +247,15 @@ def Arithmetic_Sequences_2(difficulty=1, expr="latex"):
       answer = sympy.simplify(diff)
       return problem,answer
 
-for i in range(5):
-  a , b = Arithmetic_Sequences_2(1,"latex")
-  print(a," common diff: ",b)
-
-for i in range(5):
-  a , b = Arithmetic_Sequences_2(2,"latex")
-  print(a," common diff: ",b)
-for i in range(50):
-  a , b = Arithmetic_Sequences_2(3,"latex")
-  print(a," common diff: ",b,r"\newline")
+# for i in range(5):
+#   a , b = Arithmetic_Sequences_2(1,"latex")
+#   print(a," common diff: ",b)
+# for i in range(5):
+#   a , b = Arithmetic_Sequences_2(2,"latex")
+#   print(a," common diff: ",b)
+# for i in range(50):
+#   a , b = Arithmetic_Sequences_2(3,"latex")
+#   print(a," common diff: ",b,r"\newline")
 
 
 def getSeqAnswer(seq, prob='common', blanks=False, expr="latex", numTerms=6):
@@ -276,7 +272,6 @@ def getSeqAnswer(seq, prob='common', blanks=False, expr="latex", numTerms=6):
             if len(answer)>0:
                 answer += r' \newline '
             answer += '$' + seq.getRecursive() + r' \quad\text{or}\quad ' + seq.getRecursive(0) + '$'
-        
         if blanks:
             if len(answer)>0:
                 answer += r' \newline '
@@ -313,8 +308,3 @@ def Arithmetic_Sequences_3(difficulty=1, prob='common', blanks=False, expr="late
     answer = getSeqAnswer(arith, prob, blanks, expr)
             
     return problem, answer
-
-for i in range(10):
-    problem, answer = Arithmetic_Sequences_3(3, 'explicit', blanks=True)
-    print(problem, r'\\')
-    print(answer, r'\\ \\')

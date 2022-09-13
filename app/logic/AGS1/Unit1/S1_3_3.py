@@ -1,5 +1,3 @@
-#1.3.3 Geometric Sequence
-
 # absolute path of the parent directory to the sys.path
 
 import os, sys, inspect
@@ -65,19 +63,19 @@ def Geometric_Sequence_Problem(difficulty=1, prob='common', blanks=False, expr="
             
     return problem, answer
 
-for i in range(10):
-    problem, answer = Geometric_Sequence_Problem(2, 'common')
-    print(problem, r'\\')
-    print(answer, r'\\ \\')
+# for i in range(10):
+#     problem, answer = Geometric_Sequence_Problem(2, 'common')
+#     print(problem, r'\\')
+#     print(answer, r'\\ \\')
 
-#section 2
-for i in range(10):
-    problem, answer = Geometric_Sequence_Problem(2, 'recursive')
-    print(problem, r'\\')
-    print(answer, r'\\ \\')
+# #section 2
+# for i in range(10):
+#     problem, answer = Geometric_Sequence_Problem(2, 'recursive')
+#     print(problem, r'\\')
+#     print(answer, r'\\ \\')
 
-#section 3
-for i in range(10):
-    problem, answer = Geometric_Sequence_Problem(2, 'explicit', blanks=True)
-    print(problem, r'\\')
-    print(answer, r'\\ \\')
+# #section 3
+# for i in range(10):
+#     problem, answer = Geometric_Sequence_Problem(2, 'explicit', blanks=True)
+#     print(problem, r'\\')
+#     print(answer, r'\\ \\')

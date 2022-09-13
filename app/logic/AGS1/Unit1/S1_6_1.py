@@ -1,4 +1,4 @@
-# 1.6.1 Percent Change (part of prealg?) (DONE)
+# 1.6.1 Percent Change
 
 from fractions import Fraction
 import random
@@ -67,8 +67,6 @@ def Percents_Fractions_Decimal_Conversion_3(difficulty=1, option_random="latex")
     temp = 0
     list_temp = []
     percent = 0
-    replace = ""
-    holder = 0
 
     if(difficulty == 1):        # Easy
         problemsets_2.append("0." + str(random.randint(1, 99)))
@@ -102,8 +100,6 @@ def Percents_Fractions_Decimal_Conversion_4(difficulty = 1, option_random="latex
     temp = 0
     list_temp = []
     percent = 0
-    replace = ""
-    holder = 0
 
     if(difficulty == 1):        # Easy
         problemsets_2.append("0." + str(random.randint(1, 99)))
@@ -395,6 +391,3 @@ def Markup_Discount_and_Tax(difficulty=1, expr='latex'):
 
 def AGS_Percent_Change(difficulty = 1, expr = "latex"):
     return random.choice([Percents_Fractions_Decimal_Conversion_1(difficulty, expr), Percents_Fractions_Decimal_Conversion_2(difficulty, expr), Percents_Fractions_Decimal_Conversion_3(difficulty, expr), Percents_Fractions_Decimal_Conversion_4(difficulty, expr), Finding_Percent_Change_Section_1(difficulty, expr), Finding_Percent_Change_Section_2(difficulty, expr), Markup_Discount_and_Tax(difficulty, expr)])
-
-a,b = AGS_Percent_Change(1, "latex")
-print(a,b)

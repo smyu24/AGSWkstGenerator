@@ -1,4 +1,3 @@
-#1.3.1 Reading The Table
 # absolute path of the parent directory to the sys.path
 
 import os, sys, inspect
@@ -58,10 +57,3 @@ def Reading_The_Table(difficulty=1, expr='latex'):
     problem += parta + partb + partc + partd
 
     return problem, answer
-  
-
-for i in range(4):
-    problem, answer = Reading_The_Table(3)
-    print(problem)
-    print(answer)
-    print(r'ss')

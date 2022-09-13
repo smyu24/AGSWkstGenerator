@@ -54,7 +54,6 @@ def getExponentForm(base, exp, start=1):
     return result
 
 
-# ConvertToExponentForm
 def The_Meaning_Of_An_Exponent_1(difficulty=1, expr="latex"):
     exp = getInt(4,9)
     
@@ -77,7 +76,7 @@ def The_Meaning_Of_An_Exponent_1(difficulty=1, expr="latex"):
 
     return problem, answer
 
-# ConvertToExpandedForm
+
 def The_Meaning_Of_An_Exponent_2(difficulty=1, expr="latex"):
     exp = getInt(2,10)
     
@@ -104,4 +103,3 @@ def The_Meaning_Of_An_Exponent_2(difficulty=1, expr="latex"):
         answer = {'base' : base, 'exp' : exp, 'start' : start, 'value' : value}
 
     return problem, answer
-
