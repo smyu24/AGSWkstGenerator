@@ -7,7 +7,8 @@ from .Unit1.S1_3_1 import Reading_The_Table
 from .Unit1.S1_3_2 import Arithmetic_Sequences_1, Arithmetic_Sequences_2, Arithmetic_Sequences_3
 from .Unit1.S1_3_3 import Geometric_Sequence_Problem
 from .Unit1.S1_3_4 import So_Should_We_Use_Recursive_Or_Explicit
-"""
+
+#-----
 from .Unit1.S1_4_1 import Arithmetic_Explicit_Recursive
 from .Unit1.S1_4_2 import AGS_Find_The_Slope_Section_1, AGS_Find_The_Slope_Section_2, AGS_Find_The_Slope_Section_3, AGS_Find_The_Slope_Section_4
 from .Unit1.S1_5_1 import Information_To_Geometric_Sequence
@@ -21,25 +22,20 @@ from .Unit1.S1_9_1 import Which_Grows_Faster
 #from .Unit1.S1_10_1 import _
 # not done, will do later
 
+"""
+from .Unit2.S2_1_1 import MatchTheSlopes
 from .Unit2.S2_1_1 import _
-from .Unit2.S2_2_1 import MatchTheSlopes
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
+from .Unit2.S2_1_1 import _
 """
 
-"""from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _
-from .Unit2.S2_1_1 import _"""
-
-#import math
-#import random
-#from sympy import latex, sympify
 
 '''
 AGS 1 Section 1-1-1
@@ -411,60 +407,72 @@ def M_So_Should_We_Use(twoDarr): #MAIN CODE ------------------------------------
 AGS 1 Section 1-4-1
 '''
 def M_Arithmetic_Explicit_Recursive(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Arithmetic_Explicit_Recursive(1, 'all', blanks=True)
+  #Arithmetic_Explicit_Recursive(2, 'all', blanks=True)
   return
 
 '''
 AGS 1 Section 1-4-2
 '''
 def M_AGS_Find_The_Slope(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #AGS_Find_The_Slope_Section_1, AGS_Find_The_Slope_Section_2, AGS_Find_The_Slope_Section_3, AGS_Find_The_Slope_Section_4
   return
 
 '''
 AGS 1 Section 1-5-1
 '''
 def M_Information_To_Geometric_Sequence(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Information_To_Geometric_Sequence
   return
 
 '''
 AGS 1 Section 1-5-2
 '''
 def M_Slope_Intercept(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Slope_Intercept_Form_1, Slope_Intercept_Form_2
   return
 
 '''
 AGS 1 Section 1-5-3
 '''
 def M_Geometric_Seq_To_Explicit_Recursive(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Geometric_Sequence_To_Explicit_Recursive (Not DONE)
   return
 
 '''
 AGS 1 Section 1-6-1
 '''
 def M_AGS_Percentage_Change(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  # AGS_Percent_Change
   return
 
 '''
 AGS 1 Section 1-6-2
 '''
 def M_Is_It_Arith_Or_Geo_Seq(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Is_It_Arithmetic_Or_Geometric_Sequence
   return
 
 '''
 AGS 1 Section 1-8-1
 '''
 def M_Fill_The_Gap(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Fill_The_Gap
   return
 
 '''
 AGS 1 Section 1-9-1
 '''
 def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  #Which_Grows_Faster
   return
 
+'''
+AGS 1 Section 1-10-1
+'''
 #1.10.1 Information to Arithmetic(?) Sequence.
 
 #instruction: write the explicit equation for each geometric sequence.
 # random.randint(1,4), no easy, medium, hard, and "lin"
-
 def M_Information_To_Arith_Seq(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
   return
