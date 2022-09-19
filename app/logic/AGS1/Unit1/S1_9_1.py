@@ -10,7 +10,9 @@ from random import randint
 # 1.9.1 Which Grows Faster?
 # instruction : find the first five terms. Then compare the growth of the arithmetic sequence and the geometric sequence. Which grows faster? When?
 
-def Which_Grows_Faster(case=1, expr='latex'):
+def Which_Grows_Faster(expr='latex'):
+    case = randint(1,5)
+
     if case == 1: # Same start and common w/ growth
         start, common = randint(1,5), randint(2,5)
         arith, geo = ArithSeq(common,[1,start]), GeoSeq(common,[1,start], label='g')

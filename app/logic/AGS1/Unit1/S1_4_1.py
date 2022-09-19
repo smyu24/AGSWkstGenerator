@@ -5,7 +5,6 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 from loader import ArithSeq, latexify, signify
-
 from random import randint
 
 # section 1
