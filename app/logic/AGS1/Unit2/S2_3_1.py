@@ -3,12 +3,47 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator
+from loader import getInt, sample, variables
 from sympy import *
 from random import randint
 
 # AGS1.2.3.1 - rules of exponents 
 # instruction : Use rules of exponents to rewrite each of the expressions with only one exponent.
+def getExpandedForm(base, exp, start=1):
+    if base>0:
+        factors = exp*[latex(base)]
+    else:
+        factors = exp*[r'\left(' + latex(base) + r'\right)']
+    if start != 1:
+        factors = [latex(start)] + factors
+    return (r' \times ').join(factors)
+
+def getExponentForm(base, exp, start=1, posExpOnly=False):
+    start = latex(start)
+
+    if posExpOnly==True and exp<0:
+        return r'\frac{' + start + r'}{' + getExponentForm(base, abs(exp)) + r'}'
+    
+    baseStr = latex(base)
+    if type(base)!=int or base<0:
+        baseStr = r'\left(' + baseStr + r'\right)'
+    expStr = r'^{' + latex(exp) + r'}'
+    
+    result = baseStr + expStr
+    if start != '1':
+        if type(base)!=int or base<0:
+            result = start + result
+        else:
+            result = start + r'\cdot ' + result
+    if base<0 and type(exp)==int: # Alternate solution for base<0; Does not handle case of start!=1
+        baseStr = latex(abs(base))
+        if type(base)!=int:
+            baseStr = r'\left(' + baseStr + r'\right)'
+        result += r' \text{ or } '
+        alt = '-' + baseStr + expStr if exp%2==1 else baseStr + expStr
+        result += alt
+
+    return result
 
 def ExponentRuleProblem(difficulty=1, expr="latex", posExpOnly=False):
     base = getInt(2,10)
@@ -72,6 +107,6 @@ def ExponentRuleProblem(difficulty=1, expr="latex", posExpOnly=False):
     return problem, answer
 
 for jj in range(10):
-    problem, answer = ExponentRuleProblem(3)
+    problem, answer = ExponentRuleProblem(randint(1,3))
     print(problem, r'\\')
     print(answer, r'\\ \\')

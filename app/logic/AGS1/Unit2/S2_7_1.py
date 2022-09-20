@@ -3,7 +3,7 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator
+from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator, getInt, LinFunc, ExpFunc, choice
 from sympy import *
 from random import randint
 
@@ -62,6 +62,6 @@ def FillInTheTable(option='exp', expr='latex'):
     return problem, answer
   
 
-for i in range(1):
+for i in range(10):
     problem, answer = FillInTheTable(option='exp')
     print(problem, answer)

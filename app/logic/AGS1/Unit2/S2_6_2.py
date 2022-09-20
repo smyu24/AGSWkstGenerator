@@ -3,7 +3,6 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator
 from sympy import *
 from random import randint
 
@@ -28,3 +27,12 @@ def monthlyexp(diff = 1, expr = "latex"):
   return problem, answer
 
 print(monthlyexp(2))
+
+"""
+  File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_6_2.py", line 29, in <module>
+    print(monthlyexp(2))
+  File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_6_2.py", line 22, in monthlyexp
+    ans = "{:.4f}".format(inta ** (1 / ndict[num]))
+IndexError: list index out of range
+
+"""

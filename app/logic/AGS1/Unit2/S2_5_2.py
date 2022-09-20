@@ -3,7 +3,6 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator
 from sympy import *
 from random import randint
 
@@ -135,3 +134,13 @@ def evaluatethefunction(diff=1, expr="latex"):
   return problem + "\newline" + pa + "\newline" + pb + "\newline" + pc, fa
 
     
+for i in range(10): print(evaluatethefunction(randint(1,5)))
+
+"""
+Traceback (most recent call last):
+  File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_5_2.py", line 137, in <module>
+    for i in range(10): print(evaluatethefunction(randint(1,5)))
+  File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_5_2.py", line 134, in evaluatethefunction
+    return problem + "\newline" + pa + "\newline" + pb + "\newline" + pc, fa
+UnboundLocalError: local variable 'problem' referenced before assignment
+"""
