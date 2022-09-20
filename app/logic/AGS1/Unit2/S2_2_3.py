@@ -3,7 +3,6 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator
 from sympy import *
 from random import randint
 
@@ -69,3 +68,9 @@ def followingequation(diff=1, expr="latex", lvl=1):
     return case1(diff)
   else:
     return case2(diff)
+
+"""
+param
+------
+reg seed [0][1]; "latex"; random.randint(0,1)
+"""

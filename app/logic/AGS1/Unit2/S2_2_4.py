@@ -3,13 +3,8 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import ArithSeq, brackify, GeoSeq, latexify, signify, tableGenerator
-from sympy import *
-from random import randint
-
 # AGS 2.2.4 - Find the recursive and explicit equations
 # instruction : Find the recursive and explicit equationsfor the sequences in the tables.
-
 
 from tabulate import tabulate
 from texttable import Texttable
@@ -100,7 +95,4 @@ def Arithmetic_Explicit_Recursive(option_difficulty=1, expr="latex"):
   problem = problem.replace("\\end{table}","")
   return problem, r'\\'.join(answer)
 
-for i in range(1):
-    a,b, = Arithmetic_Explicit_Recursive(1, "latex")
-    print(a,b)
-    
+  # Not sure abt this r'\\'

@@ -15,7 +15,7 @@ def linear_graph_line_formatter(slope, integer):
     return output
 
 
-def Graphing_Lines_Slope_Intersect(option_difficulty="easy", expr="latex"):
+def Graphing_Lines_Slope_Intersect(option_difficulty=1, expr="latex"):
     half_1 = ""
     half_2 = ""
 

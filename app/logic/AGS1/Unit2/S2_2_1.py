@@ -101,8 +101,3 @@ def MatchTheSlopes(case=1):
         answer = r'$\text{Slope}=' + latexify(slope) + '$'
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = MatchTheSlopes(3)
-    print(problem)
-    print(answer, r'\\ \\')
