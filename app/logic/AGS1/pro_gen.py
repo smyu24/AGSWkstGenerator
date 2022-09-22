@@ -723,3 +723,823 @@ AGS 1 Section 1-10-1
 # random.randint(1,4), no easy, medium, hard, and "lin"
 def M_Information_To_Arith_Seq(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
   return
+
+
+
+"""
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+'''
+AGS 1 Section 1-9-1
+'''
+def M_Which_Grows_Faster(twoDarr): #MAIN CODE --------------------------------------------------------------------------------
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '1-9-1-1'):
+        problem, answer = Which_Grows_Faster() # only one setting
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+"""
