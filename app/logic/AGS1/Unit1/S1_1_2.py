@@ -48,3 +48,6 @@ def Graph_The_Ordered_Pairs(difficulty=1):
         answer = func.getTable(nums,labels=['$x$','$y$']) + answer
 
     return problem, answer
+
+a,b = Graph_The_Ordered_Pairs(2)
+print(a,b)
