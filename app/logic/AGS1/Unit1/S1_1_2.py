@@ -1,5 +1,4 @@
 # absolute path of the parent directory to the sys.path
-
 import os, sys, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
@@ -41,7 +40,17 @@ def Graph_The_Ordered_Pairs(difficulty=1):
     problem += emptyGraph(ymax=ymax)
 
     answer = startGraph(ymax=ymax)
-    pts = [drawPt([jj,func.subs(jj)]) for jj in nums]
+
+    pts = []
+    for i in nums:
+        if func.subs(i) < ymax:
+            pts.append( drawPt( [i,func.subs(i)] ) )
+        #domain limiter
+        # append to pts array
+
+    # change from ternary to 
+    # pts = [drawPt([jj,func.subs(jj)]) for jj in nums] #nums, ymax
+    #adjust so that it takes domain into consideration
     answer += ' '.join(pts) + endGraph()
 
     if difficulty == 3:
