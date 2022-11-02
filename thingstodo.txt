@@ -317,39 +317,100 @@ INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, descr
 VALUES ('1-3-4','ags.1.3.4','So, Should We Use Recursive Or Explicit?','Easy, Medium, Hard','2, 1, 9','So, Should We Use Recursive Or Explicit? | Complete the missing equation. Then decide which equation will help find the missing term most efficiently. Find the term and explain your choice', '2, 2');
 
 
+----- STOPPED AT 1.3.4
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-4-1','ags.1.4.1','Arithmetic - Explicit & Recursive','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-4-2','ags.1.4.2','Find The Slope','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-5-1','ags.1.5.1','Information To Geometric Sequence','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-5-2','ags.1.5.2','Slope Intercept Form','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-5-3','ags.1.5.3','Geometric Sequence To Explicit Recursive','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-6-1','ags.1.6.1','Percent Change','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-6-2','ags.1.6.2','Is It Arithmetic Or Geometric Sequence','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-8-1','ags.1.8.1','Fill The Gap','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-9-1','ags.1.9.1','Which Grows Faster','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-1','ags.1.10.1','Information To Arithmetic Sequence','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+()()(())(())()()()()
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-1-1','ags.','Ratio','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-2-1','ags.','Find The Slope In Each Representation','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-2-2','ags.','Indicate The Relationship','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-2-3','ags.','Solve The Following Equations','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-2-4','ags.','Find The Recursive and Explicit Equations','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-3-1','ags.','Rules Of Exponents','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-3-2','ags.','Details Of Linear and Geometric Sequences','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-3-3','ags.','Fill In The Blanks','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('2-3-4','ags.','Find The Slope','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
 -----
-
-
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
 
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+<a href="/AGS1/2-4-1">2.4.1 - Square Roots*</a>
+<a href="/AGS1/2-4-2">2.4.2 - Fill In The Table*</a>
+<a href="/AGS1/2-5-1">2.5.1 - Higher Order Roots*</a>
+<a href="/AGS1/2-5-2">2.5.2 - Evaluate The Function*</a>
+<a href="/AGS1/2-6-1">2.6.1 - Percent Increase / Decrease*</a>
+<a href="/AGS1/2-6-2">2.6.2 - Monthly / Exponential*</a>
+<a href="/AGS1/2-7-1">2.7.1 - Fill In The Table*</a>
+<a href="/AGS1/2-7-2">2.7.2 - Radical and Fraction Exponent*</a>
+<a href="/AGS1/2-7-3">2.7.3 - X-intercept & Y-intercept*</a>
+<a href="/AGS1/2-8-1">2.8.1 - Fill In The Missing Numbers As Arithmetic & Geometric Sequence*</a>
+<a href="/AGS1/2-10-1">2.10.1 - Slope-Intercept / Point-Slope Form*</a>
+<a href="/AGS1/2-10-2">2.10.2 - Justification*</a>
+<a href="/AGS1/2-11-1">2.11.1 - Compare Different Characteristics*</a>
+<a href="/AGS1/3-1-1">3.1.1 - Find The Value of X*</a>
+<a href="/AGS1/3-2-1">3.2.1 - Point Of Intersection*</a>
+<a href="/AGS1/3-2-2">3.2.2 - Increasin / Decreasing / Constant / Domain & Range *</a>
+<a href="/AGS1/3-3-1">3.3.1 - Fill In The Table & State The Point Of Intersection*</a>
+<a href="/AGS1/3-3-2">3.3.2 - Finding Features Of Function*</a>
+<a href="/AGS1/3-3-3">3.3.3 - Finding Explicit And Recursive Equations*</a>
+<a href="/AGS1/3-4-1">3.4.1 - Find The Indicated Values*</a>
+<a href="/AGS1/3-4-2">3.4.2 - Graph The New Equation*</a>
+<a href="/AGS1/3-4-3">3.4.3- Compare Two Functions*</a>
+<a href="/AGS1/3-4-4">3.4.4 - Domain & Range / Increasing or Decreasing*</a>
+<a href="/AGS1/3-5-1">3.5.1 - Find The Indicated Values*</a>
+<a href="/AGS1/3-6-1">3.6.1 - Function Transformations*</a>
 
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
------
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('','ags.','TITLE','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
-
+AGS1.4.1.1 - Solve Each Equation And Check Steps.
+AGS1.4.1.2 - Solve Each Equation And Check Steps.
+AGS1.4.2.1 - Find The Domain And Range.
+AGS1.4.2.2 - Graph Inequality
+AGS1.4.2.3 - Solve For The Variable.
 \\\\
 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
