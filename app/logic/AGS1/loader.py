@@ -1906,7 +1906,7 @@ def getWordValue(word, params, kind, string=True):
 
 #-----------------------------------------------------
 
-def makeWordProb(kind='lin', expr='latex'):
+def makeWordProb(kind='lin', expr='latex'): # Lin_probs and Exp_probs have to be unloaded from dolphin csv
     if kind == 'lin':
         data = Lin_probs.loc[randint(0,len(Lin_probs)-1)]
     elif kind == 'exp':
