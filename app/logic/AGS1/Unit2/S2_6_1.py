@@ -56,6 +56,8 @@ def pertable():
 
   return problem, answer
 
-def Percent_Increase_Decrease(diff = 1, expr = "latex")
-  #
-  return
+def Percent_Increase_Decrease(diff = 1, expr = "latex"):
+  if randint(0, 1) == 0:
+    return perequation()
+  else:
+    return pertable()

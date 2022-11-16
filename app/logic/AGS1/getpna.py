@@ -68,7 +68,7 @@ def getproblemandanswer(code, farr):
     # elif(code == "2-5-2"):
     #     pro, ans1, ans2 = M_Evaluate_The_Function(farr) 
     # elif(code == "2-6-1"):
-    #     pro, ans1, ans2 = M_Percent_Increase_Decrease(farr) 
+    #     pro, ans1, ans2 = M_Percent_Increase_Decrease(farr) # NO MULT DIFFICULTY
     # elif(code == "2-6-2"):
     #     pro, ans1, ans2 = M_Monthly_Exponential(farr)
     # elif(code == "2-7-1"):
