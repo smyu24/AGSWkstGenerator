@@ -48,6 +48,8 @@ from .Unit2.S2_11_1 import _
 from .Unit3.S3_1_1 import _
 """
 
+from random import randint
+
 '''
 AGS 1 Section 1-1-1
 '''
@@ -243,7 +245,7 @@ def M_Finding_Patterns_In_Geo_Seq(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '1-2-3-1'):
-        problem, answer = Finding_Patterns_In_Geometric_Shapes(twoDarr[total][1])
+        problem, answer = Finding_Patterns_In_Geometric_Shapes(twoDarr[total][1], 'all', blanks=True)
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -523,7 +525,7 @@ def M_Information_To_Geometric_Sequence(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '1-5-1-1'):
-        problem, answer = Information_To_Geometric_Sequence(twoDarr[total][1], kind='exp')
+        problem, answer = Information_To_Geometric_Sequence(randint(1,4), kind='exp')
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -641,7 +643,7 @@ def M_Is_It_Arith_Or_Geo_Seq(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '1-6-2-1'):
-        problem, answer = Is_It_Arithmetic_Or_Geometric_Sequence(twoDarr[total][1])
+        problem, answer = Is_It_Arithmetic_Or_Geometric_Sequence(randint(1,3))
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"

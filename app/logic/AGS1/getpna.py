@@ -24,7 +24,7 @@ def getproblemandanswer(code, farr):
     elif(code == "1-4-2"):
         pro, ans1, ans2 = M_AGS_Find_The_Slope(farr)
     elif(code == "1-5-1"):
-        pro, ans1, ans2 = M_Information_To_Geometric_Sequence(farr)
+        pro, ans1, ans2 = M_Information_To_Geometric_Sequence(farr) # NO MULT DIFFICULTY
     elif(code == "1-5-2"):
         pro, ans1, ans2 = M_Slope_Intercept(farr)
     elif(code == "1-5-3"):
@@ -32,7 +32,7 @@ def getproblemandanswer(code, farr):
     elif(code == "1-6-1"):
         pro, ans1, ans2 = M_AGS_Percentage_Change(farr)
     elif(code == "1-6-2"):
-        pro, ans1, ans2 = M_Is_It_Arith_Or_Geo_Seq(farr)
+        pro, ans1, ans2 = M_Is_It_Arith_Or_Geo_Seq(farr) # NO MULT DIFFICULTY
     elif(code == "1-8-1"):
         pro, ans1, ans2 = M_Fill_The_Gap(farr)
     elif(code == "1-9-1"):

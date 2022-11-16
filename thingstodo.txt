@@ -208,8 +208,8 @@ UPDATE learningtarget_ags1 SET section = 'Should We Use Recursive Or Explicit?' 
 UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
 UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
 
-
-
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '1-5-1';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '1-6-2';
 
 +-------------------------------------------------------------------------------------------------------+
 | section                                                                                               |
