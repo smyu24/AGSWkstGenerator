@@ -50,7 +50,7 @@ def getSlopeTriGraph(func, pt1, pt2):
     graph += endGraph()
     return graph
 
-def MatchTheSlopes(case=1):
+def Find_The_Slope(case=1):
     if case == 1: # Graph vs. graph
         slope = Rational(getInt(-7,7),2)
         intercept = randint(-5,0) if slope>0 else randint(0,5)

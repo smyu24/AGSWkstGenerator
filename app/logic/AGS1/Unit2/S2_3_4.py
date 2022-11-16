@@ -11,7 +11,7 @@ from random import randint
 # Instruction : Find the rate of change (slope) in each of the problems.
 
 
-def FindTheSlope_2_3_4(case=1, expr="latex"):
+def Find_The_Slope_Table(case=1, expr="latex"):
     slope = Rational(getInt(-8,8),2)
     intercept = Rational(getInt(-12,12),2)
     func = LinFunc(slope, intercept)
@@ -33,8 +33,3 @@ def FindTheSlope_2_3_4(case=1, expr="latex"):
     answer = '$m =' + latexify(func.slope) + '$'
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = FindTheSlope_2_3_4(randint(1,3))
-    print(problem)
-    print(answer)

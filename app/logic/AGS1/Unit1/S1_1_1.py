@@ -53,9 +53,6 @@ def Evaluate_Equation_1(difficulty=1, expr="latex"):
   answer = f"x={answer}"
   return problem , answer
 
-a,b = Evaluate_Equation_1(1)
-print(a,b)
-
 def Evaluate_Equation_2(difficulty=1, expr='latex'):
     if difficulty == 1: # easy
         slope = random.randint(2,9) if random.randint(0,1) else Rational(1,random.randint(2,9))
@@ -89,7 +86,6 @@ def Evaluate_Equation_2(difficulty=1, expr='latex'):
         answer = outputs
 
     return problem, answer
-
 
 def Evaluate_Equation_3(difficulty=1, expr='latex'):
     if difficulty == 1: # easy

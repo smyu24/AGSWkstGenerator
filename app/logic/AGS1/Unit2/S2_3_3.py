@@ -10,7 +10,7 @@ from random import randint
 # AGS1.2.3.3 - Fill in the blanks
 # Instruction : For each arithmetic sequence below, find the missing terms in the sequence. Then write an explicit rule for the sequence.
 
-def FillInTheBlanks(kind='lin', expr='latex'):
+def Fill_In_The_Blanks(kind='lin', expr='latex'):
     if kind == 'lin':
         seq = ArithSeq(getInt(-10,10), [1,getInt(-10,10)])
     else:
@@ -37,16 +37,3 @@ def FillInTheBlanks(kind='lin', expr='latex'):
         answer = seq
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = FillInTheBlanks(kind='geo')
-    print(problem)
-    print(answer)
-
-
-# Instruction : For each geometric sequence below, find the missing terms in the sequence. Then write an explicit rule for the sequence.
-for jj in range(10):
-    problem, answer = FillInTheBlanks(kind='exp')
-    print(problem)
-    print(answer[0])
-    print(answer[1], r'\\ \\')

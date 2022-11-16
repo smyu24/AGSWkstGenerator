@@ -56,4 +56,6 @@ def pertable():
 
   return problem, answer
 
-#??
+def Percent_Increase_Decrease(diff = 1, expr = "latex")
+  #
+  return

@@ -7,8 +7,6 @@ import sympy as sp
 import fractions
 
 # from templates import *
-
-
 def money_truncate(n):
     return("{:,.2f}".format(float(n)))
 

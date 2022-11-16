@@ -10,7 +10,7 @@ from random import randint
 # AGS1.2.5.1 - Higher Order Roots 
 # instruction : Rewrite each of the radical expressions to remove perfect square factors from inside the radical.
 
-def RadicalSimplify(expr='latex'):
+def Higher_Order_Roots(expr='latex'):
     primes = sample([2,3,5,7],3)
     primes.sort()
 
@@ -37,8 +37,3 @@ def RadicalSimplify(expr='latex'):
         answer = '$' + latex(answer) + '$'
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = RadicalSimplify()
-    print(problem, r'\\ ')
-    print(answer, r'\\ \\')

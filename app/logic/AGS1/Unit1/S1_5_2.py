@@ -120,12 +120,6 @@ def Slope_Intercept_Form_1(difficulty=1, expr="latex"):
         problem = str(half_1) + " = " + str(half_2)
     return(str(problem) + r"\\What is the Slope?", "Slope (m) = " + "$" + str(answer) + "$")
 
-
-for i in range(3):
-    problem, answer = Slope_Intercept_Form_1(1, "latex")
-    print(problem, answer)
-
-
 # section 2
 # Instruction : Find the slope,  m  , and the y-intercept,  b  , for each line. Then write an equation for the line.  y=mx+b
 

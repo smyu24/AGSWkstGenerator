@@ -10,7 +10,7 @@ from random import randint
 # AGS1.2.4.2 - Fill In The Table - Fractional Exponent
 # instruction : Fill in the missing values of the table based on the growth that is described, then create the explicit equation for the table.
 
-def FillInTheTable_2_4_2(case=1, expr='latex'):
+def Square_Roots(case=1, expr='latex'):
     primes = [2,3,5,7]
     ratioDescrips = {2: 'doubled', 3: 'tripled', 4: 'quadrupled'}
     labels = ['Years','Bacteria']
@@ -37,8 +37,3 @@ def FillInTheTable_2_4_2(case=1, expr='latex'):
     answer += signify(func.getBaseInt(notation='b'))
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = FillInTheTable_2_4_2(randint(1,3))
-    print(problem)
-    print(answer, r'\\')

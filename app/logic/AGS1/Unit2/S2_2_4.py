@@ -58,7 +58,7 @@ def geo_problem_terms_gen(start, ratio, interateby):
         indexes.append(str(int(indexes[-1]) + int(interateby)))
     return indexes, terms
     
-def Arithmetic_Explicit_Recursive(option_difficulty=1, expr="latex"):
+def Find_The_Recursive_And_Explicit_Equations(option_difficulty=1, expr="latex"):
   variable = random.choice(['x', 'y', 'a', 'b', 'z', 'p', 't'])
   notation = random.choice(['L', 'K', 'U', 'R', 'D', 'W', 'G', 'H', 'V'])
   function_start = notation + "(" + variable + ")"
@@ -94,5 +94,3 @@ def Arithmetic_Explicit_Recursive(option_difficulty=1, expr="latex"):
   problem = problem.replace("\\begin{table}","")
   problem = problem.replace("\\end{table}","")
   return problem, r'\\'.join(answer)
-
-  # Not sure abt this r'\\'

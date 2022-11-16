@@ -45,7 +45,7 @@ def getExponentForm(base, exp, start=1, posExpOnly=False):
 
     return result
 
-def ExponentRuleProblem(difficulty=1, expr="latex", posExpOnly=False):
+def Rules_Of_Exponents(difficulty=1, expr="latex", posExpOnly=False):
     base = getInt(2,10)
     exp1 = getInt(2,10)
     exp2 = getInt(2,10)
@@ -105,8 +105,3 @@ def ExponentRuleProblem(difficulty=1, expr="latex", posExpOnly=False):
         answer = {'base': base, 'exp': expAns} if difficulty<3 else answer
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = ExponentRuleProblem(randint(1,3))
-    print(problem, r'\\')
-    print(answer, r'\\ \\')

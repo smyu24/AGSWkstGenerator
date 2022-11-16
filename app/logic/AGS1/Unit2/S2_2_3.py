@@ -63,14 +63,8 @@ def case2(diff=1):
   equation = r'$\frac{' + str(ft) + "}{" + str(fb) + "}$x = " + str( "{:.2f}".format((ft/fb)*a) )
   return equation, a
 
-def followingequation(diff=1, expr="latex", lvl=1):
+def Solve_The_Following_Equations(diff=1, expr="latex", lvl=1):
   if lvl == 1:
     return case1(diff)
   else:
     return case2(diff)
-
-"""
-param
-------
-reg seed [0][1]; "latex"; random.randint(0,1)
-"""

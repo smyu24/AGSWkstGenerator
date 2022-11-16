@@ -11,7 +11,7 @@ from random import randint
 # AGS1.2.3.2 - Details Of Linear And Geometric Sequences
 # introduction : Based on each of the word problems, determine the following.
 
-def LinOrExp_2_3_2(case=1, expr='latex'):       #TODO: discrete vs. continuous
+def Details_Of_Linear_And_Geometric_Sequences_1(case=1, expr='latex'):       #TODO: discrete vs. continuous
     if case in [1,2]:               # Linear, discrete and continuous
         kind = 'lin'
     elif case in [3,4]:             # Exponential, discrete and continuous
@@ -35,15 +35,10 @@ def LinOrExp_2_3_2(case=1, expr='latex'):       #TODO: discrete vs. continuous
 
     return problem, answer
 
-for jj in range(10):
-    problem, answer = LinOrExp_2_3_2(case=3)
-    print(problem, r'\\')
-    print(answer)
-
 
 # Instrcutiont : Based on each of the linear equations, determine the following.
 
-def LinOrExpEq_2_3_2(case=1, expr='latex'):                 # TODO: transcental equations     
+def Details_Of_Linear_And_Geometric_Sequences_2(case=1, expr='latex'):                 # TODO: transcental equations     
     if case <= 3:               # Linear
         if case == 1:
             aa, bb, cc = randint(-10,10), getInt(-10,10), randint(-10,10)
@@ -84,14 +79,9 @@ def LinOrExpEq_2_3_2(case=1, expr='latex'):                 # TODO: transcental 
 
     return problem, answer
 
-for jj in range(10):
-    problem, answer = LinOrExpEq_2_3_2(case=randint(4,8))
-    print(problem, r'\\')
-    print(answer, r'\\ \\')
-
 # Instrcutiont : Based on each of the graphs, determine the following.
 
-def LinOrExpGraph_2_3_2(case=1, expr='latex'):
+def Details_Of_Linear_And_Geometric_Sequences_3(case=1, expr='latex'):
     if case in [1,2]:               # Linear
         func = LinFunc(getInt(-10,10),randint(-10,10))
 
@@ -112,12 +102,6 @@ def LinOrExpGraph_2_3_2(case=1, expr='latex'):
     problem += endGraph()
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = LinOrExpGraph_2_3_2(case=randint(1,4))
-    print(problem, r'\\')
-    print(answer)
-
 
 # Instrcutiont : Based on each of the tables, determine the following.
 

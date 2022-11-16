@@ -9,7 +9,7 @@ from random import randint
 # AGS1.2.6.2 - Monthly / Exponential
 # instruction : Rewrite each of the expressions containing an annual interest rate to reveal a monthly, quarterly, or daily interest rate. Find the rate and provide the time period it would represent.
 
-def monthlyexp(diff = 1, expr = "latex"):
+def Monthly_Exponential(diff = 1, expr = "latex"):
   ndict = [1, 4, 6, 12, 52, 365]
   sdict = ["annually", "quarterly", "semi-annually", "monthly", "weekly", "daily"]
   num = randint(0, 6)
@@ -25,8 +25,6 @@ def monthlyexp(diff = 1, expr = "latex"):
   answer = "$" + str(ans) + "^t$, " + sdict[num] + " rate of " + str(ans) 
 
   return problem, answer
-
-print(monthlyexp(2))
 
 """
   File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_6_2.py", line 29, in <module>

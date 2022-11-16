@@ -10,7 +10,7 @@ from random import randint
 # AGS1.2.4.1 - Square Roots
 # instruction : Rewrite each of the square roots below by removing repeated factors from under the square root.
 
-def SqrtSimplify(expr='latex'):
+def Square_Roots(expr='latex'):
     primes = sample([2,3,5,7],3)
     primes.sort()
 
@@ -32,8 +32,3 @@ def SqrtSimplify(expr='latex'):
         answer = '$' + latex(answer) + '$'
 
     return problem, answer
-
-for jj in range(10):
-    problem, answer = SqrtSimplify()
-    print(problem, r'\\ ')
-    print(answer, r'\\ \\')

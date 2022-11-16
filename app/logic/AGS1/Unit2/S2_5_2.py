@@ -9,7 +9,7 @@ from random import randint
 # AGS1.2.5.2 - Evaluate The Function
 # Instruction : Find the indicated values for each of the problems.
 
-def evaluatethefunction(diff=1, expr="latex"):
+def Evaluate_The_Function(diff=1, expr="latex"):
   fname = ["f", "k", "z"]
   fnum = randint(0, 2)
   arr = []
@@ -133,8 +133,6 @@ def evaluatethefunction(diff=1, expr="latex"):
 
   return problem + "\newline" + pa + "\newline" + pb + "\newline" + pc, fa
 
-    
-for i in range(10): print(evaluatethefunction(randint(1,5)))
 
 """
 Traceback (most recent call last):
