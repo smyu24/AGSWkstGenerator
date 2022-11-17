@@ -211,6 +211,12 @@ UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
 UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '1-5-1';
 UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '1-6-2';
 
+UPDATE testset SET ccss = 'pre.1.8.1,pre.1.8.3,pre.1.8.4,pre.1.8.5,pre.1.8.6' WHERE testname = 'Proportions and Percents';
+
+Proportions and Percent
+Prealgebra | Inequalities             | pre.1.6.1,pre.1.6.2,pre.1.6.3,pre.1.6.4
+Prealgebra | Proportions and Percents | pre.1.8.1,pre.1.8.2,pre.1.8.4,pre.1.8.5,pre.1.8.6
+
 +-------------------------------------------------------------------------------------------------------+
 | section                                                                                               |
 +-------------------------------------------------------------------------------------------------------+

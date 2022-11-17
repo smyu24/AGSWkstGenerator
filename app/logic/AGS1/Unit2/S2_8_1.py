@@ -45,8 +45,3 @@ def FillInTheMeansTable(expr='latex'):
         answer = [answer, arith, geo]
 
     return problem, answer
-
-for jj in range(5):
-    problem, answer = FillInTheMeansTable()
-    print(problem)
-    print(answer)

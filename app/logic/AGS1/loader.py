@@ -934,7 +934,7 @@ class ArithSeq(LinFunc):
         blank = r'\underline{\hspace{4mm}}'
         result = [latexify(self.findTerm(jj), self.precision) if type(jj)==int else blank for jj in nums]
 
-        return (r',\ ').join(result) + r', \ldots'
+        return (r', ').join(result) + r', \ldots' # prev ',\ '
 
 class GeoSeq(ExpFunc):
     """

@@ -29,15 +29,4 @@ def LinearForms_2_10_1(case=1, expr='latex'):
 
     return problem, answer
 
-for jj in range(10):
-    problem, answer = LinearForms_2_10_1()
-    print(problem, r'\\')
-    print(answer, r'\\')
-
-
 # instruction : For each table of values, write two different explicit equations in point-slope form and slope-intercept form.
-
-for jj in range(10):
-    problem, answer = LinearForms_2_10_1(case=2)
-    print(problem, r'\\')
-    print(answer, r'\\')

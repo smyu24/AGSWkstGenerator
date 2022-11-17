@@ -10,7 +10,7 @@ def getproblemandanswer(code, farr):
     elif(code == "1-2-2"):
         pro, ans1, ans2 = M_The_Meaning_Of_An_Exp(farr)
     elif(code == "1-2-3"):
-        pro, ans1, ans2 = M_Finding_Patterns_In_Geo_Seq(farr)
+        pro, ans1, ans2 = M_Finding_Patterns_In_Geo_Seq(farr) # NO MULT DIFFICULTY
     elif(code == "1-3-1"):
         pro, ans1, ans2 = M_Reading_The_Table(farr)
     elif(code == "1-3-2"):
@@ -43,8 +43,9 @@ def getproblemandanswer(code, farr):
     
     # elif(code == "2-1-1"):
     #     pro, ans1, ans2 = M_(farr)
+
     # elif(code == "2-2-1"):
-    #     pro, ans1, ans2 = M_Find_The_Slope(farr)
+    #     pro, ans1, ans2 = M_Find_The_Slope(farr) # NO MULT DIFFICULTY!
     # elif(code == "2-2-2"):
     #     pro, ans1, ans2 = M_Indicate_The_Relationship(farr)
     # elif(code == "2-2-3"):
@@ -62,30 +63,29 @@ def getproblemandanswer(code, farr):
     # elif(code == "2-4-1"):
     #     pro, ans1, ans2 = M_Square_Roots(farr)
     # elif(code == "2-4-2"):
-    #     pro, ans1, ans2 = M_Fill_In_The_Table(farr)
+    #     pro, ans1, ans2 = M_Fill_In_The_Table(farr) # NO MULT DIFFICULTY
     # elif(code == "2-5-1"):
     #     pro, ans1, ans2 = M_Higher_Order_Roots(farr) 
     # elif(code == "2-5-2"):
-    #     pro, ans1, ans2 = M_Evaluate_The_Function(farr) 
+    #     pro, ans1, ans2 = M_Evaluate_The_Function(farr) # issue
     # elif(code == "2-6-1"):
     #     pro, ans1, ans2 = M_Percent_Increase_Decrease(farr) # NO MULT DIFFICULTY
     # elif(code == "2-6-2"):
-    #     pro, ans1, ans2 = M_Monthly_Exponential(farr)
+    #     pro, ans1, ans2 = M_Monthly_Exponential(farr) # issue
     # elif(code == "2-7-1"):
-    #     pro, ans1, ans2 = M_(farr) #
+    #     pro, ans1, ans2 = M_(farr) # no mult; option='exp'
     # elif(code == "2-7-2"):
-    #     pro, ans1, ans2 = M_(farr)
+    #     pro, ans1, ans2 = M_(farr) # (diff, "latex", "r" or "e")
     # elif(code == "2-7-3"):
-    #     pro, ans1, ans2 = M_(farr)
+    #     pro, ans1, ans2 = M_(farr) # NO MULT ; kind='exp' only para
     # elif(code == "2-8-1"):
-    #     pro, ans1, ans2 = M_(farr)
+    #     pro, ans1, ans2 = M_(farr) # NO MULT DIFF
     # elif(code == "2-10-1"):
     #     pro, ans1, ans2 = M_(farr)
     # elif(code == "2-10-2"):
-    #     pro, ans1, ans2 = M_(farr)
+    #     pro, ans1, ans2 = M_(farr) # Case 1 for diff 1 and case 2 for diff 2
     # elif(code == "2-11-1"):
     #     pro, ans1, ans2 = M_(farr)
-
 
     # elif(code == "3-"):
     #     pro, ans1, ans2 = M_(farr)

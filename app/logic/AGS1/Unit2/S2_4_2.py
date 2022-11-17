@@ -10,7 +10,7 @@ from random import randint
 # AGS1.2.4.2 - Fill In The Table - Fractional Exponent
 # instruction : Fill in the missing values of the table based on the growth that is described, then create the explicit equation for the table.
 
-def Square_Roots(case=1, expr='latex'):
+def Fill_In_The_Table(case=1, expr='latex'):
     primes = [2,3,5,7]
     ratioDescrips = {2: 'doubled', 3: 'tripled', 4: 'quadrupled'}
     labels = ['Years','Bacteria']

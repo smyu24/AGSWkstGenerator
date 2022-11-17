@@ -97,5 +97,3 @@ def radicalandfractionexponent(diff = 1, expr = "latex", form = "r"):
       answer = trisqrt(inta, intb, intc, intd, inte, intf, intg)
 
   return problem, answer
-
-print(radicalandfractionexponent(3, "latex", "r"))

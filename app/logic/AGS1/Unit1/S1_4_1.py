@@ -59,17 +59,4 @@ def Arithmetic_Explicit_Recursive(difficulty=1, prob='common', blanks=False, exp
             
     return problem, answer
 
-# for i in range(5):
-#     problem, answer = Arithmetic_Explicit_Recursive(1, 'all', blanks=True)
-#     print(problem, r'\\')
-#     print(answer, r'\\')
-
-# for i in range(5):
-#     problem, answer = Arithmetic_Explicit_Recursive(2, 'all', blanks=True)
-#     print(problem, r'\\')
-#     print(answer, r'\\')
-
-# for i in range(5):
-#     problem, answer = Arithmetic_Explicit_Recursive(3, 'all', blanks=True)
-#     print(problem, r'\\')
-#     print(answer, r'\\')
+print(*(Arithmetic_Explicit_Recursive(1, 'all', False)))

@@ -147,8 +147,3 @@ def GraphXintYint_2_7_3(kind='lin', expr='latex'):
     answer += (drawPt([xint,0]) + endGraph()) if xint!=None else endGraph()
 
     return problem, answer
-
-for jj in range(5):
-    problem, answer = GraphXintYint_2_7_3(kind='exp')
-    print(problem)
-    print(answer)

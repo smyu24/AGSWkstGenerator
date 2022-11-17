@@ -61,7 +61,3 @@ def FillInTheTable(option='exp', expr='latex'):
 
     return problem, answer
   
-
-for i in range(10):
-    problem, answer = FillInTheTable(option='exp')
-    print(problem, answer)
