@@ -32,7 +32,7 @@ from .Unit2.S2_3_4 import Find_The_Slope_Table
 from .Unit2.S2_4_1 import Square_Roots
 from .Unit2.S2_4_2 import Fill_In_The_Table
 from .Unit2.S2_5_1 import Higher_Order_Roots
-from .Unit2.S2_5_2 import Evaluate_The_Function
+#from .Unit2.S2_5_2 import Evaluate_The_Function
 from .Unit2.S2_6_1 import Percent_Increase_Decrease
 from .Unit2.S2_6_2 import Monthly_Exponential
 """
@@ -831,8 +831,8 @@ def M_Solve_The_Following_Equations(twoDarr):
     midnewanswer = ""
 
     for i in range(twoDarr[total][2]):
-      if(twoDarr[total][0] == '1-6-2-1'):
-        problem, answer = Is_It_Arithmetic_Or_Geometric_Sequence(randint(1,3))
+      if(twoDarr[total][0] == '2-2-3-1'):
+        problem, answer = Solve_The_Following_Equations( twoDarr[total][1], "latex", randint(1,2) )
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -852,57 +852,384 @@ def M_Solve_The_Following_Equations(twoDarr):
 '''
 AGS 1 Section 2-2-4
 '''
+def M_Find_The_Recursive_And_Explicit_Equations(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-2-4-1'):
+        problem, answer = Find_The_Recursive_And_Explicit_Equations()
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 '''
 AGS 1 Section 2-3-1
 '''
+def M_Rules_Of_Exponents(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-3-1-1'):
+        problem, answer = Rules_Of_Exponents( twoDarr[total][1] )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
 '''
 AGS 1 Section 2-3-2
 '''
+def M_Details_Of_Linear_And_Geometric_Sequences(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-3-2-1'):
+        problem, answer = Details_Of_Linear_And_Geometric_Sequences_1( randint(1,7) )
+      elif(twoDarr[total][0] == '2-3-2-2'):
+        problem, answer = Details_Of_Linear_And_Geometric_Sequences_2( randint(1,8) )
+      else:
+        problem, answer = Details_Of_Linear_And_Geometric_Sequences_3( randint(1,4) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 '''
 AGS 1 Section 2-3-3
 '''
+def M_Fill_In_The_Blanks(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-3-3-1'):
+        problem, answer = Fill_In_The_Blanks()
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 '''
 AGS 1 Section 2-3-4
 '''
+def M_Find_The_Slope_Table(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-3-4-1'):
+        problem, answer = Find_The_Slope_Table( randint(1,3) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
 '''
 AGS 1 Section 2-4-1
 '''
+def M_Square_Roots(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-4-1-1'):
+        problem, answer = Square_Roots()
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
 '''
 AGS 1 Section 2-4-2
 '''
+def M_Fill_In_The_Table(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-4-2-1'):
+        problem, answer = Fill_In_The_Table( randint(1,2) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
 '''
 AGS 1 Section 2-5-1
 '''
+def M_Higher_Order_Roots(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
 
-'''
-AGS 1 Section 2-5-2
-'''
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-5-1-1'):
+        problem, answer = Higher_Order_Roots()
 
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+# '''
+# AGS 1 Section 2-5-2
+# '''
+# def M_Evaluate_The_Function(twoDarr): # ????
+#   masterSeed = []
+#   ANSmasterSeed = []
+#   newpageanswer = []
+#   tmasterSeed = ""
+#   tANSmasterSeed = ""
+
+#   for total in range(len(twoDarr)):
+#     midMasterSeed = ""
+#     midANSmasterSeed = ""
+#     midnewanswer = ""
+
+#     for i in range(twoDarr[total][2]):
+#       if(twoDarr[total][0] == '2-5-2-1'):
+#         problem, answer = Evaluate_The_Function( randint(1, 5) )
+
+#         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+#         temp_answer = "{\\color{red}" + str(answer) + "}"
+#         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+#         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+#       midMasterSeed += tmasterSeed
+#       midANSmasterSeed += tANSmasterSeed
+#       midnewanswer += tnewpageanswer
+
+#     ANSmasterSeed.append(midANSmasterSeed)
+#     masterSeed.append(midMasterSeed)
+#     newpageanswer.append(midnewanswer)
+
+#   return (masterSeed, ANSmasterSeed, newpageanswer)
 
 '''
 AGS 1 Section 2-6-1
 '''
+def M_Percent_Increase_Decrease(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-6-1-1'):
+        problem, answer = Percent_Increase_Decrease()
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 '''
 AGS 1 Section 2-6-2
 '''
+def M_Monthly_Exponential(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-6-2-1'):
+        problem, answer = Monthly_Exponential()
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+      
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 '''
 AGS 1 Section 2-7-1

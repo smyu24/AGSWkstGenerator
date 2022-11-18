@@ -58,7 +58,7 @@ def geo_problem_terms_gen(start, ratio, interateby):
         indexes.append(str(int(indexes[-1]) + int(interateby)))
     return indexes, terms
     
-def Find_The_Recursive_And_Explicit_Equations(option_difficulty=1, expr="latex"):
+def Find_The_Recursive_And_Explicit_Equations(expr="latex"):
   variable = random.choice(['x', 'y', 'a', 'b', 'z', 'p', 't'])
   notation = random.choice(['L', 'K', 'U', 'R', 'D', 'W', 'G', 'H', 'V'])
   function_start = notation + "(" + variable + ")"

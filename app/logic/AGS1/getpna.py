@@ -44,34 +44,34 @@ def getproblemandanswer(code, farr):
     # elif(code == "2-1-1"):
     #     pro, ans1, ans2 = M_(farr)
 
-    # elif(code == "2-2-1"):
-    #     pro, ans1, ans2 = M_Find_The_Slope(farr) # NO MULT DIFFICULTY!
+    elif(code == "2-2-1"):
+        pro, ans1, ans2 = M_Find_The_Slope(farr) # NO MULT DIFFICULTY!
     # elif(code == "2-2-2"):
     #     pro, ans1, ans2 = M_Indicate_The_Relationship(farr)
-    # elif(code == "2-2-3"):
-    #     pro, ans1, ans2 = M_Solve_The_Following_Equations(farr) # (diff=1, expr="latex", lvl=1) ONLY LVL 1 & 2
-    # elif(code == "2-2-4"):
-    #     pro, ans1, ans2 = M_Find_The_Recursive_And_Explicit_Equations(farr) 
-    # elif(code == "2-3-1"):
-    #     pro, ans1, ans2 = M_Rules_Of_Exponents(farr) #(difficulty=1, expr="latex", posExpOnly=False):
-    # elif(code == "2-3-2"):
-    #     pro, ans1, ans2 = M_Details_Of_Linear_And_Geometric_Sequences(farr)
-    # elif(code == "2-3-3"):
-    #     pro, ans1, ans2 = M_Fill_In_The_Blanks(farr) # kind='geo'; kind='exp'
-    # elif(code == "2-3-4"):
-    #     pro, ans1, ans2 = M_Find_The_Slope_Table(farr) # only one mode
-    # elif(code == "2-4-1"):
-    #     pro, ans1, ans2 = M_Square_Roots(farr)
-    # elif(code == "2-4-2"):
-    #     pro, ans1, ans2 = M_Fill_In_The_Table(farr) # NO MULT DIFFICULTY
-    # elif(code == "2-5-1"):
-    #     pro, ans1, ans2 = M_Higher_Order_Roots(farr) 
-    # elif(code == "2-5-2"):
-    #     pro, ans1, ans2 = M_Evaluate_The_Function(farr) # issue
-    # elif(code == "2-6-1"):
-    #     pro, ans1, ans2 = M_Percent_Increase_Decrease(farr) # NO MULT DIFFICULTY
-    # elif(code == "2-6-2"):
-    #     pro, ans1, ans2 = M_Monthly_Exponential(farr) # issue
+    elif(code == "2-2-3"):
+        pro, ans1, ans2 = M_Solve_The_Following_Equations(farr) # (diff=1, expr="latex", lvl=1) ONLY LVL 1 & 2
+    elif(code == "2-2-4"):
+        pro, ans1, ans2 = M_Find_The_Recursive_And_Explicit_Equations(farr) 
+    elif(code == "2-3-1"):
+        pro, ans1, ans2 = M_Rules_Of_Exponents(farr) #(difficulty=1, expr="latex", posExpOnly=False):
+    elif(code == "2-3-2"):
+        pro, ans1, ans2 = M_Details_Of_Linear_And_Geometric_Sequences(farr)
+    elif(code == "2-3-3"):
+        pro, ans1, ans2 = M_Fill_In_The_Blanks(farr) # kind='geo'; kind='exp'
+    elif(code == "2-3-4"):
+        pro, ans1, ans2 = M_Find_The_Slope_Table(farr) # only one mode
+    elif(code == "2-4-1"):
+        pro, ans1, ans2 = M_Square_Roots(farr)
+    elif(code == "2-4-2"):
+        pro, ans1, ans2 = M_Fill_In_The_Table(farr) # NO MULT DIFFICULTY
+    elif(code == "2-5-1"):
+        pro, ans1, ans2 = M_Higher_Order_Roots(farr) 
+    elif(code == "2-5-2"):
+        pro, ans1, ans2 = M_Evaluate_The_Function(farr) # issue
+    elif(code == "2-6-1"):
+        pro, ans1, ans2 = M_Percent_Increase_Decrease(farr) # NO MULT DIFFICULTY
+    elif(code == "2-6-2"):
+        pro, ans1, ans2 = M_Monthly_Exponential(farr) # issue
     # elif(code == "2-7-1"):
     #     pro, ans1, ans2 = M_(farr) # no mult; option='exp'
     # elif(code == "2-7-2"):
