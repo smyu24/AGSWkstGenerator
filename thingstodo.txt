@@ -1,6 +1,10 @@
+GET RID OF NEWLINE (\newline)
+
 pip install WTForms==2.3.3
 
 improve navbar, sidebar
+
+FIX GRAPHICAL ISSUE WITH LATEX
 
 add user login, register, settings
 
@@ -10,12 +14,6 @@ TOGGLE HTML VERSION FOR LIVE ANSWERING (image of exmaple + mathjax/SVG plot) htt
 
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
-
-FINISH PRE_ALG
-
-SET UP AGS 1
-
-get tables, graphs, graphical set up for future
 
 ADHD font availability in PDF -- bionic reading
 
@@ -208,8 +206,17 @@ UPDATE learningtarget_ags1 SET section = 'Should We Use Recursive Or Explicit?' 
 UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
 UPDATE learningtarget_ags1 SET latex = '1, 2' where Seed ='1-2-1';
 
-UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '1-5-1';
-UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '1-6-2';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-2-4';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-3-2';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-3-3';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-3-4';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-4-1';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-4-2';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-5-1';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-5-2';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-6-1';
+UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-';
+
 
 
 One question per line for 1-9-1
@@ -262,11 +269,6 @@ Prealgebra | Proportions and Percents | pre.1.8.1,pre.1.8.2,pre.1.8.4,pre.1.8.5,
                                                    |
 
 
-
-
-
- 1-9-1 | pre.1.9.1 | Find The Slope Using Graphs, Find The Slope Using Data Points, Find The Slope Using Equations | Easy, Medium, Hard | 2, 1, 9 | Find The Slope | Find the slope of each line. | Find the slo
-pe of the set of points. | Find the slope of each equation. | 2, 2  |
 
 UPDATE learningtarget_ags1 SET section = 'Select the solution to the equation, Find the response value, Evaluate functions using the same value' where Seed ='1-1-1';
 

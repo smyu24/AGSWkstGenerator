@@ -104,4 +104,3 @@ def Details_Of_Linear_And_Geometric_Sequences_3(case=1, expr='latex'):
     return problem, answer
 
 # Instrcutiont : Based on each of the tables, determine the following.
-

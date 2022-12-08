@@ -935,11 +935,7 @@ def M_Details_Of_Linear_And_Geometric_Sequences(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-3-2-1'):
-        problem, answer = Details_Of_Linear_And_Geometric_Sequences_1( randint(1,7) )
-      elif(twoDarr[total][0] == '2-3-2-2'):
-        problem, answer = Details_Of_Linear_And_Geometric_Sequences_2( randint(1,8) )
-      else:
-        problem, answer = Details_Of_Linear_And_Geometric_Sequences_3( randint(1,4) )
+        problem, answer = choice(Details_Of_Linear_And_Geometric_Sequences_1( randint(1,7) ), Details_Of_Linear_And_Geometric_Sequences_2( randint(1,8) ), Details_Of_Linear_And_Geometric_Sequences_3( randint(1,4) ) )
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -971,7 +967,7 @@ def M_Fill_In_The_Blanks(twoDarr):
     midANSmasterSeed = ""
     midnewanswer = ""
 
-    for i in range(twoDarr[total][2]):
+    for i in range(twoDarr[total][2]): ## arith, but there is also geo, exp
       if(twoDarr[total][0] == '2-3-3-1'):
         problem, answer = Fill_In_The_Blanks()
 
@@ -1234,33 +1230,35 @@ def M_Monthly_Exponential(twoDarr):
 '''
 AGS 1 Section 2-7-1
 '''
-
+#no multiple difficulty (there is linear, exponential, )
 
 '''
 AGS 1 Section 2-7-2
 '''
-
+#(diff, expr, form) diff: 1-single 2-dual 3-tri expr: latex, form: "r"-radical else: exponential
 
 '''
 AGS 1 Section 2-7-3
 '''
-
+#kind=lin and exp 
 
 '''
 AGS 1 Section 2-8-1
 '''
-
+#
 
 '''
 AGS 1 Section 2-10-1
 '''
-
+#case: 1 slope and point, 2 table
 
 '''
 AGS 1 Section 2-10-2
 '''
-
+#
 
 '''
 AGS 1 Section 2-11-1
 '''
+#
+
