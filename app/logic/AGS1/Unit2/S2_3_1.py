@@ -100,7 +100,7 @@ def Rules_Of_Exponents(difficulty=1, expr="latex", posExpOnly=False):
         if difficulty<3:
             answer = '$' + getExponentForm(base, expAns, posExpOnly=posExpOnly) + '$'
         else:
-            answer = '$' + latex(answer) + '$'
+            answer = f'${latex(answer)}$'
     else:
         answer = {'base': base, 'exp': expAns} if difficulty<3 else answer
 

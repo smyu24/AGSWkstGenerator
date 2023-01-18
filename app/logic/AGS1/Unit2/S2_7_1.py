@@ -61,3 +61,5 @@ def FillInTheTable(option='exp', expr='latex'):
 
     return problem, answer
   
+
+#!!!!!!!!! the minipage is set to previous version. Same for the text width and vspace

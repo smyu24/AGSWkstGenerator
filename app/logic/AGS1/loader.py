@@ -1145,7 +1145,7 @@ def latexify(data, precision=2):
 def brackify(data):
     return r'{' + str(data) + r'}'
 
-def minipagify(left, right, vspace='0.25in'):
+def minipagify(left, right, vspace='0.6cm'):
     string = '\\noindent\\begin{minipage}[t]{0.5\\textwidth}\n'
     string += left + '\n\\end{minipage}\n'
     string += '\\begin{minipage}[t]{0.5\\textwidth}\n'
@@ -1153,12 +1153,12 @@ def minipagify(left, right, vspace='0.25in'):
     string += f'\\vspace{brackify(vspace)}\n'
     return string
 
-def tripPagify(left, middle, right, vspace='0.25in'):
-    string = '\\noindent\\begin{minipage}[t]{0.33\\textwidth}\n'
+def tripPagify(left, middle, right, vspace='0.6cm'):
+    string = '\\noindent\\begin{minipage}[t]{0.3\\textwidth}\n'
     string += left + '\n\\end{minipage}\n'
-    string += '\\begin{minipage}[t]{0.33\\textwidth}\n'
+    string += '\\begin{minipage}[t]{0.3\\textwidth}\n'
     string += middle + '\n\\end{minipage}\n'
-    string += '\\begin{minipage}[t]{0.33\\textwidth}\n'
+    string += '\\begin{minipage}[t]{0.4\\textwidth}\n'
     string += right + '\n\\end{minipage}\n\n'
     string += f'\\vspace{brackify(vspace)}\n'
     return string

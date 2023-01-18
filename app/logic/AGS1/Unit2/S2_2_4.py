@@ -13,6 +13,7 @@ import latextable
 import sympy
 import random
 
+
 def table_selector(rows):
     table = Texttable()
     table.set_cols_align(["c"] * 2)
@@ -38,7 +39,7 @@ def recursive_function_formatter(start, variable, ratio, notation):
     return sympy.latex(sympy.sympify(fr'{start} + ({variable} - 1) * {ratio}', evaluate = False), fold_short_frac=False)
 
 def dollar_signify(input):
-    return("$" + input + "$")
+    return(f"${input}$")
 
 def explicit_function_formatter_g(ratio, variable, start, notation):
     return sympy.latex(sympy.sympify(fr'{start} * ({ratio}) ** ({variable} - 1)', evaluate = False), fold_short_frac=False)

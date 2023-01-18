@@ -133,3 +133,6 @@ def comparedifferent(diff = 1, expr="latex"):
     graph = creategraph(str(a)+"*+pow("+str(m)+","+str(x)+"+"+str(xint)+")+"+str(yint), [ xtable[1], ytable[1] ],[ xtable[3], ytable[3] ], 1)
 
     return createproblem(equation), createanswer(equation, "Exponential", "Geometric", ytable, m, graph, ytable[1])
+
+
+    #!!!!! minipage, vspace, and textwidth are all on previous versions. must update before pushing onto official build

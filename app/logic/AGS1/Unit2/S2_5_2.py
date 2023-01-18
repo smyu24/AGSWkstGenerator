@@ -63,6 +63,10 @@ def Evaluate_The_Function(diff=1, expr="latex"):
 
     arr.append("{:.2f}".format(arr[0]* (arr[1] ** 0.5)))
 
+    problem = "Given equation is $" + fname[fnum] + "(x) = " + str(arr[0]) + " ^ " + str(arr[1]) + "$"
+
+
+
   elif (diff == 4): #Quadratic
     arr.append(0) 
     arr.append(0) 

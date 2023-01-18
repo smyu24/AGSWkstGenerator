@@ -866,7 +866,7 @@ def M_Find_The_Recursive_And_Explicit_Equations(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-2-4-1'):
-        problem, answer = Find_The_Recursive_And_Explicit_Equations()
+        problem, answer = Find_The_Recursive_And_Explicit_Equations() # no argv
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -969,7 +969,14 @@ def M_Fill_In_The_Blanks(twoDarr):
 
     for i in range(twoDarr[total][2]): ## arith, but there is also geo, exp
       if(twoDarr[total][0] == '2-3-3-1'):
-        problem, answer = Fill_In_The_Blanks()
+        problem, answer = Fill_In_The_Blanks() # arith 
+
+        # geo
+      # if(twoDarr[total][0] == '2-3-3-2'):
+      #   problem, answer = Fill_In_The_Blanks()
+
+        # exp
+
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -1159,6 +1166,7 @@ def M_Higher_Order_Roots(twoDarr):
 
 #   return (masterSeed, ANSmasterSeed, newpageanswer)
 
+
 '''
 AGS 1 Section 2-6-1
 '''
@@ -1255,10 +1263,9 @@ AGS 1 Section 2-10-1
 '''
 AGS 1 Section 2-10-2
 '''
-#
+# 
 
 '''
 AGS 1 Section 2-11-1
 '''
-#
-
+# 

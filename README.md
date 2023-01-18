@@ -83,14 +83,10 @@ CREATE TABLE learningtarget_ags1 (
 * improve navbar, sidebar
 * add user login, register, settings
 * add teacher, parent, classroom database set up
-* TOGGLE HTML VERSION FOR LIVE ANSWERING (image of exmaple + mathjax/SVG plot) https://github.com/kisonecat/tikzjax
-* ADHD font availability in PDF
+* TOGGLE HTML VERSION FOR LIVE ANSWERING (image of example + mathjax/SVG plot) https://github.com/kisonecat/tikzjax
+* ADHD font availability in PDF (bionic reading)
 * AUTO GRADE FEATURE
 * Quizlet similar single online activities availiablity
     - lazy loading using async JS and creating
 * Local compilation of latex PDF
-* 
-* 
-* 
-* 
 * 

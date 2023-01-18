@@ -147,3 +147,6 @@ def GraphXintYint_2_7_3(kind='lin', expr='latex'):
     answer += (drawPt([xint,0]) + endGraph()) if xint!=None else endGraph()
 
     return problem, answer
+
+
+# !!!!!!!! minipage, vspace, and textwidth for this generator is at previous verison. Must update b4 pushing onto official version

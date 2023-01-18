@@ -12,7 +12,7 @@ from random import randint
 def Monthly_Exponential(expr = "latex"):
   ndict = [1, 4, 6, 12, 52, 365]
   sdict = ["annually", "quarterly", "semi-annually", "monthly", "weekly", "daily"]
-  num = randint(0, 6)
+  num = randint(0, 5)
   case = randint(1,2)
 
   if case == 1: #natural number
