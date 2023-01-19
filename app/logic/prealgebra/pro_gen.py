@@ -54,9 +54,7 @@ from .section8.pre1a8a6 import Simple_And_Compound_Interest_Section_1, Simple_An
 
 from.section9.pre1a9a1 import Find_The_Slope_Section_1, Find_The_Slope_Section_2, Find_The_Slope_Section_3
 from.section9.pre1a9a2 import Graphing_Lines_Slope_Intersect
-#from.section9.pre1a9a3 import
-#from.section9.pre1a9a4 import
-#from.section9.pre1a9a5 import
+
 
 import math
 import random
