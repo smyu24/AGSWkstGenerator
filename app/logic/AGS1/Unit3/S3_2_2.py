@@ -8,12 +8,12 @@ import random
 import numpy as np
 from random import randint
 
+#NOT WORKIGN; I think
 # NO SETTING OTHER THAN 1; no Hard medium, easy
 
 # AGS1.3.2.2 - Increasin / Decreasing / Constant / Domain & Range
 # section 1: lienar function
 # instruction : For each graph and description do the following:
-
 
 #prequisite
 
@@ -24,7 +24,6 @@ r"""
 \usetikzlibrary{patterns}
 """
 # for generating data, create a "range" of +/3 that the randomizer can choose from (up or down)
-
 
 def upAndDownGraph():
     problem = ""
@@ -69,13 +68,11 @@ def compress_d(increasing, decreasing, stagnant):
                 #increasing[i+1]
                 # domains not properly compressing (only pairing
 
-    print(decreasing)
     for i in range(len(decreasing)):
         if i+1 != len(decreasing):
             if decreasing[i] - 1 == decreasing[i+1]:
                 decreasing[i] = fr'[{decreasing[i]}, {decreasing[i+1]}]'
 
-    print(stagnant)
     for i in range(len(stagnant)):
         if i+1 != len(stagnant):
             if stagnant[i] == stagnant[i+1]:
@@ -148,7 +145,6 @@ def analyize_data(x, data):
     # WORKING ON THIS
     # calculate increase, decrease, minimum, maximum, domain, range
     details = []
-    print(graph_movement_conf(data, x))
     details.append([]) #increasing
     details.append([]) #decreasing
     details.append(indexcount(y_minimum, data)) #minimum (multiple instances)
@@ -156,8 +152,6 @@ def analyize_data(x, data):
     details.append(indexcount(y_maximum, data)) #maximum
     details.append([xvals[0], xvals[-1]]) #domain (might have to add number of domains index later) ( do this after increasing and decreasing analization )
     details.append([copy[0], copy[-1]])#range
-
-    print(details)
 
     """Increasing :
     Decreasing :

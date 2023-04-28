@@ -11,13 +11,7 @@ import random
 # !!!! No difficulty settings. Only one setting
 # AGS1.3.2.1 - Point Of Intersection
 
-# section 1
 # instruction : Graph each set of linear equations on the same set of axes. Name the coordinates of the point where the two lines intersect.
-
-#given two functions, find the point of intersection
-#fractions inc
-#output point of intersection in a (x, y) format
-
 
 def Systems_of_Equation(expr='sympy',option='standard',range_x=3,range_y=3,coeff_mult_range=5):
     '''

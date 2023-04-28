@@ -30,8 +30,3 @@ def LinSysTable_3_3_1(expr='latex'):
     answer += fr'Point of intersection: $({pt[0]},{pt[1]})$'
 
     return problem, answer
-
-# for jj in range(5):
-#     problem, answer = LinSysTable_3_3_1()
-#     print(problem, r'\\')
-#     print(answer, r'\\')

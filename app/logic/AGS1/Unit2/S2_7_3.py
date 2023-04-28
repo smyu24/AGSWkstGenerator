@@ -10,8 +10,6 @@ from random import randint
 # AGS1.2.7.3 - X-intercept & Y-intercept
 # instruction : Given the function, find the  x -intercept(s) and  y -intercept if they exist, and then use them to graph the function.
 
-from sympy import Symbol
-
 def notzero(fnum, snum):
   inta = 0
   while inta == 0:
@@ -97,9 +95,9 @@ def xinterceptyintercept(diff = 1, expr = "latex"):
 
   return equation, answer
 
-xinterceptyintercept(2)
- 
+# section 2
 # Generate the empty grid from -7 to 7
+
 def GraphXintYint_2_7_3(kind='lin', expr='latex'):
     case = randint(1,6)
     if kind == 'lin':
@@ -147,6 +145,5 @@ def GraphXintYint_2_7_3(kind='lin', expr='latex'):
     answer += (drawPt([xint,0]) + endGraph()) if xint!=None else endGraph()
 
     return problem, answer
-
 
 # !!!!!!!! minipage, vspace, and textwidth for this generator is at previous verison. Must update b4 pushing onto official version
