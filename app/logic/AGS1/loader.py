@@ -15,7 +15,6 @@ variables = symbols(variables, real=True)
 variables += (Symbol('z'),)
 a,b,c,d,m,n,p,q,r,s,t,w,x,y,z = variables
 
-# import sympy
 # from sympy import latex,simplify,nsimplify,sympify,Symbol,symbols
 # from sympy import Rational,Integer,Float,S,oo
 # from sympy import log,Pow,powsimp,powdenest,sqrt,real_root,lcm

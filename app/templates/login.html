@@ -9,61 +9,11 @@
 
 {% block content %}
 <!--SAME NAME but having different function  <form method="POST" name="signup_form" class="login" action="">-->
-  <div style="float: right;" class="container">
+  <div style="float: center;" class="container">
     <div class="screen">
       <div class="screen__content">
         <form class="login">
-          <h2><b>Login:</b></h2>
-          <div class="login__field">
-              <i class="button__icon fa-solid fa-user"></i>
-              <input name="username" type="text" class="login__input" placeholder="Username" required>
-            </div>
-            <div class="login__field">
-              <i class="button__icon fa-solid fa-envelope"></i>
-              <input name="email" type="text" class="login__input" placeholder="Email" required>
-            </div>
-            <div class="login__field">
-              <i class="button__icon fa-solid fa-lock"></i>
-              <input name="password" type="password" class="login__input" placeholder="Password" required>
-            </div>
-            <div class="login__field">
-              <i class="button__icon fa-solid fa-check"></i>
-              <input name="confirmation" type="password" class="login__input" placeholder="Confirmation" required>
-            </div>
-
-            <div class="dropdown">
-                <label for="role">Choose a role: </label>
-                <select id="roles" name="roles">
-                  <option value="student">Student</option>
-                  <option value="parents">Parent</option>
-                  <option value="teacher">Teacher</option>
-                </select>
-            </div>
-
-          <button class="button login__submit">
-            <span class="button__text">Log In Now</span>
-            <i class="button__icon fa-solid fa-circle-arrow-right"></i>
-          </button>
-          <!--Forgot password and otehr option here-->
-
-        </form>
-      </div>
-
-      <div class="screen__background">
-        <span class="screen__background__shape screen__background__shape4"></span>
-        <span class="screen__background__shape screen__background__shape3"></span>
-        <span class="screen__background__shape screen__background__shape2"></span>
-        <span class="screen__background__shape screen__background__shape1"></span>
-      </div>
-    </div>
-  </div>
-
-  
-  <div style="float: left;" class="container">
-    <div class="screen">
-      <div class="screen__content">
-        <form class="login">
-          <h2><b>Login:</b></h2>
+          <h2><b>Log In:</b></h2>
           <div class="login__field">
               <i class="button__icon fa-solid fa-user"></i>
               <input name="username" type="text" class="login__input" placeholder="Username" required>

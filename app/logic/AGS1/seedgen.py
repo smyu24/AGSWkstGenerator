@@ -9,7 +9,6 @@ def reseed(seed, code):
             twoDarr[j][0] = str(code) + "-" + str(twoDarr[j][0])
             j += 1
             oneDarr = []
-
     return twoDarr
 
 def seedgem(reqeust, code):
