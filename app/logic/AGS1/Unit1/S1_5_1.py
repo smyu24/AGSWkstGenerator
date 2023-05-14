@@ -50,8 +50,3 @@ def Information_To_Geometric_Sequence(case=1, kind='lin', expr='latex'):
         answer = seq
 
     return problem, answer
-
-# for jj in range(10):
-#     problem, answer = Information_To_Geometric_Sequence(case=1,kind='exp')
-#     print(problem)
-#     print(answer)

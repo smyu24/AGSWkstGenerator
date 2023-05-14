@@ -8,7 +8,7 @@ from loader import ExpFunc, getInt, GeoSeq, ArithSeq, latexify, signify, tableGe
 from random import randint
 
 def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
-    header = ['Term',	'1st','2nd','3rd','4th','5th','6th','7th','8th']
+    header = ['Term','1st','2nd','3rd','4th','5th','6th','7th','8th']
     values = ['Value']
     numterms = len(header) - 1
 
@@ -21,7 +21,7 @@ def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
             start = getInt(-10, 10)
             diff = getInt(-4, 4)
             seq = ArithSeq(diff, [1,start])
-    if difficulty == 2: # medium
+    elif difficulty == 2: # medium
         if randint(0,1):
             start = getInt(-10, 20)
             ratio = getInt(-4, 4, exclude=[-1,0,1])
@@ -30,7 +30,7 @@ def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
             start = getInt(-20, 20)
             diff = getInt(-15, 15)
             seq = ArithSeq(diff, [1,start])
-    if difficulty == 3: # hard
+    else: # hard
         if randint(0,1):
             start = getInt(-20, 20)
             ratio = getInt(-6, 6, exclude=[-3,-2,-1,0,1,2,3])
@@ -56,6 +56,8 @@ def Fill_In_The_Sequence_1(difficulty=1 ,expr='latex'):
         answer = terms
 
     return problem, answer
+a,b = Fill_In_The_Sequence_1(1)
+print(a,b)
 
 ### section2:
 #### Use the given values in the table to determine a pattern and complete the table.

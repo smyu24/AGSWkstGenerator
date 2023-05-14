@@ -1,0 +1,36 @@
+#,Question,Answer1,Answer2,Controller,In,Out
+,"FIRSTNAME_MALE jogs for SEQ_1 minutes each day for the first week. Each week thereafter, he increase that time by DIFF minutes per day. ",DIFF,"1,SEQ_1","DIFF=[1,10], SEQ_1=[10,30]",Week,Minutes
+,"LASTNAME earned $SEQ_1 in the first week, $SEQ_2 in the second week and $SEQ_3 in the third week, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[5,9], SEQ_2=[10,15]",Week,\$
+,"There are SEQ_1 passengers in the first carriage, SEQ_2 passengers in the second carriage and SEQ_3 passengers in the third carriage, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[5,9], SEQ_2=[10,15]",Carriage,Passengers
+,"There are SEQ_1 students in grade one, SEQ_2 students in grade two, SEQ_3 students in grade three in a primary school, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[15,19], SEQ_2=[20,25]",Grade,Students
+,"You visit the SIGHT_SEEING_PLACES and drop a rock off the edge of a cliff. The distance the rock will fall is SEQ_1 feet the first second, SEQ_2 feet the next second, SEQ_3 feet the third second, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[11.0,16.0], SEQ_2=[33.0,48.0]",Second,Feet
+,"A car travels SEQ_1 m the first minute, SEQ_2 m the next minute, SEQ_3 m the third minute, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[15.0,25.0], SEQ_2=[30.0,50.0]",Minute,Meters
+,The Greek theater shown at the right has SEQ_1 seats in the first row of the center section. Each row behind the first row gains DIFF additional seats.,DIFF,"1,SEQ_1","DIFF=[1,10], SEQ_1=[5,10]",Row,Seats
+,"FIRSTNAME_FEMALE has decided to add strength training to her exercise program. Her trainer suggests that she starts with SEQ_1 minutes during her routine for the first week. Each week thereafter, she is to increase the weight lifting time by DIFF minutes.",DIFF,"1,SEQ_1","DIFF=[1,10], SEQ_1=[10,30]",Week,Minutes
+,Your father wants you to help him build a shed in the backyard. He says he will pay you $SEQ_1 for the first week and add an additional $DIFF each week thereafter.,DIFF,"1,SEQ_1","DIFF=[1,9], SEQ_1=[5,15]",Week,\$
+,"Your grandmother gives you $SEQ_1 to start a college book fund. She tells you she will add $INTA to the fund each month, if you will add $INTB each month.",(INTA + INTB),SEQ_1,"SEQ_1=[10,25], INTA=[1,10], INTB=[1,10]",Month,\$
+,"An auditorium has SEQ_1 seats on the first row, SEQ_2 seats on the second row, SEQ_3 seats on the third row, and so on and has MAXTERM rows of seats.","1,SEQ_1","2,SEQ_2","SEQ_1=[3,9], SEQ_2=[10,15]",Row,Seats
+,"A child puts $SEQ_1 into a piggy bank. One week later, he puts $SEQ_2 in the bank. Two weeks later, he put $SEQ_3 in the bank, and so on","0,SEQ_1","1,SEQ_2","SEQ_1=[1,5], SEQ_2=[6,10]",Week,\$
+,"A side of an apartment building is shaped like a steep staircase. The windows are arranged in columns. The first column has SEQ_1 windows, the next has SEQ_2, then SEQ_3, and so on","1,SEQ_1","2,SEQ_2","SEQ_1=[1,5], SEQ_2=[6,10]",Column,Windows
+,"FIRSTNAME_MALE has a collection of barbells for his home gym. He has 2 barbells that weigh SEQ_1 pounds each, SEQ_2 pounds each, SEQ_3 pounds each, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[5,10], SEQ_2=[11,20]",Barbell Pair,Pounds
+,"More than INTA people run in marathons each year. FIRSTNAME_MALE  is training to run a marathon. He runs SEQ_1 miles his first week of training. Each week, he increases the number of miles he runs by DIFF miles.",DIFF,"1,SEQ_1","DIFF=[1,5], SEQ_1=[1,5], INTA=[200000,300000]",Week,Miles
+,FIRSTNAME_FEMALE borrowed some money from her parents. She agreed to pay $SEQ_1 at the end of the first month and $DIFF more for each additional month for 12 months. ,DIFF,"1,SEQ_1","DIFF=[5,15], SEQ_1=[10,20]",Month,\$
+,"When an object is in free fall and air resistance is neglected, it falls SEQ_1 feet in the first second, an additional SEQ_2 feet in the next second, and SEQ_3 feet during the third second.","1,SEQ_1","2,SEQ_2","SEQ_1=[16.0,24.0], SEQ_2=[48.0,64.0]",Second,Feet
+,The first term of an arithmetic sequence is SEQ_1. The common difference of the sequence is INTA times the first term.,(INTA*SEQ_1),"1,SEQ_1","SEQ_1=[-5.0,5.0], INTA=[2,7]",Term \#,Value
+,The first row of a dominoes display has SEQ_1 dominoes. Each row after the first has DIFF more dominoes than the row before it.,DIFF,"1,SEQ_1","DIFF=[1,10], SEQ_1=[1,10]",Row,Dominoes
+,"On a highway, you take INTA seconds to increase your speed from SEQ_1 to SEQ_2 miles per hour. Your speed increases the same amount each second.",((SEQ_2-SEQ_1)/INTA),SEQ_1,"SEQ_1=[10,20], SEQ_2=[30,50], INTA=[4,10]",Time (s),Speed (mph)
+,A movie earns $SEQ_1 million the first week it is released. The movie earns $DIFF million less each additional week,(-DIFF),"1,SEQ_1","DIFF=[10.0,25.0], SEQ_1=[100.0,300.0]",Week,\$ (millions)
+,"You and a group of friends take turns planting DIFF trees each at a campsite. After the first person plants DIFF trees, there are SEQ_1 trees at the campsite.",DIFF,"1,SEQ_1","DIFF=[1,8], SEQ_1=[10,20]",Person,Trees
+,FIRSTNAME_MALE ’s exercise plan lasts for SEQ_1 minutes on the first day and increases by DIFF minutes each day.,DIFF,"1,SEQ_1","DIFF=[1,10], SEQ_1=[10,30]",Day,Minutes
+,A doctor prescribed SEQ_1 pills for his patient to be taken in the first week. Given that the patient should decrease the dosage by DIFF pills every week.,(-DIFF),"1,SEQ_1","DIFF=[1,5], SEQ_1=[14,28]",Week,Pills
+,A runner is preparing himself for a long-distance race. He covered SEQ_1 km on the first day and then increased the distance by DIFF kilometers every day.,DIFF,"1,SEQ_1","DIFF=[2,8], SEQ_1=[5,10]",Day,Kilometers
+,"FIRSTNAME_MALE saves $SEQ_1 on the first day, $SEQ_2 on the second day, $SEQ_3 on the third day, and so on, saving an extra $DIFF each day. ",DIFF,"1,SEQ_1","DIFF=[1,5], SEQ_1=[1,10]",Day,\$
+,The first term of an arithmetic sequence is equal to SEQ_1 and the common difference is equal to DIFF,DIFF,"1,SEQ_1","DIFF=[-10.0,10.0], SEQ_1=[-10.0,10.0]",Term \#,Value
+,An arithmetic sequence has a common difference equal to DIFF and its INTA th term is equal to SEQ_1.,DIFF,"INTA,SEQ_1","DIFF=[1,10], INTA=[1,10], SEQ_1=[1,10]",Term \#,Value
+,An arithmetic sequence has a its INTA th term equal to SEQ_1 and its INTB th term equal to SEQ_2.,"INTA,SEQ_1","INTB,SEQ_2","SEQ_1=[1,10], SEQ_2=[1,10], INTA=[1,10], INTB=[1,10]",Term \#,Value
+,"Mr. FIRSTNAME_MALE  suffers from allergies. When allergy season arrives, his doctor recommends that he take SEQ_1 mg of his medication the first day, and decrease the dosage by DIFF each day for one week.",(-DIFF),"1,SEQ_1","DIFF=[10,40], SEQ_1=[100,850]",Day,Dose (mg)
+,,,,,,
+,,,,,,
+FILL IN THE BLANK types,,,,,,
+,A health club rolls its towels and stacks them inlayer on a shelf. Each layer of towels has one less towel than the layer below it. There are 20 towels on the bottom layer and one towel on the top layer.,,,,,
+,Logs are stacked in a pile with SEQ_1 logs on the bottom row and 15 on the top row. There are 10 rows in all with each row having one more log than the one above it. ,,,,,

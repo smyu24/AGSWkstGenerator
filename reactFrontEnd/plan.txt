@@ -1,0 +1,7 @@
+create a front end using react to
+use MUI and chakra UI
+
+
+something like [https://github.com/yusinto/react-site-nav] would be good [https://react-site-nav.vercel.app/]
+
+[https://react-bootstrap.github.io/components/close-button/] for components

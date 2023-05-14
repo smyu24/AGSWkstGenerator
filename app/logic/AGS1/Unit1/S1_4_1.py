@@ -58,5 +58,3 @@ def Arithmetic_Explicit_Recursive(difficulty=1, prob='common', blanks=False, exp
     answer = getSeqAnswer(arith, prob, blanks, expr)
             
     return problem, answer
-
-print(*(Arithmetic_Explicit_Recursive(1, 'all', False)))

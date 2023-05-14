@@ -23,6 +23,9 @@ a,b,c,d,m,n,p,q,r,s,t,w,x,y,z = variables
 from scipy import stats
 import numpy as np
 
+import Lin_probs
+import Exp_probs
+
 #-----------------------------------------------------
 
 class LinFunc():
@@ -1830,11 +1833,11 @@ import names, pandas, num2words
 DIFF, RATIO, SEQ_1, SEQ_2, SEQ_3 = symbols('DIFF RATIO SEQ_1 SEQ_2 SEQ_3')
 INTA, INTB, FLOATA, FLOATB = symbols('INTA INTB FLOATA FLOATB')
 
-# Lin_probs = pandas.read_csv('Lin_probs.csv')
-# Lin_probs = Lin_probs[['Question','Answer1','Answer2','Controller','In','Out']]
+Lin_probs = pandas.read_csv('Lin_probs.csv')
+Lin_probs = Lin_probs[['Question','Answer1','Answer2','Controller','In','Out']]
 
-# Exp_probs = pandas.read_csv('Exp_probs.csv')
-# Exp_probs = Exp_probs[['Question','Answer1','Answer2','Controller','In','Out']]
+Exp_probs = pandas.read_csv('Exp_probs.csv')
+Exp_probs = Exp_probs[['Question','Answer1','Answer2','Controller','In','Out']]
 
 def getControls(controls):
     params = dict()

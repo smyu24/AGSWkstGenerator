@@ -135,9 +135,9 @@ WHERE Seed='1-9-1';
 
 Find the slope of the line through each pair of points., Find the slope of each line.
 
-UPDATE learningtarget
-SET description = 'Simple and Compound Interest, Solve the following problems using the given simple interests, Solve the following problems using the given compound interests'
-WHERE Seed='1-8-6';
+UPDATE learningtarget_ags1
+SET description = 'Arithmetic - Explicit and Recursive'
+WHERE Seed='1-4-1';
 
 +-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
 ------------------------------------------------------------+-------+
