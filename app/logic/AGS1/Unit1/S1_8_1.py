@@ -34,8 +34,3 @@ def Fill_The_Gap(kind='lin', expr='latex'):
         answer = [answer] + [seq]
 
     return problem, answer
-
-# for jj in range(10):
-#     problem, answer = Fill_The_Gap()
-#     print(problem)
-#     print(answer, r'\\ \\')

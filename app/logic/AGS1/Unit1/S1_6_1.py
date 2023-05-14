@@ -2,36 +2,6 @@
 
 from fractions import Fraction
 import random
-"""A LOT FOF MODULE 8
-1.6.1 Percent Change(part of prealg?)
-11 % increase 1.11
-40 % decrease 0.6"""
-
-# First Section
-def Percents_Fractions_Decimal_Conversion_1(difficulty= 1, expr="latex"):
-    problemsets = []
-    answerset = []
-    temp = 0
-    list_temp = []
-
-    if(difficulty == 1):        # Easy
-        problemsets.append("0." + str(random.randint(1, 99)))
-
-    elif(difficulty == 2):      # Medium
-        problemsets.append(str(random.randint(1, 99)) +
-                           "." + str(random.randint(1, 99)))
-
-    elif(difficulty == 3):      # Hard
-        problemsets.append(str(random.randint(-999, 999)) +
-                           "." + str(random.randint(1, 999)))
-
-    temp = round(float(str(problemsets[0])) * 100, 2)
-    list_temp = list(str(temp))
-    if int(list_temp[-1]) == 0:
-        temp = int(temp)
-    answerset.append(str(temp) + "%")
-
-    return(answerset[0], problemsets[0])
 
 # Second Section
 def Percents_Fractions_Decimal_Conversion_2(difficulty = 1, option_random = "latex"):
@@ -55,41 +25,8 @@ def Percents_Fractions_Decimal_Conversion_2(difficulty = 1, option_random = "lat
     list_temp = list(str(temp))
     if int(list_temp[-1]) == 0:
         temp = int(temp)
-    answerset.append(str(temp) + "%")
+    answerset.append(str(temp) + r"\%")
     return(problemsets[0], answerset[0])
-
-
-# Third Section NEED ALTERNATE TO FRACTION
-def Percents_Fractions_Decimal_Conversion_3(difficulty=1, option_random="latex"):
-    problemsets_1 = []
-    problemsets_2 = []
-    answerset = []
-    temp = 0
-    list_temp = []
-    percent = 0
-
-    if(difficulty == 1):        # Easy
-        problemsets_2.append("0." + str(random.randint(1, 99)))
-
-    elif(difficulty == 2):      # Medium
-        problemsets_2.append("0." + str(random.randint(1, 999)))
-
-    elif(difficulty == 3):      # Hard
-        problemsets_2.append("0." + str(random.randint(1, 9999)))
-
-    temp = round(float(str(problemsets_2[0])) * 100, 2)
-
-    list_temp = list(str(temp))
-    if int(list_temp[-1]) == 0:
-        temp = int(temp)
-    problemsets_1.append(str(temp) + "%")
-
-    percent = Fraction(problemsets_2[0])
-    percent = str(percent)
-    percent.replace("Fraction(", '')
-    percent.replace(")", '')
-    answerset.append(percent)
-    return(problemsets_1[0], answerset[0])
 
 
 # Fourth Section
@@ -115,7 +52,7 @@ def Percents_Fractions_Decimal_Conversion_4(difficulty = 1, option_random="latex
     list_temp = list(str(temp))
     if int(list_temp[-1]) == 0:
         temp = int(temp)
-    problemsets_1.append(str(temp) + "%")
+    problemsets_1.append(str(temp) + r"\%")
 
     percent = Fraction(problemsets_2[0])
     percent = str(percent)
@@ -124,10 +61,11 @@ def Percents_Fractions_Decimal_Conversion_4(difficulty = 1, option_random="latex
     answerset.append(percent)
     return(answerset[0], problemsets_1[0])
 
+
 def percentify(num):
     if str(float(num))[-2:] == ".0":
         num = int(num)
-    return(str(num) + "%")
+    return(str(num) + r"\%")
 
 
 def inc_dec_formatter(num, choice):
@@ -186,7 +124,7 @@ def Finding_Percent_Change_Section_1(difficulty=1, expr='latex'):
                 answer = float(answer) * -1
             return(problem, inc_dec_formatter(percentify(round(100 * round(answer, 4), 2)), type))
 
-    elif difficulty == 3:  # 76% of what is 188.12 ? || 144.26  is  23%  of what?
+    elif difficulty == 3:
         if chosen == True:
             type = False
             problem = "From " + str(floatA) + " to " + str(floatB)
@@ -260,7 +198,7 @@ def Finding_Percent_Change_Section_2(difficulty=1, expr='latex'):
                 answer = float(answer) * -1
             return(problem, inc_dec_formatter(percentify(round(100 * round(answer, 4), 2)), type))
 
-    elif difficulty == 3:  # 76% of what is 188.12 ? || 144.26  is  23%  of what?
+    elif difficulty == 3: 
         if chosen == True:
             type = False
             problem = "From " + \
@@ -390,4 +328,4 @@ def Markup_Discount_and_Tax(difficulty=1, expr='latex'):
     return(sentence, answer)
 
 def AGS_Percent_Change(difficulty = 1, expr = "latex"):
-    return random.choice([Percents_Fractions_Decimal_Conversion_1(difficulty, expr), Percents_Fractions_Decimal_Conversion_2(difficulty, expr), Percents_Fractions_Decimal_Conversion_3(difficulty, expr), Percents_Fractions_Decimal_Conversion_4(difficulty, expr), Finding_Percent_Change_Section_1(difficulty, expr), Finding_Percent_Change_Section_2(difficulty, expr), Markup_Discount_and_Tax(difficulty, expr)])
+    return random.choice([Percents_Fractions_Decimal_Conversion_2(difficulty, expr), Percents_Fractions_Decimal_Conversion_4(difficulty, expr), Finding_Percent_Change_Section_1(difficulty, expr), Finding_Percent_Change_Section_2(difficulty, expr), Markup_Discount_and_Tax(difficulty, expr)])

@@ -14,7 +14,7 @@
 ,"A side of an apartment building is shaped like a steep staircase. The windows are arranged in columns. The first column has SEQ_1 windows, the next has SEQ_2, then SEQ_3, and so on","1,SEQ_1","2,SEQ_2","SEQ_1=[1,5], SEQ_2=[6,10]",Column,Windows
 ,"FIRSTNAME_MALE has a collection of barbells for his home gym. He has 2 barbells that weigh SEQ_1 pounds each, SEQ_2 pounds each, SEQ_3 pounds each, and so on.","1,SEQ_1","2,SEQ_2","SEQ_1=[5,10], SEQ_2=[11,20]",Barbell Pair,Pounds
 ,"More than INTA people run in marathons each year. FIRSTNAME_MALE  is training to run a marathon. He runs SEQ_1 miles his first week of training. Each week, he increases the number of miles he runs by DIFF miles.",DIFF,"1,SEQ_1","DIFF=[1,5], SEQ_1=[1,5], INTA=[200000,300000]",Week,Miles
-,FIRSTNAME_FEMALE borrowed some money from her parents. She agreed to pay $SEQ_1 at the end of the first month and $DIFF more for each additional month for 12 months. ,DIFF,"1,SEQ_1","DIFF=[5,15], SEQ_1=[10,20]",Month,\$
+,FIRSTNAME_FEMALE borrowed some money from her parents. She agreed to pay $SEQ_1 at the end of the first month and $DIFF more for each additional month for 12 months.,DIFF,"1,SEQ_1","DIFF=[5,15], SEQ_1=[10,20]",Month,\$
 ,"When an object is in free fall and air resistance is neglected, it falls SEQ_1 feet in the first second, an additional SEQ_2 feet in the next second, and SEQ_3 feet during the third second.","1,SEQ_1","2,SEQ_2","SEQ_1=[16.0,24.0], SEQ_2=[48.0,64.0]",Second,Feet
 ,The first term of an arithmetic sequence is SEQ_1. The common difference of the sequence is INTA times the first term.,(INTA*SEQ_1),"1,SEQ_1","SEQ_1=[-5.0,5.0], INTA=[2,7]",Term \#,Value
 ,The first row of a dominoes display has SEQ_1 dominoes. Each row after the first has DIFF more dominoes than the row before it.,DIFF,"1,SEQ_1","DIFF=[1,10], SEQ_1=[1,10]",Row,Dominoes
@@ -29,8 +29,3 @@
 ,An arithmetic sequence has a common difference equal to DIFF and its INTA th term is equal to SEQ_1.,DIFF,"INTA,SEQ_1","DIFF=[1,10], INTA=[1,10], SEQ_1=[1,10]",Term \#,Value
 ,An arithmetic sequence has a its INTA th term equal to SEQ_1 and its INTB th term equal to SEQ_2.,"INTA,SEQ_1","INTB,SEQ_2","SEQ_1=[1,10], SEQ_2=[1,10], INTA=[1,10], INTB=[1,10]",Term \#,Value
 ,"Mr. FIRSTNAME_MALE  suffers from allergies. When allergy season arrives, his doctor recommends that he take SEQ_1 mg of his medication the first day, and decrease the dosage by DIFF each day for one week.",(-DIFF),"1,SEQ_1","DIFF=[10,40], SEQ_1=[100,850]",Day,Dose (mg)
-,,,,,,
-,,,,,,
-FILL IN THE BLANK types,,,,,,
-,A health club rolls its towels and stacks them inlayer on a shelf. Each layer of towels has one less towel than the layer below it. There are 20 towels on the bottom layer and one towel on the top layer.,,,,,
-,Logs are stacked in a pile with SEQ_1 logs on the bottom row and 15 on the top row. There are 10 rows in all with each row having one more log than the one above it. ,,,,,

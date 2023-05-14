@@ -7,13 +7,11 @@ from .Unit1.S1_3_1 import Reading_The_Table
 from .Unit1.S1_3_2 import Arithmetic_Sequences_1, Arithmetic_Sequences_2, Arithmetic_Sequences_3
 from .Unit1.S1_3_3 import Geometric_Sequence_Problem
 from .Unit1.S1_3_4 import So_Should_We_Use_Recursive_Or_Explicit
-#-----
 from .Unit1.S1_4_1 import Arithmetic_Explicit_Recursive
 from .Unit1.S1_4_2 import AGS_Find_The_Slope_Section_1, AGS_Find_The_Slope_Section_2, AGS_Find_The_Slope_Section_3, AGS_Find_The_Slope_Section_4
 from .Unit1.S1_5_1 import Information_To_Geometric_Sequence
 from .Unit1.S1_5_2 import Slope_Intercept_Form_1, Slope_Intercept_Form_2
 #from .Unit1.S1_5_3 import Geometric_Sequence_To_Explicit_Recursive
-#not done, but close (done somewhere else)
 from .Unit1.S1_6_1 import AGS_Percent_Change
 from .Unit1.S1_6_2 import Is_It_Arithmetic_Or_Geometric_Sequence
 from .Unit1.S1_8_1 import Fill_The_Gap
@@ -64,7 +62,7 @@ from random import randint, choice
 '''
 AGS 1 Section 1-1-1
 '''
-def M_Evaluate_Equation(twoDarr):  
+def M_Evaluate_Equation(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -115,7 +113,7 @@ def M_Evaluate_Equation(twoDarr):
 '''
 AGS 1 Section 1-1-2
 '''
-def M_Graph_The_Ordered_Pairs(twoDarr):  
+def M_Graph_The_Ordered_Pairs(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -149,7 +147,7 @@ def M_Graph_The_Ordered_Pairs(twoDarr):
 '''
 AGS 1 Section 1-2-1
 '''
-def M_Fill_In_The_Seq(twoDarr):  
+def M_Fill_In_The_Seq(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -167,25 +165,25 @@ def M_Fill_In_The_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-2-1-2'):
-        problem, answer = Fill_In_The_Sequence_2( choice(["lin", "exp", "neither"]) ) #["lin", "exp", "neither"]
+        problem, answer = Fill_In_The_Sequence_2( choice(["lin", "exp", "neither"]) )
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-2-1-3'):
         problem, answer = Fill_In_The_Sequence_3(twoDarr[total][1]) # error
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -195,12 +193,12 @@ def M_Fill_In_The_Seq(twoDarr):
     newpageanswer.append(midnewanswer)
 
   return (masterSeed, ANSmasterSeed, newpageanswer)
-  
+
 
 '''
 AGS 1 Section 1-2-2
 '''
-def M_The_Meaning_Of_An_Exp(twoDarr):  
+def M_The_Meaning_Of_An_Exp(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -220,7 +218,7 @@ def M_The_Meaning_Of_An_Exp(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-2-2-2'):
         problem, answer = The_Meaning_Of_An_Exponent_2(twoDarr[total][1])
 
@@ -228,7 +226,7 @@ def M_The_Meaning_Of_An_Exp(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -242,7 +240,7 @@ def M_The_Meaning_Of_An_Exp(twoDarr):
 '''
 AGS 1 Section 1-2-3
 '''
-def M_Finding_Patterns_In_Geo_Seq(twoDarr):  
+def M_Finding_Patterns_In_Geo_Seq(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -262,7 +260,7 @@ def M_Finding_Patterns_In_Geo_Seq(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -277,7 +275,7 @@ def M_Finding_Patterns_In_Geo_Seq(twoDarr):
 '''
 AGS 1 Section 1-3-1
 '''
-def M_Reading_The_Table(twoDarr):  
+def M_Reading_The_Table(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -297,7 +295,7 @@ def M_Reading_The_Table(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -311,7 +309,7 @@ def M_Reading_The_Table(twoDarr):
 '''
 AGS 1 Section 1-3-2
 '''
-def M_Arithmetic_Seq(twoDarr):  
+def M_Arithmetic_Seq(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -331,7 +329,7 @@ def M_Arithmetic_Seq(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-3-2-2'):
         problem, answer = Arithmetic_Sequences_2(twoDarr[total][1])
 
@@ -339,7 +337,7 @@ def M_Arithmetic_Seq(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-3-2-3'):
         problem, answer = Arithmetic_Sequences_3(twoDarr[total][1])
 
@@ -347,7 +345,7 @@ def M_Arithmetic_Seq(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -361,7 +359,7 @@ def M_Arithmetic_Seq(twoDarr):
 '''
 AGS 1 Section 1-3-3
 '''
-def M_Geo_Seq_Problem(twoDarr):  
+def M_Geo_Seq_Problem(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -381,7 +379,7 @@ def M_Geo_Seq_Problem(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -395,7 +393,7 @@ def M_Geo_Seq_Problem(twoDarr):
 '''
 AGS 1 Section 1-3-4
 '''
-def M_So_Should_We_Use(twoDarr):  
+def M_So_Should_We_Use(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -415,7 +413,7 @@ def M_So_Should_We_Use(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -430,7 +428,7 @@ def M_So_Should_We_Use(twoDarr):
 '''
 AGS 1 Section 1-4-1
 '''
-def M_Arithmetic_Explicit_Recursive(twoDarr):  
+def M_Arithmetic_Explicit_Recursive(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -450,7 +448,7 @@ def M_Arithmetic_Explicit_Recursive(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -464,7 +462,7 @@ def M_Arithmetic_Explicit_Recursive(twoDarr):
 '''
 AGS 1 Section 1-4-2
 '''
-def M_AGS_Find_The_Slope(twoDarr):  
+def M_AGS_Find_The_Slope(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -484,7 +482,7 @@ def M_AGS_Find_The_Slope(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-4-2-2'):
         problem, answer = AGS_Find_The_Slope_Section_2(twoDarr[total][1])
 
@@ -492,7 +490,7 @@ def M_AGS_Find_The_Slope(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-4-2-3'):
         problem, answer = AGS_Find_The_Slope_Section_3(twoDarr[total][1])
 
@@ -500,7 +498,7 @@ def M_AGS_Find_The_Slope(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-4-2-4'):
         problem, answer = AGS_Find_The_Slope_Section_4(twoDarr[total][1])
 
@@ -508,7 +506,7 @@ def M_AGS_Find_The_Slope(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -522,7 +520,7 @@ def M_AGS_Find_The_Slope(twoDarr):
 '''
 AGS 1 Section 1-5-1
 '''
-def M_Information_To_Geometric_Sequence(twoDarr):  
+def M_Information_To_Geometric_Sequence(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -540,9 +538,9 @@ def M_Information_To_Geometric_Sequence(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -556,7 +554,7 @@ def M_Information_To_Geometric_Sequence(twoDarr):
 '''
 AGS 1 Section 1-5-2
 '''
-def M_Slope_Intercept(twoDarr):  
+def M_Slope_Intercept(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -576,7 +574,7 @@ def M_Slope_Intercept(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       elif(twoDarr[total][0] == '1-5-2-2'):
         problem, answer = Slope_Intercept_Form_2(twoDarr[total][1])
 
@@ -584,7 +582,7 @@ def M_Slope_Intercept(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -598,14 +596,14 @@ def M_Slope_Intercept(twoDarr):
 '''
 AGS 1 Section 1-5-3
 '''
-def M_Geometric_Seq_To_Explicit_Recursive(twoDarr):  
+def M_Geometric_Seq_To_Explicit_Recursive(twoDarr):
   #Geometric_Sequence_To_Explicit_Recursive (Not DONE)
   return
 
 '''
 AGS 1 Section 1-6-1
 '''
-def M_AGS_Percentage_Change(twoDarr):  
+def M_AGS_Percentage_Change(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -625,7 +623,7 @@ def M_AGS_Percentage_Change(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -639,7 +637,7 @@ def M_AGS_Percentage_Change(twoDarr):
 '''
 AGS 1 Section 1-6-2
 '''
-def M_Is_It_Arith_Or_Geo_Seq(twoDarr):  
+def M_Is_It_Arith_Or_Geo_Seq(twoDarr):
   #Is_It_Arithmetic_Or_Geometric_Sequence
   masterSeed = []
   ANSmasterSeed = []
@@ -660,7 +658,7 @@ def M_Is_It_Arith_Or_Geo_Seq(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -674,7 +672,7 @@ def M_Is_It_Arith_Or_Geo_Seq(twoDarr):
 '''
 AGS 1 Section 1-8-1
 '''
-def M_Fill_The_Gap(twoDarr):  
+def M_Fill_The_Gap(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -692,9 +690,9 @@ def M_Fill_The_Gap(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -708,7 +706,7 @@ def M_Fill_The_Gap(twoDarr):
 '''
 AGS 1 Section 1-9-1
 '''
-def M_Which_Grows_Faster(twoDarr):  
+def M_Which_Grows_Faster(twoDarr):
   masterSeed = []
   ANSmasterSeed = []
   newpageanswer = []
@@ -728,7 +726,7 @@ def M_Which_Grows_Faster(twoDarr):
         temp_answer = "{\\color{red}" + str(answer) + "}"
         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
       midMasterSeed += tmasterSeed
       midANSmasterSeed += tANSmasterSeed
       midnewanswer += tnewpageanswer
@@ -746,7 +744,7 @@ AGS 1 Section 1-10-1
 
 #instruction: write the explicit equation for each geometric sequence.
 # random.randint(1,4), no easy, medium, hard, and "lin"
-def M_Information_To_Arith_Seq(twoDarr):  
+def M_Information_To_Arith_Seq(twoDarr):
   return
 
 
@@ -755,7 +753,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 # '''
 # AGS 1 Section 2-1-1
 # '''
-# def _(twoDarr):  
+# def _(twoDarr):
 #   masterSeed = []
 #   ANSmasterSeed = []
 #   newpageanswer = []
@@ -775,7 +773,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -790,7 +788,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 # '''
 # AGS 1 Section 2-2-1
 # '''
-# def M_Find_The_Slope(twoDarr):  
+# def M_Find_The_Slope(twoDarr):
 #   masterSeed = []
 #   ANSmasterSeed = []
 #   newpageanswer = []
@@ -804,13 +802,13 @@ def M_Information_To_Arith_Seq(twoDarr):
 
 #     for i in range(twoDarr[total][2]):
 #       if(twoDarr[total][0] == '2-2-1-1'):
-#         problem, answer = Find_The_Slope( randint(1,3) ) 
+#         problem, answer = Find_The_Slope( randint(1,3) )
 
 #         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -850,7 +848,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -884,7 +882,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -918,7 +916,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -953,7 +951,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -981,7 +979,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 
 #     for i in range(twoDarr[total][2]): ## arith, but there is also geo, exp
 #       if(twoDarr[total][0] == '2-3-3-1'):
-#         problem, answer = Fill_In_The_Blanks() # arith 
+#         problem, answer = Fill_In_The_Blanks() # arith
 
 #         # geo
 #       # if(twoDarr[total][0] == '2-3-3-2'):
@@ -994,7 +992,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1028,7 +1026,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1063,7 +1061,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1098,7 +1096,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1133,7 +1131,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1167,7 +1165,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 # #         temp_answer = "{\\color{red}" + str(answer) + "}"
 # #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 # #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 # #       midMasterSeed += tmasterSeed
 # #       midANSmasterSeed += tANSmasterSeed
 # #       midnewanswer += tnewpageanswer
@@ -1202,7 +1200,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1236,7 +1234,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
 #         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
-      
+
 #       midMasterSeed += tmasterSeed
 #       midANSmasterSeed += tANSmasterSeed
 #       midnewanswer += tnewpageanswer
@@ -1262,7 +1260,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 # '''
 # AGS 1 Section 2-7-3
 # '''
-# #kind=lin and exp 
+# #kind=lin and exp
 # section1: xinterceptyintercept(random.randint(1,2))
 # section2: GraphXintYint_2_7_3('lin') or GraphXintYint_2_7_3('exp')
 
@@ -1309,7 +1307,7 @@ def M_Information_To_Arith_Seq(twoDarr):
 # '''
 # AGS 1 Section 3-3-2
 # '''
-# 
+#
 
 # '''
 # AGS 1 Section 3-3-3
@@ -1319,24 +1317,24 @@ def M_Information_To_Arith_Seq(twoDarr):
 # '''
 # AGS 1 Section 3-4-1
 # '''
-# 
+#
 
 # '''
 # AGS 1 Section 3-4-2
 # '''
-# 
+#
 
 # '''
 # AGS 1 Section 3-4-4
 # '''
-# 
+#
 
 # '''
 # AGS 1 Section 3-5-1
 # '''
-# 
+#
 
 # '''
 # AGS 1 Section 3-6-1
 # '''
-# 
+#

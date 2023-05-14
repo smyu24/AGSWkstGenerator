@@ -1,5 +1,5 @@
 #,Question,Answer1,Answer2,Controller,In,Out
-,"Heavy rain in FIRSTNAME’s town caused the river to rise. The river rose SEQ_1 inches the first day, and each day MULT_PHRASE as much as the previous day.",RATIO,"1,SEQ_1","SEQ_1=[2.0,12.0], RATIO=[2,5]",Day,Inches
+,"Heavy rain in FIRSTNAME ’s town caused the river to rise. The river rose SEQ_1 inches the first day, and each day MULT_PHRASE as much as the previous day.",RATIO,"1,SEQ_1","SEQ_1=[2.0,12.0], RATIO=[2,5]",Day,Inches
 ,A teacher teaches SEQ_1 students how to fold an origami model. Each of these students goes on to teach RATIO students of their own how to fold the same model.,RATIO,SEQ_1,"RATIO=[2,6], SEQ_1=[2,12]",Term \#,Students
 ,"A virus goes through a computer, infecting files. If SEQ_1 files were infected initially and the total number of files infected GROWTH_PHRASE every minute.",RATIO,SEQ_1,"SEQ_1=[100,200], RATIO=[2,10]",Minutes,Files
 ,"The first year a toy manufacturer introduces a new toy, its sales total $SEQ_1. The company expects its sales to drop INTA% each succeeding year. ",(1-0.01*INTA),"1,SEQ_1","SEQ_1=[100000.0,200000.0], INTA=[10,90]",Year,\$
@@ -18,35 +18,4 @@
 ,You land a job as a police officer. Your salary for the first year is $SEQ_1. You will receive INTA% increase every year.,(1+0.01*INTA),"1,SEQ_1","SEQ_1=[40000,70000], INTA=[1,20]",Year,\$
 ,"FIRSTNAME bought a house for $SEQ_1. Each year, it increases INTA% of its value.",(1+0.01*INTA),SEQ_1,"SEQ_1=[100000,500000], INTA=[1,9]",Year,\$
 ,"When a ball is dropped onto a flat floor, it bounces to INTA% of the height from which it was dropped. If the ball is dropped from SEQ_1 cm.",(0.01*INTA),SEQ_1,"INTA=[1,99], SEQ_1=[20,200]",Bounce,Centimeters
-,FIRSTNAME writes a letter to SEQ_1 of his friends. He asks each one of them to copy the letter and mail to RATIO different persons with the instruction that they continue the process similarly. ,RATIO,SEQ_1,"RATIO=[2,6], SEQ_1=[2,12]",Term \#,Friends
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,A ball on a pendulum moves SEQ_1 cm on its first swing. Each succeeding swing it moves FLOATA the distance of the previous swing.,,,"FLOATA=['FLOAT',0.01,1.99]",,
-,"At age INTA, to save for retirement, you decide to deposit $SEQ_1 at the end of each month into an IRA that pays FLOATA% compounded monthly.",,,"INTA=['INT',25,35], SEQ_1=['INT',5000,10000], FLOATA=['FLOAT',0.1,5.9]",,
-,"At age INTA, to save for retirement, you decide to deposit $SEQ_1 at the end of each month in an IRA that pays FLOATA% compounded monthly.",,,"INTA=['INT',10,30], SEQ_1=['INT',1000,12000], FLOATA=['FLOAT',0.1,5.9]",,
-,"A badminton tournament begins with SEQ_1 teams. After the first round, SEQ_2 teams remain. After the second round, SEQ_3 teams remain.",,,"SEQ_1=['INT',1,24], RATIO=['INT',2,3]",,
-,"The graphing calculator screen displays an area of SEQ_1 square units. After you zoom out once, the area is SEQ_2 square units. After you zoom out a second time, the area is SEQ_3 square units.",,,"SEQ_1=['INT',1,24], RATIO=['INT',2,4]",,
-,"Suppose you go to work for a company that pays $SEQ_1 on the first day, $SEQ_2 on the second day, $SEQ_3 on the third day and so on",,,,,
-,"A student borrows $SEQ_1. The bank loans this money at a rate of [INT,1,15] %, capitalized monthly. ",,,,,
-,A research lab is to begin experimentation with a bacteria that doubles every 4 hours. The lab starts with 200 bacteria.,,,,,
-,"Eric calls [INT,1,9] people within [INT,1,10] minutes of his son’s birth to pass along the news. They each pass along the news to 4 new people within 10 minutes, and so on. How many total people have heard the news in 1 hour?",,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,-fill in the blank case,,,,,
-,"The second term of a geometric sequence is 6, and the fifth term is 48.",,,,,
-,"A job pays a salary of $[INT,10000,90000] the first year. During the next 19 years, the salary increases by 5% each year. What is the total lifetime salary over the 20-year period?",,,,,
-,"FIRSTNAME LASTNAME’s personal fortune doubles every year. If the value of his fortune was estimated at $ 32,000,000 in 2000, how much was it in 1995?",,,,,
-,"The price of a liter of milk in 1990 was $SEQ_1. In 2000, the price of milk was fixed at $1.42. What was the annual inflation rate for this period?",,,,,
-,"A person wishes to buy a motorcycle worth $SEQ_1. In order to collect this amount, he deposits an amount $ at the bank, and lets it flourish for 5 years at an interest rate of 5 %, capitalized biannually.",,,,,
-,"A student borrows $SEQ_1. The bank loans this money at a rate of [INT,1,15] %, capitalized annually. What amount will the student have to reimburse two years later?",,,,,
-,The 1st term of a geometric sequence is SEQ_1 and the eighth term is SEQ_8.,,,,,
-,"The 1st term of a geometric sequence is SEQ_1 and the eighth term is SEQ_8. Find the common ratio, the sum, and the product of the first terms.",,,,,
-,,,,,,
-,"Bruno has 3 pizza stores and wants to dramatically expand his franchise nationwide. If the number of stores he owns doubles in number each month, what month will he launch 6,144 stores?",,,,,
-,"On January 1, Abby’s troop sold three boxes of Girl Scout cookies online. Their daily goal is to sell double the number of boxes as the previous day. At this rate, how many boxes will they sell on day 7? If this pattern continues, on what day will they sell 24,576 boxes of cookies?",,,,,
-,"When a ball is dropped onto a flat floor, it bounces to [INT,1,99]% of the height from which it was dropped. If the ball is dropped from SEQ_1 cm, find the height of the fifth bounce.",,,,,
+,FIRSTNAME writes a letter to SEQ_1 of his friends. He asks each one of them to copy the letter and mail to RATIO different persons with the instruction that they continue the process similarly.,RATIO,SEQ_1,"RATIO=[2,6], SEQ_1=[2,12]",Term \#,Friends
