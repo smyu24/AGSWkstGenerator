@@ -39,8 +39,7 @@ def ags1_main(code):
             return render_template('AGS1/editing.html',
                 probs = pro, answ = ans1, Nansw = ans2, arr = data, total = total, latex = latex, desc = desc)
 
-    #GET
-    #Select data from sql
+    #GET; Select data from sql
     cur = db.connection.cursor()
     cur.execute('SELECT options from learningtarget_ags1 where seed = %s', [code])
     num = str(cur.fetchone())[2:-3]
