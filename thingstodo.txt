@@ -126,8 +126,8 @@ INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, descriptio
 VALUES ('1-9-1','pre.1.9.1','Find The Slope','Easy, Hard','2, 1, 9','Find The Slope, Find the slope of each line., ', '2, 2');
 
 UPDATE learningtarget_ags1 
-SET description = '' 
-WHERE Seed='3-2-2';
+SET section = 'Using Equations, Using Tables' 
+WHERE Seed='2-10-1';
 
 
 ****IMPORTANT*****
@@ -174,7 +174,10 @@ UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-5-2';
 UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-6-1';
 UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-';
 
-UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-2-1';
+UPDATE learningtarget_ags1 SET latex = '1, 2' WHERE Seed = '2-4-2';
+UPDATE learningtarget_ags1 SET description = 'Fill In The Blanks | For each sequence below, find the missing terms in the sequence. Then write an explicit rule for the sequence' WHERE Seed = '2-3-3';
+
+# seed code [array], function call return [array], allow \newline [bool]
 
 One question per line for 1-9-1
 

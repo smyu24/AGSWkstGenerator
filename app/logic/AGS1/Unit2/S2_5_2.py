@@ -13,6 +13,7 @@ def Evaluate_The_Function(diff=1, expr="latex"):
   fname = ["f", "k", "z"]
   fnum = randint(0, 2)
   arr = []
+  problem=""
   if(diff == 1): #linear
     arr.append(randint(-100,200))
     arr.append(randint(-40,50))
@@ -63,9 +64,8 @@ def Evaluate_The_Function(diff=1, expr="latex"):
 
     arr.append("{:.2f}".format(arr[0]* (arr[1] ** 0.5)))
 
-    problem = "Given equation is $" + fname[fnum] + "(x) = " + str(arr[0]) + " ^ " + str(arr[1]) + "$"
-
-
+    problem = "Given equation is $" + fname[fnum] + "(x) = " + str(arr[0]) + " * (" + str(arr[1]) + ") ^x " + "$"
+  
 
   elif (diff == 4): #Quadratic
     arr.append(0) 
@@ -93,7 +93,7 @@ def Evaluate_The_Function(diff=1, expr="latex"):
 
     problem = "Given equation is $" + fname[fnum] + "(x) = " + str(arr[0]) + " * x^2 + " + str(arr[1]) + " * x + " + str(arr[2]) + "$"
 
-  elif (diff == 5): #Mix
+  else: #Mix
     arr.append(0) 
     arr.append(0) 
 
@@ -121,28 +121,18 @@ def Evaluate_The_Function(diff=1, expr="latex"):
     pb = " b). Find x if $" + fname[fnum] + "(x) = " + str(arr[5]) + "$"
     pc = " c). Find $" + fname[fnum] + "(0.5)$"
 
-    fa = "Answer " + "a. " + str(arr[3]) + " b. " + str(arr[4]) + " c. " + str(arr[6])
+    fa = "Answer: " + r"\par" + "a) " + str(arr[3]) + r"\par"  + " b) " + str(arr[4]) + r"\par"  + " c) " + str(arr[6])
   elif diff == 4:
     pa = " a). Find $" + fname[fnum] + "(" + str(arr[3]) + ")"+ "$"
     pb = " b). Find x if $" + fname[fnum] + "(x) = " + str(arr[5]) + "$"
     pc = " c). Find $" + fname[fnum] + "(0.5)$"
 
-    fa = "Answer " + "a. " + str(arr[4]) + " b. " + str(arr[6]) + " c. " + str(arr[7])
-  elif diff == 5:
+    fa = "Answer: " + r"\par" + "a) " + str(arr[4]) + r"\par"  + " b) " + str(arr[6]) + r"\par"  + " c) " + str(arr[7])
+  else:
     pa = " a). Find $" + fname[fnum] + "(" + str(arr[2]) + ")"+ "$"
     pb = " b). Find x if $" + fname[fnum] + "(x) = " + str(arr[4]) + "$"
     pc = " c). Find $" + fname[fnum] + "(0.5)$"
 
-    fa = "Answer " + "a. " + str(arr[3]) + " b. " + str(arr[5]) + " c. " + str(arr[6])
+    fa = "Answer: " + r"\par" + "a) " + str(arr[3]) + r"\par"  + " b) " + str(arr[5]) + r"\par"  + " c) " + str(arr[6])
 
-  return problem + "\newline" + pa + "\newline" + pb + "\newline" + pc, fa
-
-
-"""
-Traceback (most recent call last):
-  File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_5_2.py", line 137, in <module>
-    for i in range(10): print(evaluatethefunction(randint(1,5)))
-  File "c:\Users\smyu2\OneDrive\GitHub\AGS_Worksheet_Generator\app\logic\AGS1\Unit2\S2_5_2.py", line 134, in evaluatethefunction
-    return problem + "\newline" + pa + "\newline" + pb + "\newline" + pc, fa
-UnboundLocalError: local variable 'problem' referenced before assignment
-"""
+  return problem + r"\par" + pa + r"\par" + pb + r"\par" + pc, fa

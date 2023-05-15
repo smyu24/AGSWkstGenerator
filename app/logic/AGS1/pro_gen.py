@@ -18,43 +18,6 @@ from .Unit1.S1_8_1 import Fill_The_Gap
 from .Unit1.S1_9_1 import Which_Grows_Faster
 #from .Unit1.S1_10_1 import _ (not done, will do later)
 
-# from .Unit2.S2_1_1 import _ (not done, will do later)
-from .Unit2.S2_2_1 import Find_The_Slope
-# from .Unit2.S2_2_2 import Indicate_The_Relationship
-from .Unit2.S2_2_3 import Solve_The_Following_Equations
-from .Unit2.S2_2_4 import Find_The_Recursive_And_Explicit_Equations
-from .Unit2.S2_3_1 import Rules_Of_Exponents
-from .Unit2.S2_3_2 import Details_Of_Linear_And_Geometric_Sequences_1, Details_Of_Linear_And_Geometric_Sequences_2, Details_Of_Linear_And_Geometric_Sequences_3
-from .Unit2.S2_3_3 import Fill_In_The_Blanks
-from .Unit2.S2_3_4 import Find_The_Slope_Table
-from .Unit2.S2_4_1 import Square_Roots
-from .Unit2.S2_4_2 import Fill_In_The_Table
-from .Unit2.S2_5_1 import Higher_Order_Roots
-#from .Unit2.S2_5_2 import Evaluate_The_Function
-from .Unit2.S2_6_1 import Percent_Increase_Decrease
-from .Unit2.S2_6_2 import Monthly_Exponential
-r"""
-from .Unit2.S2_7_1 import _
-from .Unit2.S2_7_2 import _
-from .Unit2.S2_7_3 import _
-from .Unit2.S2_8_1 import _
-from .Unit2.S2_10_1 import _
-from .Unit2.S2_10_2 import _
-from .Unit2.S2_11_1 import _
-
-from .Unit3.S3_1_1 import _
-from .Unit3.S3_2_1 import _
-from .Unit3.S3_2_2 import _
-from .Unit3.S3_3_1 import _
-from .Unit3.S3_3_2 import _
-from .Unit3.S3_3_3 import _
-from .Unit3.S3_4_1 import _
-from .Unit3.S3_4_2 import _
-from .Unit3.S3_4_3 import _
-from .Unit3.S3_4_4 import _
-from .Unit3.S3_5_1 import _
-from .Unit3.S3_6_1 import _
-"""
 
 from random import randint, choice
 
@@ -80,7 +43,7 @@ def M_Evaluate_Equation(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "$ {\\color{red}" + str(answer) + "} $"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + "\\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + "\\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-1-1-2'):
@@ -88,7 +51,7 @@ def M_Evaluate_Equation(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-1-1-3'):
@@ -96,7 +59,7 @@ def M_Evaluate_Equation(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -130,7 +93,7 @@ def M_Graph_The_Ordered_Pairs(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{1cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{1cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{1cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{1cm}"
 
       midMasterSeed += tmasterSeed
@@ -164,7 +127,7 @@ def M_Fill_In_The_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-2-1-2'):
@@ -172,7 +135,7 @@ def M_Fill_In_The_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-2-1-3'):
@@ -180,7 +143,7 @@ def M_Fill_In_The_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -215,7 +178,7 @@ def M_The_Meaning_Of_An_Exp(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-2-2-2'):
@@ -223,7 +186,7 @@ def M_The_Meaning_Of_An_Exp(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -257,7 +220,7 @@ def M_Finding_Patterns_In_Geo_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -292,7 +255,7 @@ def M_Reading_The_Table(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -326,7 +289,7 @@ def M_Arithmetic_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-3-2-2'):
@@ -334,7 +297,7 @@ def M_Arithmetic_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-3-2-3'):
@@ -342,7 +305,7 @@ def M_Arithmetic_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -376,7 +339,7 @@ def M_Geo_Seq_Problem(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -410,7 +373,7 @@ def M_So_Should_We_Use(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -445,7 +408,7 @@ def M_Arithmetic_Explicit_Recursive(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -479,7 +442,7 @@ def M_AGS_Find_The_Slope(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-4-2-2'):
@@ -487,7 +450,7 @@ def M_AGS_Find_The_Slope(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-4-2-3'):
@@ -495,7 +458,7 @@ def M_AGS_Find_The_Slope(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-4-2-4'):
@@ -503,7 +466,7 @@ def M_AGS_Find_The_Slope(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -537,7 +500,7 @@ def M_Information_To_Geometric_Sequence(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -571,7 +534,7 @@ def M_Slope_Intercept(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       elif(twoDarr[total][0] == '1-5-2-2'):
@@ -579,7 +542,7 @@ def M_Slope_Intercept(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -620,7 +583,7 @@ def M_AGS_Percentage_Change(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -655,7 +618,7 @@ def M_Is_It_Arith_Or_Geo_Seq(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -689,7 +652,7 @@ def M_Fill_The_Gap(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -723,7 +686,7 @@ def M_Which_Grows_Faster(twoDarr):
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -748,6 +711,30 @@ def M_Information_To_Arith_Seq(twoDarr):
 
 
 
+# from .Unit2.S2_1_1 import _ (not done, will do later)
+from .Unit2.S2_2_1 import Find_The_Slope
+# from .Unit2.S2_2_2 import Indicate_The_Relationship
+from .Unit2.S2_2_3 import Solve_The_Following_Equations
+from .Unit2.S2_2_4 import Find_The_Recursive_And_Explicit_Equations
+from .Unit2.S2_3_1 import Rules_Of_Exponents
+from .Unit2.S2_3_2 import Details_Of_Linear_And_Geometric_Sequences_1, Details_Of_Linear_And_Geometric_Sequences_2, Details_Of_Linear_And_Geometric_Sequences_3
+from .Unit2.S2_3_3 import Fill_In_The_Blanks
+from .Unit2.S2_3_4 import Find_The_Slope_Table
+from .Unit2.S2_4_1 import Square_Roots
+from .Unit2.S2_4_2 import Fill_In_The_Table
+from .Unit2.S2_5_1 import Higher_Order_Roots
+from .Unit2.S2_5_2 import Evaluate_The_Function
+from .Unit2.S2_6_1 import Percent_Increase_Decrease
+# from .Unit2.S2_6_2 import Monthly_Exponential
+from .Unit2.S2_7_1 import FillInTheTable
+from .Unit2.S2_7_2 import radicalandfractionexponent
+from .Unit2.S2_7_3 import xinterceptyintercept, GraphXintYint_2_7_3
+from .Unit2.S2_8_1 import FillInTheMeansTable
+from .Unit2.S2_10_1 import LinearForms_2_10_1
+# from .Unit2.S2_10_2 import _
+from .Unit2.S2_11_1 import comparedifferent
+
+
 '''
 AGS 1 Section 2-1-1
 '''
@@ -769,7 +756,7 @@ AGS 1 Section 2-1-1
 
 #         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
 #         temp_answer = "{\\color{red}" + str(answer) + "}"
-#         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+#         tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
 #         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
 #       midMasterSeed += tmasterSeed
@@ -800,11 +787,11 @@ def M_Find_The_Slope(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-2-1-1'):
-        problem, answer = Find_The_Slope( randint(1,3) )
+        problem, answer = Find_The_Slope( randint(1,3) ) # graphical fig, no mult diff; issues
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -840,11 +827,11 @@ def M_Solve_The_Following_Equations(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-2-3-1'):
-        problem, answer = Solve_The_Following_Equations( twoDarr[total][1], "latex", randint(1,2) )
+        problem, answer = Solve_The_Following_Equations( twoDarr[total][1], "latex", randint(1,2) ) # no graph fig
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -874,11 +861,11 @@ def M_Find_The_Recursive_And_Explicit_Equations(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-2-4-1'):
-        problem, answer = Find_The_Recursive_And_Explicit_Equations() # no argv
+        problem, answer = Find_The_Recursive_And_Explicit_Equations() # no mult diff, has tables figures
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -908,11 +895,11 @@ def M_Rules_Of_Exponents(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-3-1-1'):
-        problem, answer = Rules_Of_Exponents( twoDarr[total][1] )
+        problem, answer = Rules_Of_Exponents( twoDarr[total][1] ) # no graph fig
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -943,11 +930,11 @@ def M_Details_Of_Linear_And_Geometric_Sequences(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-3-2-1'):
-        problem, answer = choice(Details_Of_Linear_And_Geometric_Sequences_1( randint(1,7) ), Details_Of_Linear_And_Geometric_Sequences_2( randint(1,8) ), Details_Of_Linear_And_Geometric_Sequences_3( randint(1,4) ) )
+        problem, answer = choice( [Details_Of_Linear_And_Geometric_Sequences_1( randint(1,7) ), Details_Of_Linear_And_Geometric_Sequences_2( randint(1,8) ), Details_Of_Linear_And_Geometric_Sequences_3( randint(1,4) )] ) # has graphs
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -975,20 +962,21 @@ def M_Fill_In_The_Blanks(twoDarr):
     midANSmasterSeed = ""
     midnewanswer = ""
 
-    for i in range(twoDarr[total][2]): ## arith, but there is also geo, exp
+    for i in range(twoDarr[total][2]): # MAKE SURE THERE ARE TWO SECTIONS AVAIL IN SQL
       if(twoDarr[total][0] == '2-3-3-1'):
-        problem, answer = Fill_In_The_Blanks() # arith
-
-        # geo
-      # if(twoDarr[total][0] == '2-3-3-2'):
-      #   problem, answer = Fill_In_The_Blanks()
-
-        # exp
-
+        problem, answer = Fill_In_The_Blanks(kind='lin') # has tables
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      if(twoDarr[total][0] == '2-3-3-2'):
+        problem, answer = Fill_In_The_Blanks(kind='geo')
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1018,11 +1006,11 @@ def M_Find_The_Slope_Table(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-3-4-1'):
-        problem, answer = Find_The_Slope_Table( randint(1,3) )
+        problem, answer = Find_The_Slope_Table( randint(1,3) ) # has graphs, tables
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1053,11 +1041,11 @@ def M_Square_Roots(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-4-1-1'):
-        problem, answer = Square_Roots()
+        problem, answer = Square_Roots() # no mult diff
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1088,11 +1076,11 @@ def M_Fill_In_The_Table(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-4-2-1'):
-        problem, answer = Fill_In_The_Table( randint(1,2) )
+        problem, answer = Fill_In_The_Table( randint(1,2) ) # has tables, no mult diff
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1123,11 +1111,11 @@ def M_Higher_Order_Roots(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-5-1-1'):
-        problem, answer = Higher_Order_Roots()
+        problem, answer = Higher_Order_Roots() # no mult diff
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1140,39 +1128,39 @@ def M_Higher_Order_Roots(twoDarr):
 
   return (masterSeed, ANSmasterSeed, newpageanswer)
 
-# '''
-# AGS 1 Section 2-5-2
-# '''
-# def M_Evaluate_The_Function(twoDarr): # ????
-#   masterSeed = []
-#   ANSmasterSeed = []
-#   newpageanswer = []
-#   tmasterSeed = ""
-#   tANSmasterSeed = ""
+'''
+AGS 1 Section 2-5-2
+'''
+def M_Evaluate_The_Function(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
-#   for total in range(len(twoDarr)):
-#     midMasterSeed = ""
-#     midANSmasterSeed = ""
-#     midnewanswer = ""
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
 
-#     for i in range(twoDarr[total][2]):
-#       if(twoDarr[total][0] == '2-5-2-1'):
-#         problem, answer = Evaluate_The_Function( randint(1, 5) )
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-5-2-1'):
+        problem, answer = Evaluate_The_Function( randint(1, 5) )
 
-#         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
-#         temp_answer = "{\\color{red}" + str(answer) + "}"
-#         tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
-#         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
-#       midMasterSeed += tmasterSeed
-#       midANSmasterSeed += tANSmasterSeed
-#       midnewanswer += tnewpageanswer
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
 
-#     ANSmasterSeed.append(midANSmasterSeed)
-#     masterSeed.append(midMasterSeed)
-#     newpageanswer.append(midnewanswer)
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
 
-#   return (masterSeed, ANSmasterSeed, newpageanswer)
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
 '''
@@ -1192,11 +1180,11 @@ def M_Percent_Increase_Decrease(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-6-1-1'):
-        problem, answer = Percent_Increase_Decrease()
+        problem, answer = Percent_Increase_Decrease() # has tables, no mult diff
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1226,11 +1214,11 @@ def M_Monthly_Exponential(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-6-2-1'):
-        problem, answer = Monthly_Exponential()
+        problem, answer = Monthly_Exponential( randint(1,2) ) # some issues with generator, no mult diff,
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
-        tANSmasterSeed = r"\task " + str(problem) + r"\\" + temp_answer + " \\vspace{2cm}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       midMasterSeed += tmasterSeed
@@ -1243,96 +1231,305 @@ def M_Monthly_Exponential(twoDarr):
 
   return (masterSeed, ANSmasterSeed, newpageanswer)
 
-# '''
-# AGS 1 Section 2-7-1
-# '''
-# #no multiple difficulty (there is linear, exponential, )
-# xinterceptyintercept( randint(1,2) )
 
-# '''
-# AGS 1 Section 2-7-2
-# '''
-# #(diff, expr, form) diff: 1-single 2-dual 3-tri expr: latex, form: "r"-radical else: exponential
+'''
+AGS 1 Section 2-7-1
+'''
+def M_FillInTheTable(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-7-1-1'):
+        problem, answer = FillInTheTable( choice(['lin','exp']) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
-# '''
-# AGS 1 Section 2-7-3
-# '''
-# #kind=lin and exp
-# section1: xinterceptyintercept(random.randint(1,2))
-# section2: GraphXintYint_2_7_3('lin') or GraphXintYint_2_7_3('exp')
+'''
+AGS 1 Section 2-7-2
+'''
+def M_radicalandfractionexponent(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
 
-# '''
-# AGS 1 Section 2-8-1
-# '''
-# FillInTheMeansTable()
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
 
-# '''
-# AGS 1 Section 2-10-1
-# '''
-# #case: 1 slope and point, 2 table
-# LinearForms_2_10_1( randint(1,2) )
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-7-2-1'):
+        problem, answer = radicalandfractionexponent( randint(1,3), "latex", choice(['r','e']) )
 
-# '''
-# AGS 1 Section 2-11-1
-# '''
-# # comparedifferent( randint(1,2) )
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
 
 
-# '''
-# AGS 1 Section 3-1-1
-# '''
+'''
+AGS 1 Section 2-7-3
+'''
+def M_GraphXintYint_2_7_3(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-7-3-1'):
+        problem, answer = xinterceptyintercept( randint(1,2) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      if(twoDarr[total][0] == '2-7-3-2'):
+        problem, answer = GraphXintYint_2_7_3( choice(['lin', 'exp']) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+
+'''
+AGS 1 Section 2-8-1
+'''
+def M_FillInTheMeansTable(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-8-1-1'):
+        problem, answer = FillInTheMeansTable()
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+
+'''
+AGS 1 Section 2-10-1
+'''
+def M_LinearForms_2_10_1(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-10-1-1'):
+        problem, answer = LinearForms_2_10_1( 1 )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      if(twoDarr[total][0] == '2-10-1-2'):
+        problem, answer = LinearForms_2_10_1( 2 )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+
+'''
+AGS 1 Section 2-11-1
+'''
+def M_comparedifferent(twoDarr):
+  masterSeed = []
+  ANSmasterSeed = []
+  newpageanswer = []
+  tmasterSeed = ""
+  tANSmasterSeed = ""
+
+  for total in range(len(twoDarr)):
+    midMasterSeed = ""
+    midANSmasterSeed = ""
+    midnewanswer = ""
+
+    for i in range(twoDarr[total][2]):
+      if(twoDarr[total][0] == '2-11-1-1'):
+        problem, answer = comparedifferent( randint(1,2) )
+
+        tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
+        temp_answer = "{\\color{red}" + str(answer) + "}"
+        tANSmasterSeed = r"\task " + str(problem) + r"\par" + temp_answer + " \\vspace{2cm}"
+        tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
+
+      midMasterSeed += tmasterSeed
+      midANSmasterSeed += tANSmasterSeed
+      midnewanswer += tnewpageanswer
+
+    ANSmasterSeed.append(midANSmasterSeed)
+    masterSeed.append(midMasterSeed)
+    newpageanswer.append(midnewanswer)
+
+  return (masterSeed, ANSmasterSeed, newpageanswer)
+
+
+
+
+
+r"""
+from .Unit3.S3_1_1 import _
+from .Unit3.S3_2_1 import _
+from .Unit3.S3_2_2 import _
+from .Unit3.S3_3_1 import _
+from .Unit3.S3_3_2 import _
+from .Unit3.S3_3_3 import _
+from .Unit3.S3_4_1 import _
+from .Unit3.S3_4_2 import _
+from .Unit3.S3_4_3 import _
+from .Unit3.S3_4_4 import _
+from .Unit3.S3_5_1 import _
+from .Unit3.S3_6_1 import _
+"""
+
+'''
+AGS 1 Section 3-1-1
+'''
 # Find_The_Value_Of_X_3_1_1()
 
 
-# '''
-# AGS 1 Section 3-2-1
-# '''
+'''
+AGS 1 Section 3-2-1
+'''
 # # Point_Of_Intersection_3_2_1(expr='sympy',option='standard'); Point_Of_Intersection_3_2_1(expr='sympy',option='point_slope')
 
 
-# '''
-# AGS 1 Section 3-2-2
-# '''
+'''
+AGS 1 Section 3-2-2
+'''
 # PWChars(randint(3,5), cont=False)
 #SECTION 2: SeqFeats()
 
-# '''
-# AGS 1 Section 3-3-1
-# '''
+'''
+AGS 1 Section 3-3-1
+'''
 # LinSysTable_3_3_1()
 
-# '''
-# AGS 1 Section 3-3-2
-# '''
+'''
+AGS 1 Section 3-3-2
+'''
 #
 
-# '''
-# AGS 1 Section 3-3-3
-# '''
+'''
+AGS 1 Section 3-3-3
+'''
 # NOT SURE CHECK DOCS AND EVERYTHING
 
-# '''
-# AGS 1 Section 3-4-1
-# '''
+'''
+AGS 1 Section 3-4-1
+'''
 #
 
-# '''
-# AGS 1 Section 3-4-2
-# '''
+'''
+AGS 1 Section 3-4-2
+'''
 #
 
-# '''
-# AGS 1 Section 3-4-4
-# '''
+'''
+AGS 1 Section 3-4-4
+'''
 #
 
-# '''
-# AGS 1 Section 3-5-1
-# '''
+'''
+AGS 1 Section 3-5-1
+'''
 #
 
-# '''
-# AGS 1 Section 3-6-1
-# '''
+'''
+AGS 1 Section 3-6-1
+'''
 #

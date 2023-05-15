@@ -25,13 +25,12 @@ def Fill_In_The_Blanks(kind='lin', expr='latex'):
         problem = seq.getTable(range(1,8), vals=[1,0,0,0,0,0,1], vertical=False, labels=['Term','Value'])
 
     if expr == 'latex':
-        answer = seq.getTable(range(1,8), vertical=False, labels=['Term','Value']) + r' \newline '
+        answer = seq.getTable(range(1,8), vertical=False, labels=['Term','Value'])
         answer += signify(seq.getExplicit())
 
         if kind=='geo' and case!=2:
             seq = GeoSeq(-1*seq.base, [1,seq.start])
-            answer += r'\newline or '
-            answer += seq.getTable(range(1,8), vertical=False, labels=['Term','Value']) + r' \newline '
+            answer += seq.getTable(range(1,8), vertical=False, labels=['Term','Value'])
             answer += signify(seq.getExplicit())
     else:
         answer = seq
