@@ -39,7 +39,7 @@ def FillInTheMeansTable(expr='latex'):
     header[2:5] = [signify(arithterms[2]), signify(arithterms[3]), signify(arithterms[4])]
     answer = tableGenerator(header, [row])
     if expr=='latex':
-        answer += r'\newline ' + signify(arith.getExplicit()) + r'\newline '
+        answer += r'\par ' + signify(arith.getExplicit()) + r'\par '
         answer += signify(geo.getExplicit())
     else:
         answer = [answer, arith, geo]

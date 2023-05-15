@@ -3,9 +3,12 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-from loader import LinFunc, getInt, getVar, startGraph, drawLinear, endGraph, x, ExpFunc, Rational, drawCurve
+from loader import LinFunc, getInt, getVar, startGraph, drawLinear, endGraph, x, ExpFunc, Rational, drawCurve, PWFunc, latexify, graphPW
 import random
+from random import randint, sample
 import sympy
+from sympy import nan
+from math import floor, ceiling
 
 # THIRD SECTION IS INCOMPLETE
 # AGS1.3.5.1 - Find The Indicated Values - PT2
