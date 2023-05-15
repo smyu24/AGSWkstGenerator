@@ -6,13 +6,14 @@ sys.path.insert(0, parentdir)
 from loader import LinFunc, startGraph, drawLinear, endGraph, Rational, ExpFunc, latex, sympify, emptyGraph, drawCurve, x
 import sympy
 from random import sample, choice
+import random
 
 # invalid syntax and incomplete/ borkwn code within the function
 # AGS1.3.6.1 - Function Transformations (vertical)
 # Instruction : Graph the equations.
 
 def Function_Transformations_3_6_1(option=1,case=1):
-  functionvars= sample(['a','b','c','d','e','f','g','h','j','k','p'],3)
+  functionvars= random.sample(['a','b','c','d','e','f','g','h','j','k','p'],3)
   if option == 1:
     if case == 1:
       # generate linear for option 1
@@ -43,9 +44,9 @@ def Function_Transformations_3_6_1(option=1,case=1):
     else:     
     # generate geometry for option 1
       expeqs = []
-      ratio = choice([Rational(1,2),Rational(1,3),2,3,4])
-      xlist = sample(range(-10, 10), 4)
-      start = sample(range(-9, 9), 3)
+      ratio = random.choice([Rational(1,2),Rational(1,3),2,3,4])
+      xlist = random.sample(range(-10, 10), 4)
+      start = random.sample(range(-9, 9), 3)
       for i in range(3):
         expeqs.append(ExpFunc(ratio,[0,start[i]],x,functionvars[i]))
       header = r'\newline \begin{cases}'
@@ -87,7 +88,7 @@ def Function_Transformations_3_6_1(option=1,case=1):
       for i in range(3):
         header += fr'$ {functionvars[i]}(x) = '+ sympy.latex(sympy.sympify(lineqs[i].expr , evaluate=False))+r'$ \\'
       header += r'\end{cases}'
-      problem = 
+      problem = ""
       answer_graph = r'\newline '+startGraph()+drawLinear(lineqs[0].expr,-10,10,functionvars[0])+drawLinear(lineqs[1].expr,-10,10,functionvars[1])+drawLinear(lineqs[2].expr,-10,10,functionvars[2])+endGraph()+r'\newline'
       problem = fr'a. Explain how ${functionvars[0]}(x)$ can be translated to be the same as ${functionvars[2]}(x)?$ \\'
       answer = ''
@@ -106,9 +107,9 @@ def Function_Transformations_3_6_1(option=1,case=1):
   
     else:  # generate geo option 2
       expeqs = []
-      ratio = choice([Rational(1,2),Rational(1,3),2,3,4])
-      xlist = sample(range(-10, 10), 4)
-      start = sample(range(-9, 9), 3)
+      ratio = random.choice([Rational(1,2),Rational(1,3),2,3,4])
+      xlist = random.sample(range(-10, 10), 4)
+      start = random.sample(range(-9, 9), 3)
       for i in range(3):
         expeqs.append(ExpFunc(ratio,[0,start[i]],x,functionvars[i]))
       header = r'\newline \begin{cases}'

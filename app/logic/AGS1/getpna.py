@@ -87,11 +87,67 @@ def getproblemandanswer(code, farr):
         pro, ans1, ans2 = M_comparedifferent(farr)
 
 
-    # elif(code == "3-"):
+    # elif(code == "3-1-1"):
     #     pro, ans1, ans2 = M_(farr)
-    # elif(code == "3-"):
+    # elif(code == "3-2-1"):
     #     pro, ans1, ans2 = M_(farr)
-    # elif(code == "3-"):
+    # elif(code == "3-2-2"):
     #     pro, ans1, ans2 = M_(farr)
-
+    # elif(code == "3-3-1"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-3-2"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-3-3"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-4-1"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-4-2"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-4-3"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-4-4"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-5-1"):
+    #     pro, ans1, ans2 = M_(farr)
+    # elif(code == "3-6-1"):
+    #     pro, ans1, ans2 = M_(farr)
     return (pro, ans1, ans2)
+r"""REMEMBER NO & SIGNS IN SQL SECTIONS ROW
+AGS1.3.1.1 - Find The Value of  x
+    instruction : For each equation find the value of  x  that makes it true.
+AGS1.3.2.1 - Point Of Intersection
+    instruction : Graph each set of linear equations on the same set of axes. Name the coordinates of the point where the two lines intersect.
+AGS1.3.2.2 - Increasin / Decreasing / Constant / Domain & Range
+    instruction : For each graph and description do the following:
+            -use interval notation to state where the function is increasing or decreasing
+            -state the minimum or maximum if the function has them
+            -write the domain and range of the function using interval notation
+            -respond to the context-based question
+    instruction : For each graph and description do the following:
+            -use interval notation to state where the function is increasing or decreasing
+            -state the minimum or maximum if the function has them
+            -write the domain and range of the function using interval notation
+            -respond to the context-based question
+AGS1.3.3.1 - Fill In The Table & State The Point Of Intersection
+    instruction : Fill in the table of values for each of the linear functions. Then state the point of intersection of the two lines.
+AGS1.3.3.2 - Finding Features Of Function
+    instruction " For each of the following functions, find the desired features.
+    instruction : For each of the following functions, find the desired features.
+AGS1.3.3.3 - Finding Explicit And Recursive Equations
+    instruction : Find both the explicit and recursive equations for the tables.
+AGS1.3.4.1 - Find The Indicated Values
+    instruction : Find the indicated values & Find equation or graph the explicit function
+AGS1.3.4.2 - Graph The New Equation
+    Instruction : Two functions are graphed. Graph a new function on the same grid by adding the two given functions.
+AGS1.3.4.3- Compare Two Functions
+    Instruction : Use the graph to answer the following questions.
+AGS1.3.4.4 - Domain & Range / Increasing or Decreasing
+    Instruction : For each graph, identify the domain, range, and whether or not the function is increasing or decreasing.
+AGS1.3.5.1 - Find The Indicated Values
+    Instruction : Use the graph of each function to find the indicated values.
+AGS1.3.6.1 - Function Transformations
+    Instruction : Graph the equations.
+    Instruction : Transfrom the graph from the given graph
+
+
+"""

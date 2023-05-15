@@ -1249,7 +1249,7 @@ def M_FillInTheTable(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-7-1-1'):
-        problem, answer = FillInTheTable( choice(['lin','exp']) )
+        problem, answer = FillInTheTable( choice(['lin','exp']) ) # overflow of tables
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -1319,7 +1319,7 @@ def M_GraphXintYint_2_7_3(twoDarr):
 
     for i in range(twoDarr[total][2]):
       if(twoDarr[total][0] == '2-7-3-1'):
-        problem, answer = xinterceptyintercept( randint(1,2) )
+        problem, answer = xinterceptyintercept( randint(1,2) ) # generator issue
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
@@ -1327,7 +1327,7 @@ def M_GraphXintYint_2_7_3(twoDarr):
         tnewpageanswer = "\\task " + temp_answer + " \\vspace{2cm}"
 
       if(twoDarr[total][0] == '2-7-3-2'):
-        problem, answer = GraphXintYint_2_7_3( choice(['lin', 'exp']) )
+        problem, answer = GraphXintYint_2_7_3( choice(['lin', 'exp']) ) # generator issue
 
         tmasterSeed = "\\task " + str(problem) + " \\vspace{2cm}"
         temp_answer = "{\\color{red}" + str(answer) + "}"
