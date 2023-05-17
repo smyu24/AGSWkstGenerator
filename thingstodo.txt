@@ -85,6 +85,8 @@ INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Prop
 INSERT INTO testset (section, testname, ccss, `desc`) VALUES ('Prealgebra','Linear Functions','pre.1.9.1','This is the description.');
 
 
+
+
 CREATE TABLE learningtarget_ags1 (
     Seed text,
     ccss text,
@@ -111,6 +113,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 
+
 VARCHAR
 Some examples of what VARCHAR is good for:
     Usernames
@@ -125,9 +128,28 @@ OPTIONS 1= yes range value, 2= disable range value
 INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('1-9-1','pre.1.9.1','Find The Slope','Easy, Hard','2, 1, 9','Find The Slope, Find the slope of each line., ', '2, 2');
 
-UPDATE learningtarget_ags1 
-SET description = 'Slope-Intercept / Point-Slope Form | Use the given information to create an explicit equation. Your explicit equation should be in either slope-intercept or point-slope form. Use the form that is most efficient based on the given information. | For each table of values, write two different explicit equations in point-slope form and slope-intercept form.' 
-WHERE Seed='2-10-1';
+UPDATE learningtarget
+SET description = 'Find The Slope | Find the slope of each line. | Find the slope of the set of points. | Find the slope of each equation.'
+WHERE Seed='1-9-1';
+
+
+Find the slope of the line through each pair of points., Find the slope of each line.
+
+UPDATE learningtarget
+SET description = 'Simple and Compound Interest, Solve the following problems using the given simple interests, Solve the following problems using the given compound interests'
+WHERE Seed='1-8-6';
+
++-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
+------------------------------------------------------------+-------+
+| Seed  | ccss      | section                                                                                       | difficulty         | options | description
+                                                            | latex |
++-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
+------------------------------------------------------------+-------+
+| 1-9-1 | pre.1.9.1 | Find The Slope Using Graphs, Find The Slope Using Data Points, Find The Slope Using Equations | Easy, Medium, Hard | 2, 1, 9 | Find The Slope | Find the slope of each line. | Find the slo
+pe of the set of points. | Find the slope of each equation. | 2, 2  |
++-------+-----------+-----------------------------------------------------------------------------------------------+--------------------+---------+-------------------------------------------------------------
+------------------------------------------------------------+-------+
+UPDATE learningtarget SET section = 'Divide using division symbol, Divide using fraction' where Seed ='1-3-7';
 
 ****IMPORTANT*****
     problems need "$" wrapper where as answers do not !!!!!! othercase will cause erros in double casing
@@ -155,6 +177,28 @@ INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, descriptio
 VALUES ('1-9-5','pre.1.9.5','Graphing Linear Inequalities','Easy, Medium, Hard','2, 1, 9','Graphing Linear Inequalities | Sketch the graph of each line', '2, 2');
 
 
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-1','pre.1.10.1','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-2','pre.1.10.2','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-10-3','pre.1.10.3','','','','', '');
+
+
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-11-1','pre.1.11.1','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-11-2','pre.1.11.2','','','','', '');
+
+INSERT INTO learningtarget (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('1-11-2','pre.1.11.2','','','','', '');
+
+
 ALTER TABLE learningtarget RENAME TO learningtarget_prealg;
 
 UPDATE learningtarget_ags1 SET section = 'Should We Use Recursive Or Explicit?' where Seed ='1-3-4';
@@ -173,10 +217,7 @@ UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-5-2';
 UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-6-1';
 UPDATE learningtarget_ags1 SET difficulty = 'Normal' WHERE Seed = '2-';
 
-UPDATE learningtarget_ags1 SET latex = '1, 2' WHERE Seed = '2-4-2';
-UPDATE learningtarget_ags1 SET description = 'Fill In The Blanks | For each sequence below, find the missing terms in the sequence. Then write an explicit rule for the sequence' WHERE Seed = '2-3-3';
 
-# seed code [array], function call return [array], allow \newline [bool]
 
 One question per line for 1-9-1
 
@@ -351,21 +392,22 @@ VALUES ('2-10-1','ags.2.10.1','Slope-Intercept / Point-Slope Form','Normal','2, 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('2-11-1','ags.2.11.1','Compare Different Characteristics','Normal','2, 1, 9','Compare Different Characteristics | Compare different characteristics of each type of function by filling in the cells of each table.', '2, 2');
 
+
+
+
+
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('3-1-1','ags.3.1.1','Find The Value of X','Normal','2, 1, 9','Find The Value of X | For each equation find the value of x that makes it true.', '2, 2');
 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('3-2-1','ags.3.2.1','Point Of Intersection','Normal','2, 1, 9','Point Of Intersection | Graph each set of linear equations on the same set of axes. Name the coordinates of the point where the two lines intersect.', '2, 2');
 
-
-
-
------TOO LONG----- start from here
+-----TOO LONG-----
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-2-2','ags.3.2.2','Increasing / Decreasing / Constant / Domain & Range','Normal','2, 1, 9','Increasing / Decreasing / Constant / Domain and Range | For each graph and description do the following: use interval notation to state where the function is increasing or decreasing, state the minimum or maximum if the function has them, write the domain and range of the function using interval notation, and respond to the context-based question | For each graph and description do the following: use interval notation to state where the function is increasing or decreasing, state the minimum or maximum if the function has them, write the domain and range of the function using interval notation, and respond to the context-based question', '2, 2');
+VALUES ('3-2-2','ags.3.2.2','Increasing / Decreasing / Constant / Domain & Range','Normal','2, 1, 9','Increasing / Decreasing / Constant / Domain & Range | For each graph and description do the following: use interval notation to state where the function is increasing or decreasing, state the minimum or maximum if the function has them, write the domain and range of the function using interval notation, and respond to the context-based question | For each graph and description do the following: use interval notation to state where the function is increasing or decreasing, state the minimum or maximum if the function has them, write the domain and range of the function using interval notation, and respond to the context-based question', '2, 2');
 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-3-1','ags.3.3.1','Fill In The Table & State The Point Of Intersection','Normal','2, 1, 9','Fill In The Table and State The Point Of Intersection | Fill in the table of values then state the point of intersection.', '2, 2');
+VALUES ('3-3-1','ags.3.3.1','Fill In The Table & State The Point Of Intersection','Normal','2, 1, 9','Fill In The Table & State The Point Of Intersection | Fill in the table of values then state the point of intersection.', '2, 2');
 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('3-3-2','ags.3.3.2','Finding Features Of Function','Normal','2, 1, 9','Finding Features Of Function | For each of the following functions, find the desired features. | For each of the following functions, find the desired features.', '2, 2');
@@ -374,26 +416,24 @@ INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, descr
 VALUES ('3-3-3','ags.3.3.3','Finding Explicit And Recursive Equations','Normal','2, 1, 9','Finding Explicit And Recursive Equations | Find both the explicit and recursive equations for the tables.', '2, 2');
 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-4-1','ags.3.4.1','Find The Indicated Values','Normal','2, 1, 9','Find The Indicated Values | Find the indicated values and find equation of the explicit function. | Find the indicated values & find graph of the explicit function.', '2, 2');
+VALUES ('3-4-1','ags.3.4.1','Find The Indicated Values','Normal','2, 1, 9','Find The Indicated Values | Find the indicated values & find equation of the explicit function. | Find the indicated values & find graph of the explicit function.', '2, 2');
 
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-4-2','ags.3.4.2','Graph The New Equation','Normal','2, 1, 9','Graph The New Equation | Two functions are graphed. Graph a new function on the same grid by adding the two given functions.', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-4-3','ags.3.4.3','Compare Two Functions','Normal','2, 1, 9','Compare Two Functions | Use the graph to answer the following questions.', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-4-4','ags.3.4.4','Domain & Range / Increasing or Decreasing','Normal','2, 1, 9','Domain and Range / Increasing or Decreasing | For each graph, identify the domain, range, and whether or not the function is increasing or decreasing.', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-5-1','ags.3.5.1','Find The Indicated Values','Linear, Geometric, Complex','2, 1, 9','Find The Indicated Values | Use the graph of each function to find the indicated values.', '2, 2');
-
-INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
-VALUES ('3-6-1','ags.3.6.1','Function Transformations','Easy, Medium, Hard','2, 1, 9','Function Transformations | Graph the equations. | Transfrom the graph from the given graph.', '2, 2');
-
-
+VALUES ('3-4-2','ags.3.4.2','Graph The New Equation','Easy, Medium, Hard','2, 1, 9','Graph The New Equation | SECTION DESCRIPTION', '2, 2');
 
 ----------------------
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('3-4-3','ags.3.4.3','Compare Two Functions','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('3-4-4','ags.3.4.4','Domain & Range / Increasing or Decreasing','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('3-5-1','ags.3.5.1','Find The Indicated Values','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
+INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
+VALUES ('3-6-1','ags.3.6.1','Function Transformations','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
+
 INSERT INTO learningtarget_ags1 (Seed, ccss, section, difficulty, options, description, latex)
 VALUES ('4.1.1','ags.4.1.1','Solve Each Equation And Check Steps','Easy, Medium, Hard','2, 1, 9','TITLE | SECTION DESCRIPTION', '2, 2');
 
