@@ -51,8 +51,7 @@ def Information_To_Geometric_Sequence(case=1, kind='lin', expr='latex'):
 
     return problem, answer
 
-
-import random
-for i in range(30):
-    a,b = Information_To_Geometric_Sequence(random.randint(1,4), kind='exp')
-    print(a,b)
+# for jj in range(10):
+#     problem, answer = Information_To_Geometric_Sequence(case=1,kind='exp')
+#     print(problem)
+#     print(answer)

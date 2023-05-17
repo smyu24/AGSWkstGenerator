@@ -23,9 +23,6 @@ a,b,c,d,m,n,p,q,r,s,t,w,x,y,z = variables
 from scipy import stats
 import numpy as np
 
-from . import Lin_probs
-from . import Exp_probs
-
 #-----------------------------------------------------
 
 class LinFunc():
@@ -1828,15 +1825,19 @@ def drawRegPolygon(sides):
 
 #-----------------------------------------------------
 
-import names, pandas, num2words
+import names, pandas
+from num2words import num2words
+import os, inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+os.chdir(currentdir)
 
 DIFF, RATIO, SEQ_1, SEQ_2, SEQ_3 = symbols('DIFF RATIO SEQ_1 SEQ_2 SEQ_3')
 INTA, INTB, FLOATA, FLOATB = symbols('INTA INTB FLOATA FLOATB')
 
-Lin_probs = pandas.read_csv('Lin_probs.csv')
+Lin_probs = pandas.read_csv(os.path.abspath("Lin_probs.csv"))
 Lin_probs = Lin_probs[['Question','Answer1','Answer2','Controller','In','Out']]
 
-Exp_probs = pandas.read_csv('Exp_probs.csv')
+Exp_probs = pandas.read_csv(os.path.abspath("Exp_probs.csv"))
 Exp_probs = Exp_probs[['Question','Answer1','Answer2','Controller','In','Out']]
 
 def getControls(controls):
@@ -1872,7 +1873,7 @@ def getParam(word, params, kind):
     elif word == 'MULT_PHRASE':
         if 'RATIO' not in params.keys():
             params['RATIO'] = randint(2,5)
-        phrase = 'twice' if params['RATIO']==2 else num2words(params['RATIO']) + ' times'
+        phrase = 'twice' if params['RATIO']==2 else num2words(int(params['RATIO'])) + ' times'
         return phrase
     elif word == 'GROWTH_PHRASE':
         growths = {2: 'doubles', 3: 'triples', 4: 'quadruples'}
@@ -1881,7 +1882,7 @@ def getParam(word, params, kind):
         if params['RATIO'] in growths.keys():
             phrase = growths[params['RATIO']]
         else:
-            phrase = 'grows by a factor of ' + num2words(params['RATIO'])
+            phrase = 'grows by a factor of ' + num2words(int(params['RATIO']))
         return phrase
 
 def getWordValue(word, params, kind, string=True):
@@ -1908,14 +1909,15 @@ def getWordValue(word, params, kind, string=True):
 
 #-----------------------------------------------------
 
-def makeWordProb(kind='lin', expr='latex'): # Lin_probs and Exp_probs have to be unloaded from dolphin csv
+def makeWordProb(kind='lin', expr='latex'): 
     if kind == 'lin':
         data = Lin_probs.loc[randint(0,len(Lin_probs)-1)]
-    elif kind == 'exp':
+    else: # exp
         data = Exp_probs.loc[randint(0,len(Exp_probs)-1)]
-    else:
-        data = Neither_probs.loc[randint(0,len(Neither_probs)-1)]
-
+    # else:
+    #     # data = Neither_probs.loc[randint(0,len(Neither_probs)-1)]
+    #     return
+    
     problem = data[0].split()
     solns = data[1:3].copy()
     controls = data[3].split()
@@ -1941,7 +1943,6 @@ def makeWordProb(kind='lin', expr='latex'): # Lin_probs and Exp_probs have to be
             solns[jj] = getWordValue(solns[jj][0], params, kind, string=False)
 
     return ' '.join(problem), solns, labels
-
 
 #-----------------------------------------------------
 
