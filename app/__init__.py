@@ -48,14 +48,6 @@ bps = ['.logic.prealgebra.routes:prealgebra',
 
 def create_app():
     app = Flask(__name__, instance_relative_config=False)
-    app.config.from_object('config.Config')
-    app.config['SECRET_KEY'] = 'N|\xe4\xc0\x08\xc9\x0cP\x82^\x95\xb5\x84\x87\xe9$:}n\x11c\x85O\xf6'
-
-    app.config['MYSQL_HOST'] = 'smyu24.mysql.pythonanywhere-services.com'
-    app.config['MYSQL_USER'] = 'smyu24'
-    app.config['MYSQL_PASSWORD'] = 'hunter2hunter3'
-    app.config['MYSQL_PORT'] = 3306
-    app.config['MYSQL_DB'] = 'smyu24$default'
     app.config["LOGIN_DISABLED"] = False
     db = MySQL(app)
 
