@@ -3,6 +3,8 @@
 A website for generating mathematics(AGS) related worksheets
 See a live demo at http://ericyu.dev
 
+To access most of the internal code, use this link: https://github.com/smyu24/AGS_Worksheet_Generator/blob/main/app/logic/AGS1/loader.py
+
 ## Installation
 
 Use the package manager **pip** to install the following modules.
