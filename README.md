@@ -2,6 +2,8 @@
 
 A full-stack web application for generating Common Core-aligned mathematics worksheets with automated grading capabilities. Built with Flask, React, and a custom computer algebra engine.
 
+**To check out some of the core logic, [https://github.com/smyu24/AGSWkstGenerator/blob/main/app/logic/AGS1/loader.py](https://github.com/smyu24/AGSWkstGenerator/blob/main/app/logic/AGS1/loader.py)**
+
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ## 🚀 Features
